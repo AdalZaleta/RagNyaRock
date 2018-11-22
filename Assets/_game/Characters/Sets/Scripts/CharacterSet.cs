@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Mangos {
+namespace Mangos
+{
+    [CreateAssetMenu()]
     public class CharacterSet : ScriptableObject {
         public string namae;
-        public Sprite icon;
+        //public Sprite icon;
         public SkinInfo[] skins;
 
         public void BuildCharacter(int _skin)

@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace Mangos
 {
+    [CreateAssetMenu()]
     public class SkinInfo : ScriptableObject
     {
         public string namae;

@@ -7,6 +7,8 @@ namespace Mangos
 {
 	public class Manager_UI : MonoBehaviour {
 
+        public CharacterSet[] characterSets;
+
 		void Awake()
 		{
 			Manager_Static.uiManager = this;
