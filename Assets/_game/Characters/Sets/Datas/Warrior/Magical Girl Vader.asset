@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Name: Magical Girl Vader
   m_EditorClassIdentifier: 
   namae: 
-  splash: {fileID: 0}
+  splash: {fileID: 21300000, guid: ef2ab9b0d54821846af17cb85c0c3aab, type: 3}
   model: {fileID: 0}

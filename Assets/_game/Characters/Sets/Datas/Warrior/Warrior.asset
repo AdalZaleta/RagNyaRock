@@ -11,6 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6bd26ede11d0384d9cbdbecd03dce30, type: 3}
   m_Name: Warrior
   m_EditorClassIdentifier: 
-  namae: 
-  icon: {fileID: 0}
-  skins: []
+  namae: Vader
+  skins:
+  - {fileID: 11400000, guid: 6309887d2f5c31343a30b5908bf3dd16, type: 2}
+  - {fileID: 11400000, guid: 86b330abbdfff104095dd20c01967118, type: 2}

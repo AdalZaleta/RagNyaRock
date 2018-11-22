@@ -11,6 +11,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3bfc4264f8bb743998433496cb04e5, type: 3}
   m_Name: WarriorDefault
   m_EditorClassIdentifier: 
-  namae: 
-  splash: {fileID: 0}
+  namae: Vader
+  splash: {fileID: 21300000, guid: a949f36a20bafaf489fb12733dca66e8, type: 3}
   model: {fileID: 0}

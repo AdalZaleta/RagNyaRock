@@ -11,5 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6bd26ede11d0384d9cbdbecd03dce30, type: 3}
   m_Name: Ranger
   m_EditorClassIdentifier: 
-  namae: 
-  skins: []
+  namae: Chilpayata
+  skins:
+  - {fileID: 11400000, guid: 344a5586a955d4646904c6b46891095d, type: 2}
+  - {fileID: 11400000, guid: db75cb969767d30408d4c69a3e2d46cd, type: 2}
