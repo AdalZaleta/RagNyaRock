@@ -10,7 +10,9 @@ namespace Mangos {
         public Image splash;
         public Image darkOverlay;
         public Text namae;
+        public Text ready;
 
+        private bool isSelected;
         private CharacterSet[] sets;
         private int currentChar = 0;
         private int[] currentSkin;
@@ -19,6 +21,7 @@ namespace Mangos {
         public bool isConnected;
         public KeyCode toggleConnect;
         public KeyCode select;
+        public KeyCode back;
         public KeyCode right;
         public KeyCode left;
         public KeyCode skinR;
@@ -29,7 +32,8 @@ namespace Mangos {
             sets = Manager_Static.uiManager.characterSets;
             currentChar = playerId % sets.Length;
             currentSkin = new int[sets.Length];
-            if (!isConnected)
+            ready.enabled = false;
+            if (isConnected)
                 OnJoin();
             else
                 OnLeave();
@@ -39,14 +43,25 @@ namespace Mangos {
         void Update() {
             if (Input.GetKeyDown(toggleConnect))
             {
-                if (isConnected)
+                if (!isConnected)
                     OnJoin();
                 else
                     OnLeave();
             }
             if (Input.GetKeyDown(select))
             {
-
+                SelectCharacter();
+            }
+            if (Input.GetKeyDown(back))
+            {
+                if (isSelected)
+                {
+                    DeselectCharacter();
+                }
+                else
+                {
+                    Back();
+                }
             }
             if (Input.GetKeyDown(right))
             {
@@ -88,6 +103,8 @@ namespace Mangos {
 
         public void ChangeRight()
         {
+            if (isSelected) return;
+
             currentChar++;
             if (currentChar >= sets.Length)
                 currentChar -= sets.Length;
@@ -97,6 +114,8 @@ namespace Mangos {
 
         public void ChangeLeft()
         {
+            if (isSelected) return;
+
             currentChar--;
             if (currentChar < 0)
                 currentChar += sets.Length;
@@ -106,6 +125,8 @@ namespace Mangos {
 
         public void ChangeSkinRight()
         {
+            if (isSelected) return;
+
             currentSkin[currentChar]++;
             if (currentSkin[currentChar] >= sets[currentChar].skins.Length)
                 currentSkin[currentChar] -= sets[currentChar].skins.Length;
@@ -115,6 +136,8 @@ namespace Mangos {
 
         public void ChangeSkinLeft()
         {
+            if (isSelected) return;
+
             currentSkin[currentChar]--;
             if (currentSkin[currentChar] < 0)
                 currentSkin[currentChar] += sets[currentChar].skins.Length;
@@ -124,13 +147,26 @@ namespace Mangos {
 
         public void SelectCharacter()
         {
+            isSelected = true;
+            ready.enabled = true;
+        }
 
+        public void DeselectCharacter()
+        {
+            isSelected = false;
+            ready.enabled = false;
+        }
+
+        public void Back()
+        {
+            
         }
 
         public void OnJoin()
         {
             isConnected = true;
             darkOverlay.enabled = false;
+            splash.enabled = true;
             UpdateDisplay();
         }
 
@@ -139,6 +175,7 @@ namespace Mangos {
             isConnected = false;
             darkOverlay.enabled = true;
             splash.sprite = null;
+            splash.enabled = false;
             namae.text = "";
         }
     }
