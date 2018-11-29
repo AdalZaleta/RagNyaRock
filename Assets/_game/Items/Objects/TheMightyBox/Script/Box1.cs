@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Mangos{
 	public class Box1 : MonoBehaviour {
 	
-		/*Rigidbody rigi;
+		Rigidbody rigi;
 		public float breakingPoint;
 		public float forceVariance;
 		// Use this for initialization
@@ -32,6 +32,6 @@ namespace Mangos{
 			default:
 				break;
 			}
-		}*/
+		}
 	}
 }

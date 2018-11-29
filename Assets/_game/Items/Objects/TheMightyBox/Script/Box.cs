@@ -7,7 +7,7 @@ namespace Mangos{
 	
 		Rigidbody rigi;
 		public float breakingPoint;
-		public float forceVariance;
+		public float forceVariance; 
 		bool alreadyPrayed = false;
 
 		void Start () {
