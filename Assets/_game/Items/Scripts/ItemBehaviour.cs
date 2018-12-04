@@ -34,7 +34,6 @@ namespace mangos
         public void destroyMyself()
         {
             GetComponent<BoxCollider>().enabled = false;
-            Debug.Log("1    Tengo que destruirme, mi nombre es: " + name);
 
             BoxCollider[] hijos = GetComponentsInChildren<BoxCollider>();
             for (int i = 0; i < hijos.Length; i++)
@@ -42,8 +41,6 @@ namespace mangos
                 hijos[i].enabled = true;
                 hijos[i].gameObject.GetComponent<Transform>().SetParent(null, true);
             }
-
-            Debug.Log("2    Tengo que destruirme, mi nombre es: " + name);
         }
     }
 }
