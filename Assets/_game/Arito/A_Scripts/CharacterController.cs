@@ -10,15 +10,13 @@ namespace MANGOS
         public float runningMultiplier;
         public float maxVelocity;
         public float jumpForce;
+        public float gravityMultiplier;
         public LayerMask layerMask;
 
         public Rigidbody rig;
         private bool isAirborn = false;
         private float isRunning = 1;
         private float xDir, zDir;
-
-        [Header("Debug")]
-        public Vector3 rigVelocity;
 
         private void OnTriggerEnter(Collider _col)
         {
@@ -40,26 +38,29 @@ namespace MANGOS
             else if (Input.GetKeyUp(KeyCode.LeftShift))
                 Run(false);
 
-            if (Input.GetKey(KeyCode.W))
+            /*if (Input.GetKey(KeyCode.W))
                 zDir = 1;
             else if (Input.GetKey(KeyCode.S))
                 zDir = -1;
             else
-                zDir = 0;
+                zDir = 0;*/
 
-            if (Input.GetKey(KeyCode.A))
+            zDir = Input.GetAxis("Vertical");
+            xDir = Input.GetAxis("Horizontal");
+
+            /*if (Input.GetKey(KeyCode.A))
                 xDir = -1;
             else if (Input.GetKey(KeyCode.D))
                 xDir = 1;
             else
-                xDir = 0;
+                xDir = 0;*/
 
             Move(xDir, zDir);
 
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetButtonDown("Fire1"))
                 Jump();
 
-            rigVelocity = rig.velocity;
+            
         }
 
         public void Run(bool _run)
