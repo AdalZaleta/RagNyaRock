@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace mangos
 {
+    [RequireComponent(typeof(Rigidbody))]
     public class ItemBehaviour : MonoBehaviour
     {
         public string name;
@@ -12,7 +13,6 @@ namespace mangos
         public float fire;
         Rigidbody rigi;
         public float forceVariance;
-        public Box1 box1;
 
         private void Start()
         {
@@ -34,19 +34,16 @@ namespace mangos
         public void destroyMyself()
         {
             GetComponent<BoxCollider>().enabled = false;
+            Debug.Log("1    Tengo que destruirme, mi nombre es: " + name);
 
             BoxCollider[] hijos = GetComponentsInChildren<BoxCollider>();
             for (int i = 0; i < hijos.Length; i++)
             {
                 hijos[i].enabled = true;
-                hijos[i].gameObject.AddComponent<Rigidbody>();
                 hijos[i].gameObject.GetComponent<Transform>().SetParent(null, true);
-                hijos[i].gameObject.AddComponent<Box1>();
             }
 
-            Destroy(gameObject);
-
-            Debug.Log("Tengo que destruirme, mi nombre es: " + name);
+            Debug.Log("2    Tengo que destruirme, mi nombre es: " + name);
         }
     }
 }

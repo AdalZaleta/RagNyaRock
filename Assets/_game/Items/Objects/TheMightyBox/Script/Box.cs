@@ -15,8 +15,8 @@ namespace Mangos{
 		}
 		
 		public void GetHit(){
-				//rigi.AddForce((hitData.hitPos - hitData.shooterPos).normalized * hitData.power);
-		}
+            //rigi.AddForce((hitPos - playerPos).normalized * power);
+        }
 		
 		void OnCollisionEnter(Collision _col)
 		{
@@ -29,15 +29,14 @@ namespace Mangos{
 		
 		public void Break(){
        
-            GetComponent<BoxCollider>().enabled = false;
-			
-			BoxCollider[] hijos = GetComponentsInChildren<BoxCollider>();
+            GetComponent<Collider>().enabled = false;
+
+            Collider[] hijos = GetComponentsInChildren<Collider>();
 			for(int i = 0; i < hijos.Length; i++)
 			{
 				hijos[i].enabled = true;
 				hijos[i].gameObject.AddComponent<Rigidbody>();
 				hijos[i].gameObject.GetComponent<Transform>().SetParent(null, true);
-                hijos[i].gameObject.AddComponent<Box1>();
 			}
 
 			Destroy(gameObject);
