@@ -2,57 +2,101 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Rewired;
 
 namespace Mangos {
+    [RequireComponent(typeof(CharacterController))]
     public class CharacterSelecter : MonoBehaviour {
 
-        public int playerId;
+        public int PlayerId = 0; //The Rewired player id of this character
         public Image splash;
         public Image darkOverlay;
         public Text namae;
         public Text ready;
+        public float changeCharDelay;
+        [Range(0, 1)]
+        public float charChangeThreshold;
 
         private bool isSelected;
         private CharacterSet[] sets;
         private int currentChar = 0;
         private int[] currentSkin;
+        private Player player; //The Rewired Player
+        private CharacterController cc;
+        private float lastCharChange;
 
         [Header("Debug")]
         public bool isConnected;
-        public KeyCode toggleConnect;
-        public KeyCode select;
-        public KeyCode back;
-        public KeyCode right;
-        public KeyCode left;
-        public KeyCode skinR;
-        public KeyCode skinL;
+        public bool toggleConnect;
+        public bool select;
+        public bool back;
+        public bool right;
+        public bool left;
+        public bool skinR;
+        public bool skinL;
+
+        private void Awake()
+        {
+            //Get the Rewired Player object for this player and keep it for the duration of the characte's lifetime
+            player = ReInput.players.GetPlayer(PlayerId);
+
+            //Get the character controller
+            cc = GetComponent<CharacterController>();
+
+            ReInput.ControllerConnectedEvent += OnControllerConnected;
+            ReInput.ControllerDisconnectedEvent += OnControllerDisconnected;
+        }
 
         // Use this for initialization
         void Start() {
             sets = Manager_Static.uiManager.characterSets;
-            currentChar = playerId % sets.Length;
+            currentChar = PlayerId % sets.Length;
             currentSkin = new int[sets.Length];
             ready.enabled = false;
             if (isConnected)
                 OnJoin();
             else
                 OnLeave();
+
+            lastCharChange = 0;
         }
 
         // Update is called once per frame
         void Update() {
-            if (Input.GetKeyDown(toggleConnect))
+            GetInput();
+            ProcessInput();
+
+            //toggleConnect = 
+            select = player.GetButtonDown("Jump");
+            back = player.GetButtonDown("Special");
+            right = player.GetButtonDown("");
+            if(player.GetAxis("Move_Horizontal") > charChangeThreshold)
             {
-                if (!isConnected)
-                    OnJoin();
-                else
-                    OnLeave();
+                if (lastCharChange + changeCharDelay > Time.time)
+                    ChangeRight();
             }
-            if (Input.GetKeyDown(select))
+            else if (player.GetAxis("Move_Horizontal") < charChangeThreshold)
+            {
+                if (lastCharChange + changeCharDelay > Time.time)
+                    ChangeLeft();
+            }
+            if (player.GetAxis("Move_Vertical") > charChangeThreshold)
+            {
+                ChangeSkinRight();
+            }
+            if (player.GetAxis("Move_Vertical") < charChangeThreshold)
+            {
+                ChangeSkinLeft();
+            }
+        }
+
+        private void ProcessInput()
+        {
+            if (select)
             {
                 SelectCharacter();
             }
-            if (Input.GetKeyDown(back))
+            if (back)
             {
                 if (isSelected)
                 {
@@ -63,22 +107,51 @@ namespace Mangos {
                     Back();
                 }
             }
-            if (Input.GetKeyDown(right))
+            if (right)
             {
                 ChangeRight();
             }
-            if (Input.GetKeyDown(left))
+            if (left)
             {
                 ChangeLeft();
             }
-            if (Input.GetKeyDown(skinR))
+            if (skinR)
             {
                 ChangeSkinRight();
             }
-            if (Input.GetKeyDown(skinL))
+            if (skinL)
             {
                 ChangeSkinLeft();
             }
+        }
+
+        void OnControllerConnected(ControllerStatusChangedEventArgs args)
+        {
+            Debug.Log("A controller was connected! Name = " + args.name + " Id = " + args.controllerId + " Type = " + args.controllerType);
+            OnJoin();
+        }
+
+        void OnControllerDisconnected(ControllerStatusChangedEventArgs args)
+        {
+            Debug.Log("A controller was disconnected! Name = " + args.name + " Id = " + args.controllerId + " Type = " + args.controllerType);
+            OnLeave();
+        }
+
+        private void GetInput()
+        {
+            //Get the input from the Rewired Player. All controllers that the Players owns will contribute, so it doesn't matter
+            //Whether the input is coming from a joustick, the keyboard, mouse, or a custom controller
+
+
+        }
+
+        
+
+        void OnDestroy()
+        {
+            // Unsubscribe from events
+            ReInput.ControllerConnectedEvent -= OnControllerConnected;
+            ReInput.ControllerDisconnectedEvent -= OnControllerDisconnected;
         }
 
         public void UpdateDisplay()
