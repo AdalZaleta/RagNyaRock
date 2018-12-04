@@ -10,7 +10,6 @@ namespace MANGOS
         public float runningMultiplier;
         public float maxVelocity;
         public float jumpForce;
-        public float gravityMultiplier;
         public LayerMask layerMask;
 
         public Rigidbody rig;
@@ -59,8 +58,6 @@ namespace MANGOS
 
             if (Input.GetButtonDown("Fire1"))
                 Jump();
-
-            
         }
 
         public void Run(bool _run)
@@ -90,7 +87,7 @@ namespace MANGOS
         {
             if (!isAirborn)
             {
-                rig.AddForce(Vector3.up * Time.deltaTime * jumpForce * 1000, ForceMode.Impulse);
+                rig.AddForce(Vector3.up * jumpForce * 1000, ForceMode.Impulse);
                 isAirborn = true;
             }
         }
