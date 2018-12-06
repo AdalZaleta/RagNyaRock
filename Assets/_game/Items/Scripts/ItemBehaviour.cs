@@ -9,8 +9,9 @@ namespace mangos
     {
         public string name;
         public int durability;
-        public float stun;
+        public float stunForce;
         public float fire;
+        public int addingPercentage;
         Rigidbody rigi;
         public float forceVariance;
 
@@ -39,6 +40,7 @@ namespace mangos
             for (int i = 0; i < hijos.Length; i++)
             {
                 hijos[i].enabled = true;
+                hijos[i].gameObject.AddComponent<Rigidbody>();
                 hijos[i].gameObject.GetComponent<Transform>().SetParent(null, true);
             }
         }

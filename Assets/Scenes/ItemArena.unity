@@ -183,7 +183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: GodBate
   durability: 3
-  stun: 0
+  stunForce: 0
   fire: 0
   forceVariance: 0
 --- !u!54 &118920810
@@ -265,6 +265,7 @@ GameObject:
   - component: {fileID: 518709925}
   - component: {fileID: 518709924}
   - component: {fileID: 518709929}
+  - component: {fileID: 518709930}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -366,6 +367,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &518709930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 518709923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19d2ccc3d7c066649bac83a2ae55b501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
 --- !u!1 &530888416
 GameObject:
   m_ObjectHideFlags: 0
@@ -586,7 +599,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: MasterBall
   durability: 4
-  stun: 0
+  stunForce: 0
   fire: 0
   forceVariance: 0
 --- !u!1 &1244040082 stripped
