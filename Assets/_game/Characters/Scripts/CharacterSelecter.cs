@@ -45,6 +45,8 @@ namespace Mangos {
 
             ReInput.ControllerConnectedEvent += OnControllerConnected;
             ReInput.ControllerDisconnectedEvent += OnControllerDisconnected;
+
+            
         }
 
         // Use this for initialization
@@ -53,6 +55,9 @@ namespace Mangos {
             currentChar = PlayerId % sets.Length;
             currentSkin = new int[sets.Length];
             ready.enabled = false;
+
+            isConnected = player != null;
+
             if (isConnected)
                 OnJoin();
             else
@@ -67,27 +72,7 @@ namespace Mangos {
             ProcessInput();
 
             //toggleConnect = 
-            select = player.GetButtonDown("Jump");
-            back = player.GetButtonDown("Special");
-            right = player.GetButtonDown("");
-            if(player.GetAxis("Move_Horizontal") > charChangeThreshold)
-            {
-                if (lastCharChange + changeCharDelay > Time.time)
-                    ChangeRight();
-            }
-            else if (player.GetAxis("Move_Horizontal") < charChangeThreshold)
-            {
-                if (lastCharChange + changeCharDelay > Time.time)
-                    ChangeLeft();
-            }
-            if (player.GetAxis("Move_Vertical") > charChangeThreshold)
-            {
-                ChangeSkinRight();
-            }
-            if (player.GetAxis("Move_Vertical") < charChangeThreshold)
-            {
-                ChangeSkinLeft();
-            }
+           
         }
 
         private void ProcessInput()
@@ -141,7 +126,28 @@ namespace Mangos {
         {
             //Get the input from the Rewired Player. All controllers that the Players owns will contribute, so it doesn't matter
             //Whether the input is coming from a joustick, the keyboard, mouse, or a custom controller
+            select = player.GetButtonDown("Jump");
+            back = player.GetButtonDown("Special");
+            right = player.GetButtonDown("");
 
+            if (lastCharChange + changeCharDelay > Time.time)
+                return;
+            if (player.GetAxis("Move_Horizontal") > charChangeThreshold)
+            {
+                ChangeRight();
+            }
+            else if (player.GetAxis("Move_Horizontal") < charChangeThreshold)
+            {
+                ChangeLeft();
+            }
+            if (player.GetAxis("Move_Vertical") > charChangeThreshold)
+            {
+                ChangeSkinRight();
+            }
+            else if (player.GetAxis("Move_Vertical") < charChangeThreshold)
+            {
+                ChangeSkinLeft();
+            }
 
         }
 

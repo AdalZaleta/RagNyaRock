@@ -488,8 +488,11 @@ MonoBehaviour:
       _descriptiveName: Jugador_1
       _startPlaying: 1
       _defaultJoystickMaps:
-      - _enabled: 1
+      - _enabled: 0
         _categoryId: 0
+        _layoutId: 0
+      - _enabled: 1
+        _categoryId: 1
         _layoutId: 0
       _defaultMouseMaps: []
       _defaultKeyboardMaps:
@@ -506,8 +509,14 @@ MonoBehaviour:
       _descriptiveName: Jugador_2
       _startPlaying: 1
       _defaultJoystickMaps:
-      - _enabled: 1
+      - _enabled: 0
         _categoryId: 0
+        _layoutId: 0
+      - _enabled: 0
+        _categoryId: 1
+        _layoutId: 0
+      - _enabled: 1
+        _categoryId: 3
         _layoutId: 0
       _defaultMouseMaps: []
       _defaultKeyboardMaps: []
@@ -521,8 +530,14 @@ MonoBehaviour:
       _descriptiveName: Jugador_3
       _startPlaying: 1
       _defaultJoystickMaps:
-      - _enabled: 1
+      - _enabled: 0
         _categoryId: 0
+        _layoutId: 0
+      - _enabled: 0
+        _categoryId: 1
+        _layoutId: 0
+      - _enabled: 1
+        _categoryId: 3
         _layoutId: 0
       _defaultMouseMaps: []
       _defaultKeyboardMaps: []
@@ -536,8 +551,14 @@ MonoBehaviour:
       _descriptiveName: Jugador_4
       _startPlaying: 1
       _defaultJoystickMaps:
-      - _enabled: 1
+      - _enabled: 0
         _categoryId: 0
+        _layoutId: 0
+      - _enabled: 0
+        _categoryId: 1
+        _layoutId: 0
+      - _enabled: 1
+        _categoryId: 3
         _layoutId: 0
       _defaultMouseMaps: []
       _defaultKeyboardMaps: []
@@ -628,6 +649,15 @@ MonoBehaviour:
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 0
+    - _id: 9
+      _name: Join
+      _type: 1
+      _descriptiveName: PressStartToJoin
+      _positiveDescriptiveName: 
+      _negativeDescriptiveName: 
+      _behaviorId: 0
+      _userAssignable: 1
+      _categoryId: 0
     actionCategories:
     - _name: Default
       _descriptiveName: Default
@@ -642,7 +672,7 @@ MonoBehaviour:
     actionCategoryMap:
       list:
       - categoryId: 0
-        actionIds: 000000000100000002000000030000000400000005000000060000000700000008000000
+        actionIds: 00000000010000000200000003000000040000000500000006000000070000000800000009000000
       - categoryId: 1
         actionIds: 
     inputBehaviors:
@@ -674,6 +704,20 @@ MonoBehaviour:
       _descriptiveName: Default
       _tag: 
       _id: 0
+      _userAssignable: 1
+      _checkConflictsWithAllCategories: 1
+      _checkConflictsCategoryIds: 
+    - _name: UI
+      _descriptiveName: CharacterSelect
+      _tag: 
+      _id: 1
+      _userAssignable: 1
+      _checkConflictsWithAllCategories: 1
+      _checkConflictsCategoryIds: 
+    - _name: Assignment
+      _descriptiveName: PressStartToJoin
+      _tag: 
+      _id: 3
       _userAssignable: 1
       _checkConflictsWithAllCategories: 1
       _checkConflictsCategoryIds: 
@@ -822,6 +866,42 @@ MonoBehaviour:
         _modifierKey1: 0
         _modifierKey2: 0
         _modifierKey3: 0
+    - id: 2
+      categoryId: 1
+      layoutId: 0
+      name: 
+      hardwareGuidString: 83b427e4-086f-47f3-bb06-be266abd1ca5
+      customControllerUid: 0
+      actionElementMaps:
+      - _actionCategoryId: 0
+        _actionId: -1
+        _elementType: 0
+        _elementIdentifierId: 0
+        _axisRange: 0
+        _invert: 0
+        _axisContribution: 0
+        _keyboardKeyCode: 0
+        _modifierKey1: 0
+        _modifierKey2: 0
+        _modifierKey3: 0
+    - id: 3
+      categoryId: 3
+      layoutId: 0
+      name: 
+      hardwareGuidString: 83b427e4-086f-47f3-bb06-be266abd1ca5
+      customControllerUid: 0
+      actionElementMaps:
+      - _actionCategoryId: 0
+        _actionId: 9
+        _elementType: 1
+        _elementIdentifierId: 15
+        _axisRange: 0
+        _invert: 0
+        _axisContribution: 0
+        _keyboardKeyCode: 0
+        _modifierKey1: 0
+        _modifierKey2: 0
+        _modifierKey3: 0
     keyboardMaps:
     - id: 0
       categoryId: 0
@@ -889,15 +969,15 @@ MonoBehaviour:
     customControllerMaps: []
     customControllers: []
     playerIdCounter: 5
-    actionIdCounter: 9
+    actionIdCounter: 10
     actionCategoryIdCounter: 2
     inputBehaviorIdCounter: 1
-    mapCategoryIdCounter: 1
+    mapCategoryIdCounter: 4
     joystickLayoutIdCounter: 1
     keyboardLayoutIdCounter: 1
     mouseLayoutIdCounter: 1
     customControllerLayoutIdCounter: 1
-    joystickMapIdCounter: 1
+    joystickMapIdCounter: 4
     keyboardMapIdCounter: 1
     mouseMapIdCounter: 0
     customControllerMapIdCounter: 0
@@ -1789,6 +1869,8 @@ GameObject:
   m_Component:
   - component: {fileID: 715343044}
   - component: {fileID: 715343043}
+  - component: {fileID: 715343046}
+  - component: {fileID: 715343045}
   m_Layer: 0
   m_Name: BearerOfScripts
   m_TagString: Untagged
@@ -1825,6 +1907,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &715343045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 715343042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d640a951e79e0d547a4a8bb78e80b4ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &715343046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 715343042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae6d9ec8fe000354e8a2e81248a693de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxPlayers: 4
 --- !u!1 &736513767
 GameObject:
   m_ObjectHideFlags: 0
@@ -2548,7 +2653,7 @@ MonoBehaviour:
   ready: {fileID: 1254426682}
   changeCharDelay: 0
   charChangeThreshold: 0
-  isConnected: 1
+  isConnected: 0
   toggleConnect: 0
   select: 0
   back: 0
@@ -2895,7 +3000,7 @@ MonoBehaviour:
   ready: {fileID: 1944191405}
   changeCharDelay: 0
   charChangeThreshold: 0
-  isConnected: 1
+  isConnected: 0
   toggleConnect: 0
   select: 0
   back: 0

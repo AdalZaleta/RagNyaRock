@@ -22,7 +22,7 @@ namespace Mangos
             //CODIGO DE LOS INPUTS DEPENDIENDO DEL ESTADO DEL JUEGO
 
             //ENTRA EN ESTE IF SI EL ESTADO DE LA APLICACION ESTA EN GAMEPLAY
-            if (Manager_Static.appManager.currentState == AppState.GAMEPLAY)
+            if (Manager_Static.gameStateManager.gameState == GameState.GAMEPLAY)
             {
                 if(Input.GetAxisRaw("Horizontal") != 0.0f || Input.GetAxisRaw("Vertical") != 0.0f)
                 {
@@ -31,25 +31,25 @@ namespace Mangos
             }
 
             //ENTRA EN ESTE IF SI EL ESTADO DE LA APLICACION ESTA EN PAUSA
-            else if (Manager_Static.appManager.currentState == AppState.PAUSE)
+            else if (Manager_Static.gameStateManager.gameState == GameState.PAUSE)
             {
                 
             }
 
             //ENTRA EN ESTE IF SI EL ESTADO DE LA APLICACION ESTA EN GAME END
-            else if (Manager_Static.appManager.currentState == AppState.GAME_END)
+            else if (Manager_Static.gameStateManager.gameState == GameState.GAME_END)
             {
                 
             }
 
             //ENTRA EN ESTE IF SI EL ESTADO DE LA APLICACION ESTA EN EL MENU PRINCIPAL
-            else if (Manager_Static.appManager.currentState == AppState.MAIN_MENU)
+            else if (Manager_Static.gameStateManager.gameState == GameState.MAIN_MENU)
 			{
                 
 			}
 
 	        //ENTRA EN ESTE IF SI EL ESTADO DE LA APLICACION DE LA APLIACION ESTA EN FIN DEL JUEGO
-	        else if (Manager_Static.appManager.currentState == AppState.GAME_END)
+	        else if (Manager_Static.gameStateManager.gameState == GameState.GAME_END)
 	        {
 	        }
         }

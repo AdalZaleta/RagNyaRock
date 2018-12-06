@@ -16,25 +16,25 @@ namespace Mangos
 
 		public void SetPause()
 		{
-			Manager_Static.appManager.currentState = AppState.PAUSE;
+			Manager_Static.gameStateManager.gameState = GameState.PAUSE;
 			Time.timeScale = 0.0f;
 		}
 
 		public void  SetPlay()
 		{
-			Manager_Static.appManager.currentState = AppState.GAMEPLAY;
+			Manager_Static.gameStateManager.gameState = GameState.GAMEPLAY;
 			Time.timeScale = 1.0f;
 		}
 
         public void SetWin()
         {
-            Manager_Static.appManager.currentState = AppState.GAME_END;
+            Manager_Static.gameStateManager.gameState = GameState.GAME_END;
             Time.timeScale = 1.0f;
         }
 
         public void SetCredits()
         {
-            Manager_Static.appManager.currentState = AppState.CREDITS;
+            Manager_Static.gameStateManager.gameState = GameState.CREDITS;
             Time.timeScale = 1.0f;
         }
 	}

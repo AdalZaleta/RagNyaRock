@@ -10,16 +10,17 @@ namespace Mangos
     //ESTE ES UN ENUMERADOR QUE NOS DICE LOS ESTADOS DE LA APLICACION
     public enum AppState
     {
+        LOADING,
+        RUNNING
+    }
+
+    public enum GameState
+    {
         PAUSE,
         GAMEPLAY,
         CREDITS,
         GAME_END,
         MAIN_MENU
-    }
-
-    public enum GameState
-    {
-        
     }
 
     //ESTE SE ENCARGARA DE MANTENER A LOS DEMAS MANAGER COMUNICADOS ENTRE ELLOS
