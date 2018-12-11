@@ -1,0 +1,287 @@
+fileFormatVersion: 2
+guid: 8575f0a0a36cd9445805a820d3419743
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: bottom
+    100002: Cabeza
+    100004: CabezaEnd
+    100006: Cintura
+    100008: Codo_D
+    100010: Codo_D 1
+    100012: CodoD
+    100014: Crtl_Cuello
+    100016: CTRL
+    100018: Ctrl_Brazo
+    100020: Ctrl_Brazo 1
+    100022: Ctrl_Cadera
+    100024: Ctrl_Cadera2
+    100026: Ctrl_Codo
+    100028: Ctrl_Codo 1
+    100030: Ctrl_Head
+    100032: Ctrl_Mano
+    100034: Ctrl_Mano 1
+    100036: Ctrl_Pierna
+    100038: Ctrl_Pierna 1
+    100040: Ctrl_Rodilla
+    100042: Ctrl_Rodilla 1
+    100044: CtrlRoot
+    100046: Gato Caballero
+    100048: GEO
+    100050: Head
+    100052: HeadEn
+    100054: HID
+    100056: Hombro_D
+    100058: Hombro_I
+    100060: HombroD
+    100062: JHONNY
+    100064: LeCattoRigo
+    100066: LeTralp
+    100068: Locatos
+    100070: //RootNode
+    100072: Mano_D
+    100074: Mano_D 1
+    100076: ManoD
+    100078: OffHandD
+    100080: OffHandI
+    100082: Pecho
+    100084: Pecho 1
+    100086: Pelvis
+    100088: Pie_D
+    100090: Pie_D 1
+    100092: PieD
+    100094: Pierna_D
+    100096: Pierna_I
+    100098: PiernaD
+    100100: polySurface1
+    100102: polySurface2
+    100104: polySurface3
+    100106: polySurface4
+    100108: Rodilla_D
+    100110: Rodilla_D 1
+    100112: RodillaD
+    100114: ScaleControlBrazoI
+    100116: ScaleControlPierna
+    100118: ScalePierna
+    100120: Torso
+    100122: transform1
+    100124: transform2
+    100126: transform3
+    100128: Z_Crtl_Cuello
+    100130: ZCtrl_Brazo
+    100132: ZCtrl_BrazoI
+    100134: ZCtrl_Cadera
+    100136: ZCtrl_Codo
+    100138: ZCtrl_Codo 1
+    100140: ZCtrl_Head
+    100142: ZCtrl_Mano
+    100144: ZCtrl_Mano 1
+    100146: ZCtrl_Pierna
+    100148: ZCtrl_Piernai
+    100150: ZCtrl_Rodilla
+    100152: ZCtrl_Rodilla 1
+    100154: ZCtrl_Root
+    400000: bottom
+    400002: Cabeza
+    400004: CabezaEnd
+    400006: Cintura
+    400008: Codo_D
+    400010: Codo_D 1
+    400012: CodoD
+    400014: Crtl_Cuello
+    400016: CTRL
+    400018: Ctrl_Brazo
+    400020: Ctrl_Brazo 1
+    400022: Ctrl_Cadera
+    400024: Ctrl_Cadera2
+    400026: Ctrl_Codo
+    400028: Ctrl_Codo 1
+    400030: Ctrl_Head
+    400032: Ctrl_Mano
+    400034: Ctrl_Mano 1
+    400036: Ctrl_Pierna
+    400038: Ctrl_Pierna 1
+    400040: Ctrl_Rodilla
+    400042: Ctrl_Rodilla 1
+    400044: CtrlRoot
+    400046: Gato Caballero
+    400048: GEO
+    400050: Head
+    400052: HeadEn
+    400054: HID
+    400056: Hombro_D
+    400058: Hombro_I
+    400060: HombroD
+    400062: JHONNY
+    400064: LeCattoRigo
+    400066: LeTralp
+    400068: Locatos
+    400070: //RootNode
+    400072: Mano_D
+    400074: Mano_D 1
+    400076: ManoD
+    400078: OffHandD
+    400080: OffHandI
+    400082: Pecho
+    400084: Pecho 1
+    400086: Pelvis
+    400088: Pie_D
+    400090: Pie_D 1
+    400092: PieD
+    400094: Pierna_D
+    400096: Pierna_I
+    400098: PiernaD
+    400100: polySurface1
+    400102: polySurface2
+    400104: polySurface3
+    400106: polySurface4
+    400108: Rodilla_D
+    400110: Rodilla_D 1
+    400112: RodillaD
+    400114: ScaleControlBrazoI
+    400116: ScaleControlPierna
+    400118: ScalePierna
+    400120: Torso
+    400122: transform1
+    400124: transform2
+    400126: transform3
+    400128: Z_Crtl_Cuello
+    400130: ZCtrl_Brazo
+    400132: ZCtrl_BrazoI
+    400134: ZCtrl_Cadera
+    400136: ZCtrl_Codo
+    400138: ZCtrl_Codo 1
+    400140: ZCtrl_Head
+    400142: ZCtrl_Mano
+    400144: ZCtrl_Mano 1
+    400146: ZCtrl_Pierna
+    400148: ZCtrl_Piernai
+    400150: ZCtrl_Rodilla
+    400152: ZCtrl_Rodilla 1
+    400154: ZCtrl_Root
+    2000000: bottom
+    2100000: Escudo
+    2100002: Espada
+    2100004: Caballero genial
+    2300000: polySurface1
+    2300002: polySurface3
+    3300000: polySurface1
+    3300002: polySurface3
+    4300000: polySurface1
+    4300002: polySurface3
+    4300004: polySurface4
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: polySurface4
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 59
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
