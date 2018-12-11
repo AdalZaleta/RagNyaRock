@@ -56,7 +56,7 @@ namespace Mangos {
             currentSkin = new int[sets.Length];
             ready.enabled = false;
 
-            isConnected = player != null;
+            isConnected = PlayerId == 1;
 
             if (isConnected)
                 OnJoin();
@@ -129,6 +129,12 @@ namespace Mangos {
             select = player.GetButtonDown("Jump");
             back = player.GetButtonDown("Special");
             right = player.GetButtonDown("");
+
+            if (player.GetButtonDown("Join"))
+            {
+                Debug.Log("Pressed Start");
+                OnJoin();
+            }
 
             if (lastCharChange + changeCharDelay > Time.time)
                 return;
@@ -243,6 +249,7 @@ namespace Mangos {
 
         public void OnJoin()
         {
+            Manager_Static.playerAssigner.AssignNextPlayer(PlayerId);
             isConnected = true;
             darkOverlay.enabled = false;
             splash.enabled = true;

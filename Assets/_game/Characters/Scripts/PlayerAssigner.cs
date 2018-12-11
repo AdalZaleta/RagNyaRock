@@ -14,6 +14,7 @@ namespace Mangos
 
         void Awake()
         {
+            Manager_Static.playerAssigner = this;
             playerMap = new List<PlayerMap>();
         }
 
@@ -32,8 +33,16 @@ namespace Mangos
             }
         }
 
-        void AssignNextPlayer(int rewiredPlayerId)
+        public void AssignNextPlayer(int rewiredPlayerId)
         {
+            for(int i = 0; i < playerMap.Count; i++)
+            {
+                if(playerMap[i].rewiredPlayerId == rewiredPlayerId)
+                {
+                    return;
+                }
+            }
+
             if (playerMap.Count >= maxPlayers)
             {
                 Debug.LogError("Max player limit already reached!");
@@ -48,7 +57,7 @@ namespace Mangos
             Player rewiredPlayer = ReInput.players.GetPlayer(rewiredPlayerId);
 
             // Disable the Assignment map category in Player so no more JoinGame Actions return
-            rewiredPlayer.controllers.maps.SetMapsEnabled(false, "Assignment");
+            rewiredPlayer.controllers.maps.SetMapsEnabled(false, "Default");
 
             // Enable UI control for this Player now that he has joined
             rewiredPlayer.controllers.maps.SetMapsEnabled(true, "UI");
@@ -60,6 +69,7 @@ namespace Mangos
         {
             return gamePlayerIdCounter++;
         }
+
 
         // This class is used to map the Rewired Player Id to your game player id
         private class PlayerMap
