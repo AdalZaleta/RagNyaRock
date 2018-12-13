@@ -15,7 +15,7 @@ namespace mangos
 
         private Rigidbody m_rigi;
 
-        void Start()
+        void Start()    
         {
             m_rigi = GetComponent<Rigidbody>();
         }

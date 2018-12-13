@@ -4,10 +4,17 @@ using UnityEngine;
 
 namespace mangos
 {
+    public enum TYPE
+    {
+        HEAVY,
+        LIGHT
+    }
+
     [RequireComponent(typeof(Rigidbody))]
     public class ItemBehaviour : MonoBehaviour
     {
         public string name;
+        public TYPE type;
         public int durability;
         public float stunForce;
         public float fire;
