@@ -1,0 +1,191 @@
+fileFormatVersion: 2
+guid: e4adc7a33c6216643b986bcbf37f6e8d
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Rig12
+    100004: Ring1
+    100006: Ring10
+    100008: Ring11
+    100010: Ring13
+    100012: Ring14
+    100014: Ring15
+    100016: Ring16
+    100018: Ring17
+    100020: Ring18
+    100022: Ring19
+    100024: Ring2
+    100026: Ring20
+    100028: Ring3
+    100030: Ring4
+    100032: Ring5
+    100034: Ring6
+    100036: Ring7
+    100038: Ring8
+    100040: Ring9
+    400000: //RootNode
+    400002: Rig12
+    400004: Ring1
+    400006: Ring10
+    400008: Ring11
+    400010: Ring13
+    400012: Ring14
+    400014: Ring15
+    400016: Ring16
+    400018: Ring17
+    400020: Ring18
+    400022: Ring19
+    400024: Ring2
+    400026: Ring20
+    400028: Ring3
+    400030: Ring4
+    400032: Ring5
+    400034: Ring6
+    400036: Ring7
+    400038: Ring8
+    400040: Ring9
+    2100000: default
+    2300000: Rig12
+    2300002: Ring1
+    2300004: Ring10
+    2300006: Ring11
+    2300008: Ring13
+    2300010: Ring14
+    2300012: Ring15
+    2300014: Ring16
+    2300016: Ring17
+    2300018: Ring18
+    2300020: Ring19
+    2300022: Ring2
+    2300024: Ring20
+    2300026: Ring3
+    2300028: Ring4
+    2300030: Ring5
+    2300032: Ring6
+    2300034: Ring7
+    2300036: Ring8
+    2300038: Ring9
+    3300000: Rig12
+    3300002: Ring1
+    3300004: Ring10
+    3300006: Ring11
+    3300008: Ring13
+    3300010: Ring14
+    3300012: Ring15
+    3300014: Ring16
+    3300016: Ring17
+    3300018: Ring18
+    3300020: Ring19
+    3300022: Ring2
+    3300024: Ring20
+    3300026: Ring3
+    3300028: Ring4
+    3300030: Ring5
+    3300032: Ring6
+    3300034: Ring7
+    3300036: Ring8
+    3300038: Ring9
+    4300000: Ring19
+    4300002: Ring18
+    4300004: Ring17
+    4300006: Ring16
+    4300008: Ring15
+    4300010: Ring14
+    4300012: Ring13
+    4300014: Rig12
+    4300016: Ring11
+    4300018: Ring10
+    4300020: Ring9
+    4300022: Ring8
+    4300024: Ring7
+    4300026: Ring6
+    4300028: Ring5
+    4300030: Ring4
+    4300032: Ring3
+    4300034: Ring2
+    4300036: Ring1
+    4300038: Ring20
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
