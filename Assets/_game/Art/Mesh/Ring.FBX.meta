@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e4adc7a33c6216643b986bcbf37f6e8d
+guid: 1d7046e74a6131f44bf206f47b0361dc
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: Rig12
+    100000: Rig12
+    100002: //RootNode
     100004: Ring1
     100006: Ring10
     100008: Ring11
@@ -24,8 +24,8 @@ ModelImporter:
     100036: Ring7
     100038: Ring8
     100040: Ring9
-    400000: //RootNode
-    400002: Rig12
+    400000: Rig12
+    400002: //RootNode
     400004: Ring1
     400006: Ring10
     400008: Ring11
