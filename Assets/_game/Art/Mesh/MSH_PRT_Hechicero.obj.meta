@@ -14,6 +14,7 @@ ModelImporter:
     2100000: MSH_EstrellaMat
     2100002: MSH_PatitaMat
     2100004: Object001Mat
+    2100006: default
     2300000: MSH_Estrella
     2300002: MSH_Patita
     2300004: Object001
