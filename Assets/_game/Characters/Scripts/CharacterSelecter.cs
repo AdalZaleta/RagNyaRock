@@ -23,10 +23,12 @@ namespace Mangos {
         private int[] currentSkin;
         private Player player; //The Rewired Player
         private CharacterController cc;
-        private float lastCharChange;
+        private float lastRightCharChange;
+        private float lastLeftCharChange;
 
         [Header("Debug")]
-        public bool isConnected;
+        public bool join;
+        public bool isConnected = false;
         public bool toggleConnect;
         public bool select;
         public bool back;
@@ -56,14 +58,13 @@ namespace Mangos {
             currentSkin = new int[sets.Length];
             ready.enabled = false;
 
-            isConnected = PlayerId == 1;
+            lastRightCharChange = 0;
+            lastLeftCharChange = 0;
 
             if (isConnected)
                 OnJoin();
             else
                 OnLeave();
-
-            lastCharChange = 0;
         }
 
         // Update is called once per frame
@@ -75,11 +76,47 @@ namespace Mangos {
            
         }
 
+        private void GetInput()
+        {
+            //Get the input from the Rewired Player. All controllers that the Players owns will contribute, so it doesn't matter
+            //Whether the input is coming from a joustick, the keyboard, mouse, or a custom controller
+            select = player.GetButtonDown("Jump");
+            back = player.GetButtonDown("Special");
+            //right = player.GetButtonDown("");
+
+            join = player.GetButtonDown("Join");
+
+            Debug.Log("lastCharChange: " + lastRightCharChange + ", delay: " + changeCharDelay);
+
+            if (lastRightCharChange + changeCharDelay < Time.time)
+                right = (player.GetAxis("ChangeChar") > charChangeThreshold);
+            else
+                right = false;
+
+            if (lastLeftCharChange + changeCharDelay < Time.time)
+                left = (player.GetAxis("ChangeChar") < -charChangeThreshold);
+            else
+                left = false;
+
+            skinR = (player.GetButtonDown("NextSkin"));
+            skinL = (player.GetButtonDown("PreviousSkin"));
+
+            back = player.GetButtonDown("Back");
+            select = player.GetButtonDown("ToggleReady");
+
+        }
+
         private void ProcessInput()
         {
+            if (join)
+                OnJoin();
+
             if (select)
             {
-                SelectCharacter();
+                if (!isSelected)
+                    SelectCharacter();
+                else
+                    StartGameRequest();
             }
             if (back)
             {
@@ -121,42 +158,6 @@ namespace Mangos {
             Debug.Log("A controller was disconnected! Name = " + args.name + " Id = " + args.controllerId + " Type = " + args.controllerType);
             OnLeave();
         }
-
-        private void GetInput()
-        {
-            //Get the input from the Rewired Player. All controllers that the Players owns will contribute, so it doesn't matter
-            //Whether the input is coming from a joustick, the keyboard, mouse, or a custom controller
-            select = player.GetButtonDown("Jump");
-            back = player.GetButtonDown("Special");
-            right = player.GetButtonDown("");
-
-            if (player.GetButtonDown("Join"))
-            {
-                Debug.Log("Pressed Start");
-                OnJoin();
-            }
-
-            if (lastCharChange + changeCharDelay > Time.time)
-                return;
-            if (player.GetAxis("Move_Horizontal") > charChangeThreshold)
-            {
-                ChangeRight();
-            }
-            else if (player.GetAxis("Move_Horizontal") < charChangeThreshold)
-            {
-                ChangeLeft();
-            }
-            if (player.GetAxis("Move_Vertical") > charChangeThreshold)
-            {
-                ChangeSkinRight();
-            }
-            else if (player.GetAxis("Move_Vertical") < charChangeThreshold)
-            {
-                ChangeSkinLeft();
-            }
-
-        }
-
         
 
         void OnDestroy()
@@ -164,6 +165,11 @@ namespace Mangos {
             // Unsubscribe from events
             ReInput.ControllerConnectedEvent -= OnControllerConnected;
             ReInput.ControllerDisconnectedEvent -= OnControllerDisconnected;
+        }
+
+        public void StartGameRequest()
+        {
+            //Ask player asigner if can start game and tell someone to start the game
         }
 
         public void UpdateDisplay()
@@ -190,6 +196,8 @@ namespace Mangos {
         {
             if (isSelected) return;
 
+            lastRightCharChange = Time.time;
+
             currentChar++;
             if (currentChar >= sets.Length)
                 currentChar -= sets.Length;
@@ -200,6 +208,8 @@ namespace Mangos {
         public void ChangeLeft()
         {
             if (isSelected) return;
+
+            lastLeftCharChange = Time.time;
 
             currentChar--;
             if (currentChar < 0)
@@ -234,12 +244,14 @@ namespace Mangos {
         {
             isSelected = true;
             ready.enabled = true;
+            Manager_Static.playerAssigner.SetReady(PlayerId, isSelected);
         }
 
         public void DeselectCharacter()
         {
             isSelected = false;
             ready.enabled = false;
+            Manager_Static.playerAssigner.SetReady(PlayerId, isSelected);
         }
 
         public void Back()

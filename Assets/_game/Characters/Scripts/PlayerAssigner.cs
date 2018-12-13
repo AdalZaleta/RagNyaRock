@@ -65,22 +65,48 @@ namespace Mangos
             Debug.Log("Added Rewired Player id " + rewiredPlayerId + " to game player " + gamePlayerId);
         }
 
+        public void SetReady(int playerId, bool b)
+        {
+            for(int i = 0; i < playerMap.Count; i++)
+            {
+                if (playerMap[i].gamePlayerId == playerId)
+                {
+                    playerMap[i].ready = b;
+                    break;
+                }
+            }
+        }
+
         private int GetNextGamePlayerId()
         {
             return gamePlayerIdCounter++;
         }
 
+        public bool AreAllPlayersReady()
+        {
+            if (playerMap.Count < 2)
+                return false;
+
+            for(int i = 0; i < playerMap.Count; i++)
+            {
+                if (!playerMap[i].ready)
+                    return false;
+            }
+            return true;
+        }
 
         // This class is used to map the Rewired Player Id to your game player id
         private class PlayerMap
         {
             public int rewiredPlayerId;
             public int gamePlayerId;
+            public bool ready;
 
             public PlayerMap(int rewiredPlayerId, int gamePlayerId)
             {
                 this.rewiredPlayerId = rewiredPlayerId;
                 this.gamePlayerId = gamePlayerId;
+                this.ready = false;
             }
         }
     }
