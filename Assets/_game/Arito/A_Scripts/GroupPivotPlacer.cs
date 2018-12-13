@@ -9,6 +9,7 @@ namespace Mangos
 
         public GameObject[] members;
         public GameObject follower;
+        public Vector3 offset;
 
         // Use this for initialization
         void Start()
@@ -18,7 +19,7 @@ namespace Mangos
 
         private void Update()
         {
-            transform.position = FindCenter(members);
+            transform.position = FindCenter(members) + offset;
         }
 
         private Vector3 FindCenter(GameObject[] _gos)
@@ -29,7 +30,8 @@ namespace Mangos
                 return _gos[0].transform.position;
             Bounds bounds = new Bounds(_gos[0].transform.position, Vector3.zero);
             for (var i = 1; i < _gos.Length; i++)
-                bounds.Encapsulate(_gos[i].transform.position);
+                if (_gos[i])
+                    bounds.Encapsulate(_gos[i].transform.position);
             return bounds.center;
         }
     }

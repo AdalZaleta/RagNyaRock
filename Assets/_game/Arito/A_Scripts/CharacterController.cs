@@ -16,7 +16,7 @@ namespace MANGOS
         private float xDir, zDir;
         private bool canMove = true;
 
-        private void OnCollisionEnter(Collision _col)
+        private void OnCollisionStay(Collision _col)
         {
             bool foundFloor = false;
             for (int i = 0; i < _col.contacts.Length; i++)
@@ -33,7 +33,7 @@ namespace MANGOS
                         foundFloor = true;
                         canMove = true;
                     }
-                    else if (comparison > 0.1f && comparison < 0.7f && _col.gameObject.CompareTag("Map"))
+                    else if (comparison > 0.25f && comparison < 0.7f && _col.gameObject.CompareTag("Map"))
                     {
                         gameObject.GetComponent<CapsuleCollider>().material.staticFriction = 0.0f;
                         canMove = false;
@@ -45,6 +45,12 @@ namespace MANGOS
                     }
                 }  
             }
+        }
+
+        private void OnCollisionExit(Collision _col)
+        {
+            gameObject.GetComponent<CapsuleCollider>().material.staticFriction = 0.0f;
+            isAirborn = true;
         }
 
         void Start()
