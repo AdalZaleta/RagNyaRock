@@ -2573,5 +2573,5 @@ MonoBehaviour:
   durability: 1
   stunForce: 0
   fire: 0
-  addingPercentage: 0
+  addingPercentage: 10
   forceVariance: 0
