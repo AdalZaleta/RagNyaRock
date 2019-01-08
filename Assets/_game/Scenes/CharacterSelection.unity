@@ -500,6 +500,12 @@ MonoBehaviour:
       _defaultMouseMaps: []
       _defaultKeyboardMaps:
       - _enabled: 1
+        _categoryId: 3
+        _layoutId: 0
+      - _enabled: 0
+        _categoryId: 1
+        _layoutId: 0
+      - _enabled: 0
         _categoryId: 0
         _layoutId: 0
       _defaultCustomControllerMaps: []
@@ -522,7 +528,16 @@ MonoBehaviour:
         _categoryId: 3
         _layoutId: 0
       _defaultMouseMaps: []
-      _defaultKeyboardMaps: []
+      _defaultKeyboardMaps:
+      - _enabled: 1
+        _categoryId: 3
+        _layoutId: 0
+      - _enabled: 0
+        _categoryId: 1
+        _layoutId: 0
+      - _enabled: 0
+        _categoryId: 0
+        _layoutId: 0
       _defaultCustomControllerMaps: []
       _startingCustomControllers: []
       _assignMouseOnStart: 0
@@ -543,7 +558,16 @@ MonoBehaviour:
         _categoryId: 3
         _layoutId: 0
       _defaultMouseMaps: []
-      _defaultKeyboardMaps: []
+      _defaultKeyboardMaps:
+      - _enabled: 1
+        _categoryId: 3
+        _layoutId: 0
+      - _enabled: 0
+        _categoryId: 1
+        _layoutId: 0
+      - _enabled: 0
+        _categoryId: 0
+        _layoutId: 0
       _defaultCustomControllerMaps: []
       _startingCustomControllers: []
       _assignMouseOnStart: 0
@@ -564,7 +588,16 @@ MonoBehaviour:
         _categoryId: 3
         _layoutId: 0
       _defaultMouseMaps: []
-      _defaultKeyboardMaps: []
+      _defaultKeyboardMaps:
+      - _enabled: 1
+        _categoryId: 3
+        _layoutId: 0
+      - _enabled: 0
+        _categoryId: 1
+        _layoutId: 0
+      - _enabled: 0
+        _categoryId: 0
+        _layoutId: 0
       _defaultCustomControllerMaps: []
       _startingCustomControllers: []
       _assignMouseOnStart: 0
@@ -715,6 +748,15 @@ MonoBehaviour:
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 2
+    - _id: 18
+      _name: KeyboardJoin
+      _type: 1
+      _descriptiveName: When a keyboard joins
+      _positiveDescriptiveName: 
+      _negativeDescriptiveName: 
+      _behaviorId: 0
+      _userAssignable: 1
+      _categoryId: 0
     actionCategories:
     - _name: Default
       _descriptiveName: Gameplay Controls
@@ -729,7 +771,7 @@ MonoBehaviour:
     actionCategoryMap:
       list:
       - categoryId: 0
-        actionIds: 00000000010000000200000003000000040000000500000006000000070000000800000009000000
+        actionIds: 0000000001000000020000000300000004000000050000000600000007000000080000000900000012000000
       - categoryId: 2
         actionIds: 0a0000000c0000000d0000000e0000000f00000010000000
     inputBehaviors:
@@ -1110,11 +1152,102 @@ MonoBehaviour:
         _modifierKey1: 0
         _modifierKey2: 0
         _modifierKey3: 0
+    - id: 1
+      categoryId: 1
+      layoutId: 0
+      name: 
+      hardwareGuidString: 
+      customControllerUid: 0
+      actionElementMaps:
+      - _actionCategoryId: 0
+        _actionId: 12
+        _elementType: 1
+        _elementIdentifierId: -1
+        _axisRange: 0
+        _invert: 0
+        _axisContribution: 0
+        _keyboardKeyCode: 119
+        _modifierKey1: 0
+        _modifierKey2: 0
+        _modifierKey3: 0
+      - _actionCategoryId: 0
+        _actionId: 10
+        _elementType: 1
+        _elementIdentifierId: -1
+        _axisRange: 0
+        _invert: 0
+        _axisContribution: 1
+        _keyboardKeyCode: 97
+        _modifierKey1: 0
+        _modifierKey2: 0
+        _modifierKey3: 0
+      - _actionCategoryId: 0
+        _actionId: 13
+        _elementType: 1
+        _elementIdentifierId: -1
+        _axisRange: 0
+        _invert: 0
+        _axisContribution: 0
+        _keyboardKeyCode: 115
+        _modifierKey1: 0
+        _modifierKey2: 0
+        _modifierKey3: 0
+      - _actionCategoryId: 0
+        _actionId: 10
+        _elementType: 1
+        _elementIdentifierId: -1
+        _axisRange: 0
+        _invert: 0
+        _axisContribution: 0
+        _keyboardKeyCode: 100
+        _modifierKey1: 0
+        _modifierKey2: 0
+        _modifierKey3: 0
+      - _actionCategoryId: 0
+        _actionId: 15
+        _elementType: 1
+        _elementIdentifierId: -1
+        _axisRange: 0
+        _invert: 0
+        _axisContribution: 0
+        _keyboardKeyCode: 106
+        _modifierKey1: 0
+        _modifierKey2: 0
+        _modifierKey3: 0
+      - _actionCategoryId: 0
+        _actionId: 14
+        _elementType: 1
+        _elementIdentifierId: -1
+        _axisRange: 0
+        _invert: 0
+        _axisContribution: 0
+        _keyboardKeyCode: 107
+        _modifierKey1: 0
+        _modifierKey2: 0
+        _modifierKey3: 0
+    - id: 2
+      categoryId: 3
+      layoutId: 0
+      name: 
+      hardwareGuidString: 
+      customControllerUid: 0
+      actionElementMaps:
+      - _actionCategoryId: 0
+        _actionId: 18
+        _elementType: 1
+        _elementIdentifierId: -1
+        _axisRange: 0
+        _invert: 0
+        _axisContribution: 0
+        _keyboardKeyCode: 13
+        _modifierKey1: 0
+        _modifierKey2: 0
+        _modifierKey3: 0
     mouseMaps: []
     customControllerMaps: []
     customControllers: []
     playerIdCounter: 5
-    actionIdCounter: 17
+    actionIdCounter: 19
     actionCategoryIdCounter: 3
     inputBehaviorIdCounter: 1
     mapCategoryIdCounter: 4
@@ -1123,7 +1256,7 @@ MonoBehaviour:
     mouseLayoutIdCounter: 1
     customControllerLayoutIdCounter: 1
     joystickMapIdCounter: 4
-    keyboardMapIdCounter: 1
+    keyboardMapIdCounter: 3
     mouseMapIdCounter: 0
     customControllerMapIdCounter: 0
     customControllerIdCounter: 0
@@ -1341,7 +1474,7 @@ MonoBehaviour:
   darkOverlay: {fileID: 217663878}
   namae: {fileID: 1767230753}
   ready: {fileID: 87530612}
-  changeCharDelay: 0.2
+  changeCharDelay: 0.15
   charChangeThreshold: 0.41
   join: 0
   isConnected: 0
@@ -1352,6 +1485,7 @@ MonoBehaviour:
   left: 0
   skinR: 0
   skinL: 0
+  keyboardJoin: 0
 --- !u!1 &357215610
 GameObject:
   m_ObjectHideFlags: 0
@@ -2339,7 +2473,7 @@ MonoBehaviour:
   darkOverlay: {fileID: 1671480356}
   namae: {fileID: 38274879}
   ready: {fileID: 634016607}
-  changeCharDelay: 0.2
+  changeCharDelay: 0.15
   charChangeThreshold: 0.41
   join: 0
   isConnected: 0
@@ -2350,6 +2484,7 @@ MonoBehaviour:
   left: 0
   skinR: 0
   skinL: 0
+  keyboardJoin: 0
 --- !u!1 &987605213
 GameObject:
   m_ObjectHideFlags: 0
@@ -2799,7 +2934,7 @@ MonoBehaviour:
   darkOverlay: {fileID: 559907484}
   namae: {fileID: 197264227}
   ready: {fileID: 1254426682}
-  changeCharDelay: 0.2
+  changeCharDelay: 0.15
   charChangeThreshold: 0.41
   join: 0
   isConnected: 0
@@ -2810,6 +2945,7 @@ MonoBehaviour:
   left: 0
   skinR: 0
   skinL: 0
+  keyboardJoin: 0
 --- !u!1 &1613338291
 GameObject:
   m_ObjectHideFlags: 0
@@ -3147,7 +3283,7 @@ MonoBehaviour:
   darkOverlay: {fileID: 1613338293}
   namae: {fileID: 1182630165}
   ready: {fileID: 1944191405}
-  changeCharDelay: 0.2
+  changeCharDelay: 0.15
   charChangeThreshold: 0.41
   join: 0
   isConnected: 0
@@ -3158,6 +3294,7 @@ MonoBehaviour:
   left: 0
   skinR: 0
   skinL: 0
+  keyboardJoin: 0
 --- !u!1 &1944191403
 GameObject:
   m_ObjectHideFlags: 0

@@ -36,6 +36,7 @@ namespace Mangos {
         public bool left;
         public bool skinR;
         public bool skinL;
+        public bool keyboardJoin;
 
         private void Awake()
         {
@@ -58,8 +59,8 @@ namespace Mangos {
             currentSkin = new int[sets.Length];
             ready.enabled = false;
 
-            lastRightCharChange = 0;
-            lastLeftCharChange = 0;
+            lastRightCharChange = -changeCharDelay;
+            lastLeftCharChange = -changeCharDelay;
 
             if (isConnected)
                 OnJoin();
@@ -86,17 +87,12 @@ namespace Mangos {
 
             join = player.GetButtonDown("Join");
 
+            keyboardJoin = player.GetButtonDown("KeyboardJoin");
+
             Debug.Log("lastCharChange: " + lastRightCharChange + ", delay: " + changeCharDelay);
 
-            if (lastRightCharChange + changeCharDelay < Time.time)
-                right = (player.GetAxis("ChangeChar") > charChangeThreshold);
-            else
-                right = false;
-
-            if (lastLeftCharChange + changeCharDelay < Time.time)
-                left = (player.GetAxis("ChangeChar") < -charChangeThreshold);
-            else
-                left = false;
+            right = (player.GetAxis("ChangeChar") > charChangeThreshold);
+            left = (player.GetAxis("ChangeChar") < -charChangeThreshold);
 
             skinR = (player.GetButtonDown("NextSkin"));
             skinL = (player.GetButtonDown("PreviousSkin"));
@@ -110,6 +106,8 @@ namespace Mangos {
         {
             if (join)
                 OnJoin();
+            if (keyboardJoin)
+                OnKeyJoin();
 
             if (select)
             {
@@ -129,11 +127,11 @@ namespace Mangos {
                     Back();
                 }
             }
-            if (right)
+            if (right && (lastRightCharChange + changeCharDelay < Time.time))
             {
                 ChangeRight();
             }
-            if (left)
+            if (left && (lastLeftCharChange + changeCharDelay < Time.time))
             {
                 ChangeLeft();
             }
@@ -261,6 +259,16 @@ namespace Mangos {
 
         public void OnJoin()
         {
+            Manager_Static.playerAssigner.AssignNextPlayer(PlayerId);
+            isConnected = true;
+            darkOverlay.enabled = false;
+            splash.enabled = true;
+            UpdateDisplay();
+        }
+
+        public void OnKeyJoin()
+        {
+            charChangeThreshold = 0;
             Manager_Static.playerAssigner.AssignNextPlayer(PlayerId);
             isConnected = true;
             darkOverlay.enabled = false;

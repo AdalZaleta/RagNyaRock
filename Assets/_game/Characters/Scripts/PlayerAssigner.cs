@@ -33,7 +33,7 @@ namespace Mangos
             }
         }
 
-        public void AssignNextPlayer(int rewiredPlayerId)
+        public void AssignNextPlayer(int rewiredPlayerId, bool isKey = false)
         {
             for(int i = 0; i < playerMap.Count; i++)
             {
