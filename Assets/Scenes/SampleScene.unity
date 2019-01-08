@@ -1175,6 +1175,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   recoilMeteor: {fileID: 1985226536076256, guid: 42adbc4f84d1bee4fa72a1d1d18025ed,
     type: 2}
+  burningFloor: {fileID: 1906685831519482, guid: bcdfa4349f38b2e4d99fea752d0b9ffb,
+    type: 2}
   rangeX: {x: 0, y: 30}
   rangeZ: {x: 0, y: 30}
   origin: {x: 0, y: 0, z: 0}

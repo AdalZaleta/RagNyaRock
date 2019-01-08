@@ -5,6 +5,7 @@ using UnityEngine;
 public class Generator_Meteor : MonoBehaviour 
 {
 	public GameObject recoilMeteor;
+	public GameObject burningFloor;
 	public Vector2 rangeX;
 	public Vector2 rangeZ;
 	public Vector3 origin;
@@ -41,10 +42,15 @@ public class Generator_Meteor : MonoBehaviour
 
 	private void OnCollisionEnter(Collision other) 
 	{
-		if(other.gameObject.CompareTag("Floor") || other.gameObject.CompareTag("Player"))
+		foreach (ContactPoint contact in other.contacts)
 		{
-			Instantiate(recoilMeteor, transform.position, Quaternion.identity);
-			gameObject.SetActive(false);
+			if(other.gameObject.CompareTag("Floor") || other.gameObject.CompareTag("Player"))
+			{
+				Debug.Log("Valor de contact.normal" + contact.point);
+				Instantiate(recoilMeteor, transform.position, Quaternion.identity);
+				Instantiate(burningFloor, new Vector3(contact.point.x, 0, contact.point.z), Quaternion.identity);
+				gameObject.SetActive(false);
+			}
 		}
 	}
 }
