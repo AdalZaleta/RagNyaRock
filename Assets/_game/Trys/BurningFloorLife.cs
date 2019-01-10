@@ -2,15 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BurningFloorLife : MonoBehaviour {
+namespace Mangos
+{
+	public class BurningFloorLife : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+		public float timeToDisapeer;
+
+		void OnEnable() {
+			timeToDisapeer = Random.Range(2.0f, 4.0f);
+		}
 	}
 }
