@@ -8,6 +8,7 @@ namespace Mangos
     public class PlayerAssigner : MonoBehaviour
     {
         public int maxPlayers = 4;
+        public bool gameReadyToStart;
 
         private List<PlayerMap> playerMap; // Maps Rewired Player ids to game player ids
         private int gamePlayerIdCounter = 0;
@@ -92,6 +93,9 @@ namespace Mangos
                 if (!playerMap[i].ready)
                     return false;
             }
+
+            Manager_Static.uiManager.SetAllReadyNotice(true);
+
             return true;
         }
 

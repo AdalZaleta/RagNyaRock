@@ -113,8 +113,10 @@ namespace Mangos {
             {
                 if (!isSelected)
                     SelectCharacter();
-                else
+                else if(Manager_Static.playerAssigner.gameReadyToStart)
                     StartGameRequest();
+                else
+                    DeselectCharacter();
             }
             if (back)
             {
@@ -243,6 +245,7 @@ namespace Mangos {
             isSelected = true;
             ready.enabled = true;
             Manager_Static.playerAssigner.SetReady(PlayerId, isSelected);
+            Manager_Static.playerAssigner.AreAllPlayersReady();
         }
 
         public void DeselectCharacter()
@@ -250,11 +253,12 @@ namespace Mangos {
             isSelected = false;
             ready.enabled = false;
             Manager_Static.playerAssigner.SetReady(PlayerId, isSelected);
+            Manager_Static.playerAssigner.AreAllPlayersReady();
         }
 
         public void Back()
         {
-            
+            Manager_Static.uiManager.SetAllReadyNotice(false);
         }
 
         public void OnJoin()
