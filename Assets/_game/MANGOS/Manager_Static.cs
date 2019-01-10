@@ -34,6 +34,5 @@ namespace Mangos
         public static Manager_GameState gameStateManager;
         public static Manager_UI uiManager;
         public static PlayerAssigner playerAssigner;
-
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Rewired;
 
 namespace Mangos
@@ -9,6 +10,9 @@ namespace Mangos
     {
         public int maxPlayers = 4;
         public bool gameReadyToStart;
+        public CharacterSet[] characterSets;
+
+        private int stageSelected;
 
         private List<PlayerMap> playerMap; // Maps Rewired Player ids to game player ids
         private int gamePlayerIdCounter = 0;
@@ -17,6 +21,11 @@ namespace Mangos
         {
             Manager_Static.playerAssigner = this;
             playerMap = new List<PlayerMap>();
+        }
+
+        private void Start()
+        {
+            DontDestroyOnLoad(gameObject);
         }
 
         void Update()
@@ -31,6 +40,12 @@ namespace Mangos
                 {
                     AssignNextPlayer(i);
                 }
+            }
+
+            if (Input.GetKeyDown(KeyCode.T))
+            {
+                Debug.Log("T pressed");
+                StartGame();
             }
         }
 
@@ -66,7 +81,7 @@ namespace Mangos
             Debug.Log("Added Rewired Player id " + rewiredPlayerId + " to game player " + gamePlayerId);
         }
 
-        public void SetReady(int playerId, bool b)
+        public void SetReady(int playerId, bool b, int charId, int skinId)
         {
             for(int i = 0; i < playerMap.Count; i++)
             {
@@ -85,16 +100,15 @@ namespace Mangos
 
         public bool AreAllPlayersReady()
         {
-            if (playerMap.Count < 2)
-                return false;
+            /*if (playerMap.Count < 2)
+                return false;*/
 
-            for(int i = 0; i < playerMap.Count; i++)
+            for (int i = 0; i < playerMap.Count; i++)
             {
                 if (!playerMap[i].ready)
                     return false;
+                
             }
-
-            Manager_Static.uiManager.SetAllReadyNotice(true);
 
             return true;
         }
@@ -104,6 +118,8 @@ namespace Mangos
         {
             public int rewiredPlayerId;
             public int gamePlayerId;
+            public int charSelected;
+            public int skinSelected;
             public bool ready;
 
             public PlayerMap(int rewiredPlayerId, int gamePlayerId)
@@ -112,6 +128,18 @@ namespace Mangos
                 this.gamePlayerId = gamePlayerId;
                 this.ready = false;
             }
+        }
+
+        public void StartStageSelection()
+        {
+            //Select random stage or something
+            
+            StartGame();
+        }
+
+        public void StartGame()
+        {
+            SceneManager.LoadScene(1);
         }
     }
 }

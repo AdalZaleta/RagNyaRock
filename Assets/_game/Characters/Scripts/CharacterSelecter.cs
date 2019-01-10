@@ -54,7 +54,7 @@ namespace Mangos {
 
         // Use this for initialization
         void Start() {
-            sets = Manager_Static.uiManager.characterSets;
+            sets = Manager_Static.playerAssigner.characterSets;
             currentChar = PlayerId % sets.Length;
             currentSkin = new int[sets.Length];
             ready.enabled = false;
@@ -170,6 +170,7 @@ namespace Mangos {
         public void StartGameRequest()
         {
             //Ask player asigner if can start game and tell someone to start the game
+            Manager_Static.playerAssigner.StartStageSelection();
         }
 
         public void UpdateDisplay()
@@ -244,16 +245,16 @@ namespace Mangos {
         {
             isSelected = true;
             ready.enabled = true;
-            Manager_Static.playerAssigner.SetReady(PlayerId, isSelected);
-            Manager_Static.playerAssigner.AreAllPlayersReady();
+            Manager_Static.playerAssigner.SetReady(PlayerId, isSelected, currentChar, currentSkin[currentChar]);
+            Manager_Static.uiManager.SetAllReadyNotice(Manager_Static.playerAssigner.AreAllPlayersReady());
         }
 
         public void DeselectCharacter()
         {
             isSelected = false;
             ready.enabled = false;
-            Manager_Static.playerAssigner.SetReady(PlayerId, isSelected);
-            Manager_Static.playerAssigner.AreAllPlayersReady();
+            Manager_Static.playerAssigner.SetReady(PlayerId, isSelected, currentChar, currentSkin[currentChar]);
+            Manager_Static.uiManager.SetAllReadyNotice(Manager_Static.playerAssigner.AreAllPlayersReady());
         }
 
         public void Back()
