@@ -16,7 +16,7 @@ namespace Mangos
 
         private void Start()
         {
-            DontDestroyOnLoad(gameObject);
+            
         }
 
         void Update()

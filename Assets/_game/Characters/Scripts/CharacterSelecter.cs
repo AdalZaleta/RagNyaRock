@@ -12,7 +12,7 @@ namespace Mangos {
         public Image splash;
         public Image darkOverlay;
         public Text namae;
-        public Text ready;
+        public Image ready;
         public float changeCharDelay;
         [Range(0, 1)]
         public float charChangeThreshold;
@@ -25,6 +25,7 @@ namespace Mangos {
         private CharacterController cc;
         private float lastRightCharChange;
         private float lastLeftCharChange;
+        private bool isKeyboardPlayer = false;
 
         [Header("Debug")]
         public bool join;
@@ -274,7 +275,8 @@ namespace Mangos {
         public void OnKeyJoin()
         {
             charChangeThreshold = 0;
-            Manager_Static.playerAssigner.AssignNextPlayer(PlayerId);
+            isKeyboardPlayer = true;
+            Manager_Static.playerAssigner.AssignNextPlayer(PlayerId, true);
             isConnected = true;
             darkOverlay.enabled = false;
             splash.enabled = true;

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Name: RangerDefault
   m_EditorClassIdentifier: 
   namae: 
-  splash: {fileID: 21300000, guid: 06724cf822276cb459c6235308e34727, type: 3}
+  splash: {fileID: 21300016, guid: 124085867b125944e9ba2eddc77a4418, type: 3}
   model: {fileID: 0}

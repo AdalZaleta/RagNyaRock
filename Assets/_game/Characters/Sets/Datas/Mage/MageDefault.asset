@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Name: MageDefault
   m_EditorClassIdentifier: 
   namae: Panchita
-  splash: {fileID: 21300000, guid: 639384a0ed348e941a34a7a48603757b, type: 3}
+  splash: {fileID: 21300006, guid: 124085867b125944e9ba2eddc77a4418, type: 3}
   model: {fileID: 0}

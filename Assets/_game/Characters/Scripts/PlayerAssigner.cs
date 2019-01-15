@@ -13,6 +13,7 @@ namespace Mangos
         public CharacterSet[] characterSets;
 
         private int stageSelected;
+        private int keyboardPlayer = -1;
 
         private List<PlayerMap> playerMap; // Maps Rewired Player ids to game player ids
         private int gamePlayerIdCounter = 0;
@@ -51,6 +52,11 @@ namespace Mangos
 
         public void AssignNextPlayer(int rewiredPlayerId, bool isKey = false)
         {
+            if (isKey && keyboardPlayer != -1)
+                return;
+            else if (isKey)
+                keyboardPlayer = rewiredPlayerId;
+
             for(int i = 0; i < playerMap.Count; i++)
             {
                 if(playerMap[i].rewiredPlayerId == rewiredPlayerId)
@@ -111,6 +117,11 @@ namespace Mangos
             }
 
             return true;
+        }
+
+        public void KeyboardPlayerExit()
+        {
+            keyboardPlayer = -1;
         }
 
         // This class is used to map the Rewired Player Id to your game player id
