@@ -41,5 +41,5 @@ Material:
     m_Colors:
     - _AnisotropicColor: {r: 1, g: 1, b: 1, a: 1}
     - _FresnelColor: {r: 0.6078432, g: 0.9734884, b: 1, a: 1}
-    - _MainColor: {r: 0.490566, g: 0.4365141, b: 0.4234603, a: 1}
+    - _MainColor: {r: 0.9528302, g: 0.68765575, b: 0.9505753, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
