@@ -186,7 +186,42 @@ ModelImporter:
     13700000: Gato_Caballero
     13700002: polySurface4
     2186277476908879412: ImportLogs
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Caballero genial
+    second: {fileID: 2100000, guid: 375780918037b944ebfdc1cefd637b90, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Caballero_genial1
+    second: {fileID: 2100000, guid: 8c3b3da8b1e126c4cb545a42bf312c11, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Caballero_genial3
+    second: {fileID: 2100000, guid: 18fa4bf404a8a0245943dacf7314799d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Escudo
+    second: {fileID: 2100000, guid: 3004a3ccaafa70b4991f62f75099a1ff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Escudo4
+    second: {fileID: 2100000, guid: 486d65310b7c3c04b8cbe66e41ccf60d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Espada
+    second: {fileID: 2100000, guid: 8fffb4c9c3306474c877e06227187997, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Espada4
+    second: {fileID: 2100000, guid: 7739f9de7bb686149a8d359b1a94d8e7, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

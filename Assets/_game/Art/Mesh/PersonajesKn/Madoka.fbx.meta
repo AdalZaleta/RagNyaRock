@@ -187,7 +187,32 @@ ModelImporter:
     13700000: Gato_Arreglado
     13700002: polySurface4
     13700004: warrior
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Caballero genial2
+    second: {fileID: 2100000, guid: 626da1b5e2747f849830bec066c1fd2f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Escudo2
+    second: {fileID: 2100000, guid: dd1efe3f4a4ad8148a0b2be6baa38ecb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Espada2
+    second: {fileID: 2100000, guid: f74db01ca5546bb4ca61b0ea3f86aca3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MGuerrero_Piel1
+    second: {fileID: 2100000, guid: f7a721cf61142f242994c1124d5e1e78, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MGuerrero_Ropa1
+    second: {fileID: 2100000, guid: f2fa6c2758e78224b91d77d9f66b2691, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

@@ -184,7 +184,37 @@ ModelImporter:
     9500000: //RootNode
     13700000: Gato_Arreglado003
     13700002: polySurface4
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Caballero genial
+    second: {fileID: 2100000, guid: 131c6a2f9d89f0e4180d694f9944e145, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Escudo
+    second: {fileID: 2100000, guid: 6b49ff6aa3ebbb848a89610102d1816a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Espada
+    second: {fileID: 2100000, guid: a1b8b2c3e0f79d84493185226721c044, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gato estupido
+    second: {fileID: 2100000, guid: 0a16cc65d15fb4e49a2845f7adff198d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ropa
+    second: {fileID: 2100000, guid: cacd73d1b22848d4c95ad1c60858be82, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 7a0191421abcad14180ccd548744a5ff, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

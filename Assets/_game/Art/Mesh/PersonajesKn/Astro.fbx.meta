@@ -181,7 +181,27 @@ ModelImporter:
     13700000: Gato_astronauta
     13700002: Object001
     13700004: polySurface4
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Caballero genial
+    second: {fileID: 2100000, guid: b143b5bdff890fb41b2d36326837843f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Escudo
+    second: {fileID: 2100000, guid: 5e24a1426a3c64c4c9bd76a7f43d1405, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Espada
+    second: {fileID: 2100000, guid: 38f7dd8944c78584083d4b39a2dca4cb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 3ea3c42a339680d4386f18036c47f6f7, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

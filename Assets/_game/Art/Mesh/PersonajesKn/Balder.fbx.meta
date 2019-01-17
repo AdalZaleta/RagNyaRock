@@ -183,7 +183,37 @@ ModelImporter:
     13700000: Gato puto
     13700002: polySurface4
     13700004: Ropa
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Caballero genial
+    second: {fileID: 2100000, guid: 13135763e3dca7e48879ff1088398ce9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Escudo
+    second: {fileID: 2100000, guid: 266be680fb9ec1944be9aa028ef2728b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Espada
+    second: {fileID: 2100000, guid: d22967d7e487973449e60f0ba28d4611, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gata puto1
+    second: {fileID: 2100000, guid: 91e9a5eb14cb74147acc4cf9e0b7effd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ropa_
+    second: {fileID: 2100000, guid: 5125dfe1b5358aa4db6fc20e0089fbbd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 862193130fc7ba641a6379206cbf907e, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

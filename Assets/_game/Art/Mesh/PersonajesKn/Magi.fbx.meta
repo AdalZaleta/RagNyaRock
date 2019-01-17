@@ -186,7 +186,32 @@ ModelImporter:
     13700002: G_SombreroW
     13700004: G_Vestido
     13700006: polySurface4
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Caballero genial
+    second: {fileID: 2100000, guid: 0f20a14471df12741a394cbaee6ee1b1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Escudo
+    second: {fileID: 2100000, guid: 89dff21e43c6b3b4fb810c115900fdf6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Espada
+    second: {fileID: 2100000, guid: 0eb80da2bc7a465408d0f950f4ec01aa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _wizard_pa_texturizar_1
+    second: {fileID: 2100000, guid: f64f85f2f719d9449900ff8a43d13dd2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _wizard_pa_texturizar__1_M_Wizard1
+    second: {fileID: 2100000, guid: 4b4933793f76a15489a28b25f0f21937, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

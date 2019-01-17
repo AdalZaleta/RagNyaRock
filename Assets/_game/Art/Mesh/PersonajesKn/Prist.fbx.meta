@@ -178,7 +178,32 @@ ModelImporter:
     9500000: //RootNode
     13700000: Group10001
     13700002: polySurface4
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Caballero genial
+    second: {fileID: 2100000, guid: 319b4deeafd9a11469a3ad8dc905c92d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Escudo
+    second: {fileID: 2100000, guid: 47620f262149c894693ab29907789ceb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Espada
+    second: {fileID: 2100000, guid: 9b640df667134b143a89a3613774683a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _healer_para_texturizarM_Healer1
+    second: {fileID: 2100000, guid: bc1e5931923d7424892cce4da1242524, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _healer_para_texturizarM_Healer3
+    second: {fileID: 2100000, guid: 81f8420a72768bb4fae17e6af8cbda0e, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

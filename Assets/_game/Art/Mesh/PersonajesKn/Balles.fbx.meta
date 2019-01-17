@@ -166,7 +166,22 @@ ModelImporter:
     9500000: //RootNode
     13700000: Cinto
     13700002: polySurface4
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Caballero genial
+    second: {fileID: 2100000, guid: bd7c8d5cb8f1cdf49b772898655fba3e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: G_Ballestero_default1
+    second: {fileID: 2100000, guid: 88a9617f9be16dc4f9677ce85d103764, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: 2221571f049d6a94fa49d4cc1db5b776, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
