@@ -1,9 +1,9 @@
 fileFormatVersion: 2
-guid: 8575f0a0a36cd9445805a820d3419743
+guid: ec7439133bb271d4f942ad68aa274742
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: bottom
+    100000: Box001
     100002: Cabeza
     100004: CabezaEnd
     100006: Cintura
@@ -28,35 +28,35 @@ ModelImporter:
     100044: CtrlRoot
     100046: Gato Caballero
     100048: GEO
-    100050: Head
-    100052: HeadEn
-    100054: HID
-    100056: Hombro_D
-    100058: Hombro_I
-    100060: HombroD
-    100062: JHONNY
-    100064: LeCattoRigo
+    100050: Group10001
+    100052: Head
+    100054: HeadEn
+    100056: HID
+    100058: Hombro_D
+    100060: Hombro_I
+    100062: HombroD
+    100064: JHONNY
     100066: LeTralp
     100068: Locatos
-    100070: //RootNode
-    100072: Mano_D
-    100074: Mano_D 1
-    100076: ManoD
-    100078: OffHandD
-    100080: OffHandI
-    100082: Pecho
-    100084: Pecho 1
-    100086: Pelvis
-    100088: Pie_D
-    100090: Pie_D 1
-    100092: PieD
-    100094: Pierna_D
-    100096: Pierna_I
-    100098: PiernaD
-    100100: polySurface1
-    100102: polySurface2
-    100104: polySurface3
-    100106: polySurface4
+    100070: Mano_D
+    100072: Mano_D 1
+    100074: ManoD
+    100076: OffHandD
+    100078: OffHandI
+    100080: Pecho
+    100082: Pecho 1
+    100084: Pelvis
+    100086: Pie_D
+    100088: Pie_D 1
+    100090: PieD
+    100092: Pierna_D
+    100094: Pierna_I
+    100096: PiernaD
+    100098: polySurface1
+    100100: polySurface2
+    100102: polySurface3
+    100104: polySurface4
+    100106: //RootNode
     100108: Rodilla_D
     100110: Rodilla_D 1
     100112: RodillaD
@@ -81,7 +81,7 @@ ModelImporter:
     100150: ZCtrl_Rodilla
     100152: ZCtrl_Rodilla 1
     100154: ZCtrl_Root
-    400000: bottom
+    400000: Box001
     400002: Cabeza
     400004: CabezaEnd
     400006: Cintura
@@ -106,35 +106,35 @@ ModelImporter:
     400044: CtrlRoot
     400046: Gato Caballero
     400048: GEO
-    400050: Head
-    400052: HeadEn
-    400054: HID
-    400056: Hombro_D
-    400058: Hombro_I
-    400060: HombroD
-    400062: JHONNY
-    400064: LeCattoRigo
+    400050: Group10001
+    400052: Head
+    400054: HeadEn
+    400056: HID
+    400058: Hombro_D
+    400060: Hombro_I
+    400062: HombroD
+    400064: JHONNY
     400066: LeTralp
     400068: Locatos
-    400070: //RootNode
-    400072: Mano_D
-    400074: Mano_D 1
-    400076: ManoD
-    400078: OffHandD
-    400080: OffHandI
-    400082: Pecho
-    400084: Pecho 1
-    400086: Pelvis
-    400088: Pie_D
-    400090: Pie_D 1
-    400092: PieD
-    400094: Pierna_D
-    400096: Pierna_I
-    400098: PiernaD
-    400100: polySurface1
-    400102: polySurface2
-    400104: polySurface3
-    400106: polySurface4
+    400070: Mano_D
+    400072: Mano_D 1
+    400074: ManoD
+    400076: OffHandD
+    400078: OffHandI
+    400080: Pecho
+    400082: Pecho 1
+    400084: Pelvis
+    400086: Pie_D
+    400088: Pie_D 1
+    400090: PieD
+    400092: Pierna_D
+    400094: Pierna_I
+    400096: PiernaD
+    400098: polySurface1
+    400100: polySurface2
+    400102: polySurface3
+    400104: polySurface4
+    400106: //RootNode
     400108: Rodilla_D
     400110: Rodilla_D 1
     400112: RodillaD
@@ -159,21 +159,25 @@ ModelImporter:
     400150: ZCtrl_Rodilla
     400152: ZCtrl_Rodilla 1
     400154: ZCtrl_Root
-    2000000: bottom
-    2100000: Escudo
-    2100002: Espada
-    2100004: Caballero genial
-    2300000: polySurface1
-    2300002: polySurface3
-    3300000: polySurface1
-    3300002: polySurface3
-    4300000: polySurface1
-    4300002: polySurface3
-    4300004: polySurface4
-    7400000: Take 001
+    2100000: _healer_para_texturizarM_Healer3
+    2100002: Escudo
+    2100004: Espada
+    2100006: Caballero genial
+    2100008: _healer_para_texturizarM_Healer1
+    2300000: Box001
+    2300002: polySurface1
+    2300004: polySurface3
+    3300000: Box001
+    3300002: polySurface1
+    3300004: polySurface3
+    4300000: Box001
+    4300002: polySurface1
+    4300004: polySurface3
+    4300006: polySurface4
+    4300008: Group10001
     9500000: //RootNode
-    13700000: polySurface4
-    2186277476908879412: ImportLogs
+    13700000: Group10001
+    13700002: polySurface4
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -201,35 +205,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: Take 001
-      takeName: Take 001
-      firstFrame: 1
-      lastFrame: 59
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []

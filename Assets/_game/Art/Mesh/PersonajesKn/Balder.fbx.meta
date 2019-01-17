@@ -1,33 +1,33 @@
 fileFormatVersion: 2
-guid: b39448028bee4964d87874b1a8584912
+guid: 095c2879013b2a84986a4f8fc9a6f8f5
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: bottom
-    100004: Cabeza
-    100006: CabezaEnd
-    100008: Cintura
-    100010: Codo_D
-    100012: Codo_D 1
-    100014: CodoD
-    100016: Crtl_Cuello
-    100018: CTRL
-    100020: Ctrl_Brazo
-    100022: Ctrl_Brazo 1
-    100024: Ctrl_Cadera
-    100026: Ctrl_Cadera2
-    100028: Ctrl_Codo
-    100030: Ctrl_Codo 1
-    100032: Ctrl_Head
-    100034: Ctrl_Mano
-    100036: Ctrl_Mano 1
-    100038: Ctrl_Pierna
-    100040: Ctrl_Pierna 1
-    100042: Ctrl_Rodilla
-    100044: Ctrl_Rodilla 1
-    100046: CtrlRoot
-    100048: Gato Caballero
+    100002: Cabeza
+    100004: CabezaEnd
+    100006: Cintura
+    100008: Codo_D
+    100010: Codo_D 1
+    100012: CodoD
+    100014: Crtl_Cuello
+    100016: CTRL
+    100018: Ctrl_Brazo
+    100020: Ctrl_Brazo 1
+    100022: Ctrl_Cadera
+    100024: Ctrl_Cadera2
+    100026: Ctrl_Codo
+    100028: Ctrl_Codo 1
+    100030: Ctrl_Head
+    100032: Ctrl_Mano
+    100034: Ctrl_Mano 1
+    100036: Ctrl_Pierna
+    100038: Ctrl_Pierna 1
+    100040: Ctrl_Rodilla
+    100042: Ctrl_Rodilla 1
+    100044: CtrlRoot
+    100046: Gato Caballero
+    100048: Gato puto
     100050: GEO
     100052: Head
     100054: HeadEn
@@ -36,8 +36,8 @@ ModelImporter:
     100060: Hombro_I
     100062: HombroD
     100064: JHONNY
-    100066: LeCattoRigo
-    100068: LeTralp
+    100066: LeTralp
+    100068: Line001
     100070: Locatos
     100072: Mano_D
     100074: Mano_D 1
@@ -60,52 +60,53 @@ ModelImporter:
     100108: Rodilla_D
     100110: Rodilla_D 1
     100112: RodillaD
-    100114: ScaleControlBrazoI
-    100116: ScaleControlPierna
-    100118: ScalePierna
-    100120: Torso
-    100122: transform1
-    100124: transform2
-    100126: transform3
-    100128: Z_Crtl_Cuello
-    100130: ZCtrl_Brazo
-    100132: ZCtrl_BrazoI
-    100134: ZCtrl_Cadera
-    100136: ZCtrl_Codo
-    100138: ZCtrl_Codo 1
-    100140: ZCtrl_Head
-    100142: ZCtrl_Mano
-    100144: ZCtrl_Mano 1
-    100146: ZCtrl_Pierna
-    100148: ZCtrl_Piernai
-    100150: ZCtrl_Rodilla
-    100152: ZCtrl_Rodilla 1
-    100154: ZCtrl_Root
+    100114: Ropa
+    100116: ScaleControlBrazoI
+    100118: ScaleControlPierna
+    100120: ScalePierna
+    100122: Torso
+    100124: transform1
+    100126: transform2
+    100128: transform3
+    100130: Z_Crtl_Cuello
+    100132: ZCtrl_Brazo
+    100134: ZCtrl_BrazoI
+    100136: ZCtrl_Cadera
+    100138: ZCtrl_Codo
+    100140: ZCtrl_Codo 1
+    100142: ZCtrl_Head
+    100144: ZCtrl_Mano
+    100146: ZCtrl_Mano 1
+    100148: ZCtrl_Pierna
+    100150: ZCtrl_Piernai
+    100152: ZCtrl_Rodilla
+    100154: ZCtrl_Rodilla 1
+    100156: ZCtrl_Root
     400000: //RootNode
-    400002: bottom
-    400004: Cabeza
-    400006: CabezaEnd
-    400008: Cintura
-    400010: Codo_D
-    400012: Codo_D 1
-    400014: CodoD
-    400016: Crtl_Cuello
-    400018: CTRL
-    400020: Ctrl_Brazo
-    400022: Ctrl_Brazo 1
-    400024: Ctrl_Cadera
-    400026: Ctrl_Cadera2
-    400028: Ctrl_Codo
-    400030: Ctrl_Codo 1
-    400032: Ctrl_Head
-    400034: Ctrl_Mano
-    400036: Ctrl_Mano 1
-    400038: Ctrl_Pierna
-    400040: Ctrl_Pierna 1
-    400042: Ctrl_Rodilla
-    400044: Ctrl_Rodilla 1
-    400046: CtrlRoot
-    400048: Gato Caballero
+    400002: Cabeza
+    400004: CabezaEnd
+    400006: Cintura
+    400008: Codo_D
+    400010: Codo_D 1
+    400012: CodoD
+    400014: Crtl_Cuello
+    400016: CTRL
+    400018: Ctrl_Brazo
+    400020: Ctrl_Brazo 1
+    400022: Ctrl_Cadera
+    400024: Ctrl_Cadera2
+    400026: Ctrl_Codo
+    400028: Ctrl_Codo 1
+    400030: Ctrl_Head
+    400032: Ctrl_Mano
+    400034: Ctrl_Mano 1
+    400036: Ctrl_Pierna
+    400038: Ctrl_Pierna 1
+    400040: Ctrl_Rodilla
+    400042: Ctrl_Rodilla 1
+    400044: CtrlRoot
+    400046: Gato Caballero
+    400048: Gato puto
     400050: GEO
     400052: Head
     400054: HeadEn
@@ -114,8 +115,8 @@ ModelImporter:
     400060: Hombro_I
     400062: HombroD
     400064: JHONNY
-    400066: LeCattoRigo
-    400068: LeTralp
+    400066: LeTralp
+    400068: Line001
     400070: Locatos
     400072: Mano_D
     400074: Mano_D 1
@@ -138,42 +139,50 @@ ModelImporter:
     400108: Rodilla_D
     400110: Rodilla_D 1
     400112: RodillaD
-    400114: ScaleControlBrazoI
-    400116: ScaleControlPierna
-    400118: ScalePierna
-    400120: Torso
-    400122: transform1
-    400124: transform2
-    400126: transform3
-    400128: Z_Crtl_Cuello
-    400130: ZCtrl_Brazo
-    400132: ZCtrl_BrazoI
-    400134: ZCtrl_Cadera
-    400136: ZCtrl_Codo
-    400138: ZCtrl_Codo 1
-    400140: ZCtrl_Head
-    400142: ZCtrl_Mano
-    400144: ZCtrl_Mano 1
-    400146: ZCtrl_Pierna
-    400148: ZCtrl_Piernai
-    400150: ZCtrl_Rodilla
-    400152: ZCtrl_Rodilla 1
-    400154: ZCtrl_Root
-    2000000: bottom
-    2100000: Escudo
-    2100002: Espada
-    2100004: Caballero genial
-    2300000: polySurface1
-    2300002: polySurface3
-    3300000: polySurface1
-    3300002: polySurface3
-    4300000: polySurface1
-    4300002: polySurface3
-    4300004: polySurface4
-    7400000: Take 001
+    400114: Ropa
+    400116: ScaleControlBrazoI
+    400118: ScaleControlPierna
+    400120: ScalePierna
+    400122: Torso
+    400124: transform1
+    400126: transform2
+    400128: transform3
+    400130: Z_Crtl_Cuello
+    400132: ZCtrl_Brazo
+    400134: ZCtrl_BrazoI
+    400136: ZCtrl_Cadera
+    400138: ZCtrl_Codo
+    400140: ZCtrl_Codo 1
+    400142: ZCtrl_Head
+    400144: ZCtrl_Mano
+    400146: ZCtrl_Mano 1
+    400148: ZCtrl_Pierna
+    400150: ZCtrl_Piernai
+    400152: ZCtrl_Rodilla
+    400154: ZCtrl_Rodilla 1
+    400156: ZCtrl_Root
+    2100000: lambert1
+    2100002: Escudo
+    2100004: Espada
+    2100006: Caballero genial
+    2100008: Gata puto1
+    2100010: Ropa_
+    2300000: Line001
+    2300002: polySurface1
+    2300004: polySurface3
+    3300000: Line001
+    3300002: polySurface1
+    3300004: polySurface3
+    4300000: Line001
+    4300002: polySurface1
+    4300004: polySurface3
+    4300006: polySurface4
+    4300008: Gato puto
+    4300010: Ropa
     9500000: //RootNode
-    13700000: polySurface4
-    2186277476908879412: ImportLogs
+    13700000: Gato puto
+    13700002: polySurface4
+    13700004: Ropa
   externalObjects: {}
   materials:
     importMaterials: 1
