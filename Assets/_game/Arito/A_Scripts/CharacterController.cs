@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace MANGOS
+namespace Mangos
 {
     public class CharacterController : MonoBehaviour
     {
