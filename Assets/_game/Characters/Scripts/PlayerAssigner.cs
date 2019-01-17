@@ -94,6 +94,8 @@ namespace Mangos
                 if (playerMap[i].gamePlayerId == playerId)
                 {
                     playerMap[i].ready = b;
+                    playerMap[i].charSelected = charId;
+                    playerMap[i].skinSelected = skinId;
                     break;
                 }
             }
@@ -125,12 +127,12 @@ namespace Mangos
         }
 
         // This class is used to map the Rewired Player Id to your game player id
-        private class PlayerMap
+        public class PlayerMap
         {
             public int rewiredPlayerId;
             public int gamePlayerId;
-            public int charSelected;
-            public int skinSelected;
+            public int charSelected = -1;
+            public int skinSelected = -1;
             public bool ready;
 
             public PlayerMap(int rewiredPlayerId, int gamePlayerId)
@@ -139,6 +141,11 @@ namespace Mangos
                 this.gamePlayerId = gamePlayerId;
                 this.ready = false;
             }
+        }
+
+        public PlayerMap GetPlayerMap(int id)
+        {
+            return playerMap[id];
         }
 
         public void StartStageSelection()

@@ -90,8 +90,6 @@ namespace Mangos {
 
             keyboardJoin = player.GetButtonDown("KeyboardJoin");
 
-            Debug.Log("lastCharChange: " + lastRightCharChange + ", delay: " + changeCharDelay);
-
             right = (player.GetAxis("ChangeChar") > charChangeThreshold);
             left = (player.GetAxis("ChangeChar") < -charChangeThreshold);
 
