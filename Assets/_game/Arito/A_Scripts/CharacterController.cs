@@ -12,6 +12,7 @@ namespace MANGOS
         public float velSmoothSpeed;
         public float rotSmoothSpeed;
         public float airbornRotSpeed;
+        public GameObject model;
 
         public GameObject TestShield;
 
@@ -65,6 +66,7 @@ namespace MANGOS
         {
             rig = gameObject.GetComponent<Rigidbody>();
             TestShield.SetActive(false);
+            Instantiate(model, transform.position, transform.rotation, transform);
         }
 
         void Update()
