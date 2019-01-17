@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: f9946b1fd4d493e42968619d75dfbfb2
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _SmokeA: {fileID: 2800000, guid: c933efa33bf6bfc4899004d9e04d428c, type: 3}
+  - _SmokeB: {fileID: 2800000, guid: c933efa33bf6bfc4899004d9e04d428c, type: 3}
+  - _SmokeC: {fileID: 2800000, guid: c933efa33bf6bfc4899004d9e04d428c, type: 3}
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
