@@ -13,4 +13,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   namae: 
   splash: {fileID: 21300004, guid: 124085867b125944e9ba2eddc77a4418, type: 3}
-  model: {fileID: 1091933476533652, guid: 43604f8f9b9cc384ca37c0088a58a1d3, type: 2}
+  model: {fileID: 1352421009748610, guid: 0e8f17569dac589418c31c6ad28b4c11, type: 2}

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   namae: Vader
   splash: {fileID: 21300010, guid: 124085867b125944e9ba2eddc77a4418, type: 3}
-  model: {fileID: 1091933476533652, guid: 43604f8f9b9cc384ca37c0088a58a1d3, type: 2}
+  model: {fileID: 1126713619689014, guid: 9d76ad2857a5c2843a833d5fe7704658, type: 2}

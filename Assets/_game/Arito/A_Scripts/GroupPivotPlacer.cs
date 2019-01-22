@@ -11,6 +11,11 @@ namespace Mangos
         public GameObject follower;
         public Vector3 offset;
 
+        private void Awake()
+        {
+            Manager_Static.spawnManager.pivotPlacer = this;
+        }
+
         // Use this for initialization
         void Start()
         {

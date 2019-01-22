@@ -148,6 +148,11 @@ namespace Mangos
             return playerMap[id];
         }
 
+        public int PlayerMapLength()
+        {
+            return playerMap.Count;
+        }
+
         public void StartStageSelection()
         {
             //Select random stage or something
