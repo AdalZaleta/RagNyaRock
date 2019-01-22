@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace MANGOS
+namespace Mangos
 {
     public class CharacterController : MonoBehaviour
     {
@@ -12,12 +12,18 @@ namespace MANGOS
         public float velSmoothSpeed;
         public float rotSmoothSpeed;
         public float airbornRotSpeed;
+        public GameObject model;
+
+        public GameObject TestShield;
 
         private Rigidbody rig;
         private bool isAirborn = false;
         private float isRunning = 1;
         private float xDir, zDir;
         private bool canMove = true;
+        private bool canJump = true;
+        private bool isShielded = false;
+        private float damage = 0;
 
         private void OnCollisionStay(Collision _col)
         {
@@ -59,6 +65,8 @@ namespace MANGOS
         void Start()
         {
             rig = gameObject.GetComponent<Rigidbody>();
+            TestShield.SetActive(false);
+            Instantiate(model, transform.position, transform.rotation, transform);
         }
 
         void Update()
@@ -72,10 +80,18 @@ namespace MANGOS
             zDir = Input.GetAxis("Vertical");
             xDir = Input.GetAxis("Horizontal");
 
-            Move(xDir, zDir);
-
             if (Input.GetButtonDown("Fire1"))
                 Jump();
+
+            if (Input.GetAxis("Joy1Axis9") > 0.5 || Input.GetAxis("Joy1Axis10") > 0.5)
+            {
+                Shield();
+            } else
+            {
+                UnShield();
+            }
+
+            Move(xDir, zDir);
         }
 
         public void Run(bool _run)
@@ -128,16 +144,50 @@ namespace MANGOS
 
         public void Jump()
         {
-            if (!isAirborn)
+            if (canJump)
             {
-                rig.AddForce(Vector3.up * jumpForce * 1000, ForceMode.Impulse);
-                isAirborn = true;
+                if (!isAirborn)
+                {
+                    rig.AddForce(Vector3.up * jumpForce * 1000, ForceMode.Impulse);
+                    isAirborn = true;
+                }
             }
         }
 
         public void Shield()
         {
-            
+            if (!isAirborn)
+            {
+                rig.velocity = Vector3.Lerp(rig.velocity, Vector3.zero, 0.15f);
+                rig.angularVelocity = Vector3.zero;
+                canMove = false;
+                canJump = false;
+                isShielded = true;
+                TestShield.SetActive(true);
+            }
+        }
+
+        public void UnShield()
+        {
+            if (!isAirborn)
+            {
+                canMove = true;
+                canJump = true;
+                isShielded = false;
+                TestShield.SetActive(false);
+            }
+        }
+
+        public void ReceiveDamage(float _dmg)
+        {
+            if (!isShielded)
+                damage += _dmg;
+        }
+
+        public void HealDamage(float _heal)
+        {
+            if (!isShielded)
+               damage -= _heal;
         }
 
         /*public void Interact(GameObject _obj)
