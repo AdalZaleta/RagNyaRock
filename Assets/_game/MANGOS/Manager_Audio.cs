@@ -30,7 +30,7 @@ namespace Mangos
 
 		void Start()
 		{
-			if (Manager_Static.appManager.currentState == AppState.MAIN_MENU)
+			if (Manager_Static.gameStateManager.gameState == GameState.MAIN_MENU)
 				PlayMusic (mainMenu);
 		}
 
