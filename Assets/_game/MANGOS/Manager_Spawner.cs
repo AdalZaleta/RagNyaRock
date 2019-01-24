@@ -29,6 +29,7 @@ namespace Mangos
                     Debug.Log("Character selected " + temp.charSelected + ", skin selected " + temp.skinSelected);
                     GameObject go = Instantiate(characterSets[temp.charSelected].skins[temp.skinSelected].model, spawnPoints[i].position, Quaternion.identity);
                     pivotPlacer.members[i] = go;
+                    //TODO: hacer que instancie el mismo prefab de personaje, ya ese darle el modelo para que los instancie
                 }
             }
         }
