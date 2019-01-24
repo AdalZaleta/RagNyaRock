@@ -3,9 +3,14 @@ guid: deb2fa5afead3f14ba8284806cfd5a04
 ShaderImporter:
   externalObjects: {}
   defaultTextures:
-  - _SplitTexture: {fileID: 2800000, guid: 43acc290d5693b74cbab1ac5c908d5f1, type: 3}
+  - _SplitTex: {fileID: 2800000, guid: 2749af28092da194b9c5f08a72677d28, type: 3}
   - _NoiseTex: {fileID: 2800000, guid: 0c60eef2c338ba740a2857c13a904ade, type: 3}
-  - _OpacityMask: {fileID: 2800000, guid: 3a5a96df060a5cf4a9cc0c59e13486b7, type: 3}
+  - _OpacityMask: {fileID: 2800000, guid: 862aaaca92893664b88457cb6c3bc482, type: 3}
+  - _SliceBufferTex: {fileID: 8400000, guid: b47f7b2c9bcf2f44c9c3bca7692bb8f6, type: 2}
+  - _YutaponBufferTex: {fileID: 8400000, guid: afd832bc0ec91614b82338a3738dfcb9, type: 2}
+  - _YutaponTex: {fileID: 2800000, guid: 948c8575d73c46e42a5ae9aec13f38be, type: 3}
+  - _MainTex: {fileID: 2800000, guid: fce04cc13946c3347b173faaefc03757, type: 3}
+  - _SplitEmissionTex: {fileID: 2800000, guid: 2749af28092da194b9c5f08a72677d28, type: 3}
   nonModifiableTextures: []
   userData: 
   assetBundleName: 

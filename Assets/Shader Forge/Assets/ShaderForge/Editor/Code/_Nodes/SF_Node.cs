@@ -1039,7 +1039,7 @@ namespace ShaderForge {
 			return connectors[id].inputCon.node.texture;
 		}*/
 
-		public SF_NodePreview GetInputData( string id ) {
+		public SF_NodePreview GetInputData(string id ) {
 
 			SF_NodeConnector con = GetConnectorByStringID(id);
 			//SF_Node n; // TODO: What was this? Quite recent too. Define and undefine ghosts?
@@ -1055,10 +1055,6 @@ namespace ShaderForge {
 			}
 
 			//SF_NodePreview ret = con.inputCon.node.texture;
-
-
-
-
 			return con.inputCon.node.texture;
 		}
 
