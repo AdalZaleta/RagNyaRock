@@ -17,7 +17,8 @@ namespace mangos
         public TYPE type;
         public int durability;
         public int addingPercentage;
-        public int force;
+        public int force;       //Variable en negativos
+        public int miniforce; //Esta variable es con el knockback que no saca volando (Usar negativos)
         Rigidbody rigi;
 
         private void Start()

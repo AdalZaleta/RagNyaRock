@@ -148,6 +148,7 @@ MonoBehaviour:
   durability: 70
   addingPercentage: 10
   force: -43
+  miniforce: -6
 --- !u!114 &114357527972143672
 MonoBehaviour:
   m_ObjectHideFlags: 1

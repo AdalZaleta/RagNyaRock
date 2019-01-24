@@ -57,7 +57,10 @@ namespace mangos
                 GetKnockbacked(itemRigi.velocity, _data.transform.position, _data.force);
             } else
             {
-                //Aquí va el knockback que no lo saca volando
+                if(itemRigi.velocity.magnitude >= 30)
+                {
+                    GetKnockbacked(itemRigi.velocity, _data.transform.position, _data.miniforce);
+                }
             }
             _data.GetHit(dañoDevuelta);
         }
