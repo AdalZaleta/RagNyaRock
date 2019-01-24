@@ -7,6 +7,7 @@ namespace mangos
     public class dataReceiver : MonoBehaviour
     {
         public int dañoDevuelta;
+
         void HitReceiver(ItemBehaviour data)
         {
             if (data.name != null)
