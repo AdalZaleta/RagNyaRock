@@ -47,19 +47,51 @@ namespace mangos
             
         }
 
-        void HitReceiver(ItemBehaviour data)
+        void HitReceiver(ItemBehaviour _data)
         {
-            percentage = percentage + data.addingPercentage;
-            if(percentage >= 120)
+            percentage = percentage + _data.addingPercentage;
+            Rigidbody itemRigi = _data.GetComponent<Rigidbody>();
+            if (percentage >= 120)
             {
                 ActivateRagdoll();
+                GetKnockbacked(itemRigi.velocity, _data.transform.position, _data.force);
+            } else
+            {
+                //Aquí va el knockback que no lo saca volando
             }
-            data.GetHit(dañoDevuelta);
+            _data.GetHit(dañoDevuelta);
         }
 
         public void ActivateRagdoll()
         {
+            StartCoroutine("RagdollAct");
+        }
 
+        public void GetKnockbacked(Vector3 _dir,Vector3 _pos, float _force)
+        {
+            _dir.Normalize();
+            m_rigi.AddForceAtPosition(PunchedForce(_force) * _dir, _pos, ForceMode.Impulse);
+        }
+
+        public float PunchedForce(float _force)
+        {
+
+            return _force;
+        }
+
+        IEnumerator RagdollAct()
+        {
+            yield return new WaitForSeconds(0.5f);
+            for (int i = 0; i < m_righijos.Length; i++)
+            {
+                m_righijos[i].isKinematic = false;
+            }
+            for (int i = 0; i < m_colhijos.Length; i++)
+            {
+                m_colhijos[i].enabled = true;
+            }
+            m_rigi.isKinematic = true;
+            m_col.enabled = false;
         }
     }
 }

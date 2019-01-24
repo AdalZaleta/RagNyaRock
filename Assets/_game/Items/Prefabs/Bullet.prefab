@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 33719358485008308}
   - component: {fileID: 23943942415190882}
   - component: {fileID: 135555216146387488}
+  - component: {fileID: 135734606475202850}
   m_Layer: 0
   m_Name: ThrowingBall
   m_TagString: Untagged
@@ -145,10 +146,8 @@ MonoBehaviour:
   name: BulletVoid
   type: 1
   durability: 70
-  stunForce: 0
-  fire: 0
   addingPercentage: 10
-  forceVariance: 0
+  force: -43
 --- !u!114 &114357527972143672
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -174,4 +173,16 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!135 &135734606475202850
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1199363468290780}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.49999997
   m_Center: {x: 0, y: 0, z: 0}

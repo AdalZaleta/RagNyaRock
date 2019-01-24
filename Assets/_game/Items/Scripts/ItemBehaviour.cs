@@ -16,11 +16,9 @@ namespace mangos
         public string name;
         public TYPE type;
         public int durability;
-        public float stunForce;
-        public float fire;
         public int addingPercentage;
+        public int force;
         Rigidbody rigi;
-        public float forceVariance;
 
         private void Start()
         {
