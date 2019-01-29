@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Default Yutapon
-  m_Shader: {fileID: 4800000, guid: dcc221e2394d7ca429f84bd76694a790, type: 3}
+  m_Shader: {fileID: 4800000, guid: ffaa555bc473f5d42a7e9ca16f617a9a, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -58,6 +58,18 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _VertexOffsetFlowmap:
+        m_Texture: {fileID: 2800000, guid: 457e128d324d14941bcf82ef89250c65, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _YutaponHeightmap:
+        m_Texture: {fileID: 2800000, guid: 948c8575d73c46e42a5ae9aec13f38be, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _YutaponMask:
+        m_Texture: {fileID: 2800000, guid: 862aaaca92893664b88457cb6c3bc482, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
     - _AnisotropicDirection: 0.45
     - _AnisotropicIntensity: 1
@@ -71,7 +83,9 @@ Material:
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _HighLights: 0
+    - _MaxVertexOffsetHeight: 1
     - _Metallic: 0
+    - _MinVertexOffsetHeight: 0
     - _Mode: 0
     - _NormalPower: 0.2
     - _OcclusionStrength: 1
@@ -83,6 +97,9 @@ Material:
     - _SpecularPower: 4.29
     - _SrcBlend: 1
     - _UVSec: 0
+    - _UseSpecularLightColor: 0
+    - _VertexOffsetHeight: 1
+    - _VertexOffsetTilt: 0
     - _ZWrite: 1
     - _lightColorFresnel: 0
     - _useFresnel: 0

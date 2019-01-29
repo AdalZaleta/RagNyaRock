@@ -2,7 +2,11 @@ fileFormatVersion: 2
 guid: ffaa555bc473f5d42a7e9ca16f617a9a
 ShaderImporter:
   externalObjects: {}
-  defaultTextures: []
+  defaultTextures:
+  - _MainTex: {fileID: 2800000, guid: 1d271d6b46075634c8d8b00174a6aa2c, type: 3}
+  - _NormalTex: {fileID: 2800000, guid: a1e2bb02c14620649aac3c23fc332454, type: 3}
+  - _YutaponHeightmap: {fileID: 2800000, guid: 948c8575d73c46e42a5ae9aec13f38be, type: 3}
+  - _YutaponMask: {fileID: 2800000, guid: 862aaaca92893664b88457cb6c3bc482, type: 3}
   nonModifiableTextures: []
   userData: 
   assetBundleName: 
