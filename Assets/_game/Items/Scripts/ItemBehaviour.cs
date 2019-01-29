@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace mangos
+namespace Mangos
 {
     public enum TYPE
     {

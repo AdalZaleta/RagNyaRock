@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 114357527972143672}
   - component: {fileID: 54374758211163620}
   - component: {fileID: 114330668002344512}
+  - component: {fileID: 114468684514182896}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -55,7 +56,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1062301342710884}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.9710505, y: 0.25, z: -1.7647829}
+  m_LocalPosition: {x: 6.1877303, y: 0.15, z: -10.937952}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
   - {fileID: 4507616093050354}
@@ -146,16 +147,16 @@ MonoBehaviour:
   name: BulletVoid
   type: 1
   durability: 70
-  addingPercentage: 10
-  force: -43
-  miniforce: -6
+  addingPercentage: 60
+  force: -65
+  miniforce: -8
 --- !u!114 &114357527972143672
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1062301342710884}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 172b01e705e25b645a70e747b7395690, type: 3}
   m_Name: 
@@ -163,6 +164,18 @@ MonoBehaviour:
   acceleration: 10
   maxSpeed: 100
   target: {fileID: 100102, guid: e917b6412a480404ba5c2a473e693e95, type: 3}
+--- !u!114 &114468684514182896
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1062301342710884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e018e1ee3220ed3408974df4a8c256b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigi: {fileID: 54374758211163620}
 --- !u!135 &135555216146387488
 SphereCollider:
   m_ObjectHideFlags: 1

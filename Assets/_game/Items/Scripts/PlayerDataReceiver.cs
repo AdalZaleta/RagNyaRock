@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace mangos
+namespace Mangos
 {
     [RequireComponent(typeof(Rigidbody))]
     public class PlayerDataReceiver : MonoBehaviour
@@ -11,7 +11,7 @@ namespace mangos
         [Tooltip("El daño que le hará al PROP que le envió el golpe")]
         public int dañoDevuelta;
         [Tooltip("Porcentaje de daño que tiene actualmente")]
-        public int percentage;
+        public float percentage;
 
         public bool Ragdoll;
 
@@ -47,45 +47,24 @@ namespace mangos
             
         }
 
-        void HitReceiver(ItemBehaviour _data)
+        void HitReceiver(HitData _data)
         {
-            percentage = percentage + _data.addingPercentage;
-            Rigidbody itemRigi = _data.GetComponent<Rigidbody>();
+            percentage = percentage + _data.force;
             if (percentage >= 120)
             {
                 ActivateRagdoll();
-                GetKnockbacked(itemRigi.velocity, _data.transform.position, _data.force);
+                GetKnockbacked(_data.dir, _data.contactPoint, ForceReturnMax(_data.force));
+                m_rigi.isKinematic = true;
+                m_col.enabled = false;
             } else
             {
-                if(itemRigi.velocity.magnitude >= 30)
-                {
-                    Debug.Log("Mini KnockBack");
-                    GetKnockbacked(itemRigi.velocity, _data.transform.position, _data.miniforce);
-                }
+                GetKnockbacked(_data.dir, _data.contactPoint, ForceReturnMin(_data.force));
             }
-            _data.GetHit(dañoDevuelta);
+            _data.sender.SendMessage("GetHit", dañoDevuelta, SendMessageOptions.DontRequireReceiver);
         }
 
         public void ActivateRagdoll()
         {
-            StartCoroutine("RagdollAct");
-        }
-
-        public void GetKnockbacked(Vector3 _dir,Vector3 _pos, float _force)
-        {
-            _dir.Normalize();
-            m_rigi.AddForceAtPosition(PunchedForce(_force) * _dir, _pos, ForceMode.Impulse);
-        }
-
-        public float PunchedForce(float _force)
-        {
-
-            return _force;
-        }
-
-        IEnumerator RagdollAct()
-        {
-            yield return new WaitForSeconds(0.1f);
             for (int i = 0; i < m_righijos.Length; i++)
             {
                 m_righijos[i].isKinematic = false;
@@ -94,8 +73,29 @@ namespace mangos
             {
                 m_colhijos[i].enabled = true;
             }
-            m_rigi.isKinematic = true;
-            m_col.enabled = false;
+            Ragdoll = true;
+        }
+
+        public float ForceReturnMax(float _force)
+        {
+            return _force;
+        }
+
+        public float ForceReturnMin(float _force)
+        {
+            return _force / 2;
+        }
+
+        public void GetKnockbacked(Vector3 _dir,Vector3 _pos, float _force)
+        {
+            _dir.Normalize();
+            if(Ragdoll == false)
+                m_rigi.AddForceAtPosition(_force * _dir, _pos, ForceMode.Impulse);
+            else
+            {
+                for(int i = 0; i < m_righijos.Length; i++)
+                    m_righijos[i].AddForceAtPosition(_force * _dir, _pos, ForceMode.Impulse);
+            }
         }
     }
 }

@@ -5,6 +5,14 @@ using UnityEngine;
 namespace Mangos
 {
 
+    public struct HitData
+    {
+        public GameObject sender;
+        public Vector3 dir;
+        public float force;
+        public Vector3 contactPoint;
+    }
+
     //ES EL MANAGER STATICO ES UN SCRIPT QUE SE COMUNICA CON TODOS LOS DEMAS SCRIPTS SIN IMPORTA SI ESTA EN LA ESCENA
 
     //ESTE ES UN ENUMERADOR QUE NOS DICE LOS ESTADOS DE LA APLICACION
