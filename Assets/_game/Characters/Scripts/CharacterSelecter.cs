@@ -158,7 +158,6 @@ namespace Mangos {
             OnLeave();
         }
         
-
         void OnDestroy()
         {
             // Unsubscribe from events

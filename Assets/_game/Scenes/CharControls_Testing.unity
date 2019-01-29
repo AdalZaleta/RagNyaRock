@@ -1220,7 +1220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cff370c30e179f4fb00ec52cb03a501, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 240626072}
   followSpeed: 5
   X: 1
   Y: 0
@@ -2376,7 +2376,7 @@ MonoBehaviour:
   - {fileID: 555554025}
   - {fileID: 58032628}
   - {fileID: 2145171503}
-  pivotPlacer: {fileID: 0}
+  pivotPlacer: {fileID: 240626071}
 --- !u!4 &1598821725
 Transform:
   m_ObjectHideFlags: 0

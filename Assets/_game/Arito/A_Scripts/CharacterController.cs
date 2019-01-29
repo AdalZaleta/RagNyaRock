@@ -1,13 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Rewired;
 
 namespace Mangos
 {
     public class CharacterController : MonoBehaviour
     {
         public float movementSpeed;
-        public float runningMultiplier;
         public float jumpForce;
         public float velSmoothSpeed;
         public float rotSmoothSpeed;
@@ -16,14 +16,22 @@ namespace Mangos
 
         public GameObject TestShield;
 
+        private int playerID = 0; // Set to 0 by default
+        private Player player;
+
         private Rigidbody rig;
         private bool isAirborn = false;
-        private float isRunning = 1;
-        private float xDir, zDir;
         private bool canMove = true;
         private bool canJump = true;
         private bool isShielded = false;
         private float damage = 0;
+
+        // Input Mapping
+        [Header("DEBBUGING MOVEMENT")]
+        public bool jump;
+        public bool shield;
+        public float xDir;
+        public float zDir;
 
         private void OnCollisionStay(Collision _col)
         {
@@ -64,42 +72,44 @@ namespace Mangos
 
         void Start()
         {
+            player = ReInput.players.GetPlayer(playerID);
             rig = gameObject.GetComponent<Rigidbody>();
             TestShield.SetActive(false);
             Instantiate(model, transform.position, transform.rotation, transform);
         }
 
-        void Update()
+        public void AssignID(int _id)
         {
-            // Temp Method Testing 
-            if (Input.GetKeyDown(KeyCode.LeftShift))
-                Run(true);
-            else if (Input.GetKeyUp(KeyCode.LeftShift))
-                Run(false);
-
-            zDir = Input.GetAxis("Vertical");
-            xDir = Input.GetAxis("Horizontal");
-
-            if (Input.GetButtonDown("Fire1"))
-                Jump();
-
-            if (Input.GetAxis("Joy1Axis9") > 0.5 || Input.GetAxis("Joy1Axis10") > 0.5)
-            {
-                Shield();
-            } else
-            {
-                UnShield();
-            }
-
-            Move(xDir, zDir);
+            playerID = _id;
+            player = ReInput.players.GetPlayer(playerID);
+            Debug.Log("Player was assigned id: " + playerID);
         }
 
-        public void Run(bool _run)
+        void Update()
         {
-            if (_run)
-                isRunning = 2;
+            GetInputs();
+            ProcessInputs();
+        }
+
+        private void GetInputs()
+        {
+            xDir = player.GetAxis("Move_Horizontal");
+            zDir = player.GetAxis("Move_Vertical");
+
+            jump = player.GetButtonDown("Jump");
+            shield = player.GetButton("Block");
+        }
+
+        private void ProcessInputs()
+        {
+            if (jump)
+                Jump();
+            if (shield)
+                Shield();
             else
-                isRunning = 1;
+                UnShield();
+
+            Move(xDir, zDir);
         }
 
         public void Move(float _xDir, float _zDir)
@@ -108,8 +118,8 @@ namespace Mangos
             {
                 Vector3 finalVel = rig.velocity;
 
-                finalVel.x = _xDir * Time.deltaTime * movementSpeed * isRunning;
-                finalVel.z = _zDir * Time.deltaTime * movementSpeed * isRunning;
+                finalVel.x = _xDir * Time.deltaTime * movementSpeed;
+                finalVel.z = _zDir * Time.deltaTime * movementSpeed;
 
                 if (finalVel != Vector3.zero)
                 {
