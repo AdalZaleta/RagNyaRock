@@ -227,10 +227,9 @@ MonoBehaviour:
   name: GodBate
   type: 0
   durability: 3
-  stunForce: 0
-  fire: 0
   addingPercentage: 0
-  forceVariance: 0
+  force: 0
+  miniforce: 0
 --- !u!54 &118920810
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -673,25 +672,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &777862914 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100058, guid: d258e01b83e38cc438356656325e6365,
-    type: 3}
-  m_PrefabInternal: {fileID: 2120224081}
---- !u!114 &777862916
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 777862914}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46028901cb6a3124c9fbff04ec0bfd24, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  "da\xF1oDevuelta": 1
-  percentage: 0
-  Ragdoll: 0
 --- !u!1 &834096962 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100078, guid: d258e01b83e38cc438356656325e6365,
@@ -835,10 +815,9 @@ MonoBehaviour:
   name: MasterBall
   type: 0
   durability: 4
-  stunForce: 0
-  fire: 0
   addingPercentage: 0
-  forceVariance: 0
+  force: 0
+  miniforce: 0
 --- !u!1 &1244040082 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1037196115258250, guid: 6c532c76c6cd4154d9610170aaf5f5a8,
@@ -2008,10 +1987,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.033313226
-  m_Height: 0.13461581
+  m_Radius: 0.03662688
+  m_Height: 0.11209091
   m_Direction: 0
-  m_Center: {x: -0.069055535, y: -0.0032733888, z: 0.018121116}
+  m_Center: {x: -0.058434498, y: 0.007641537, z: -0.0046112966}
 --- !u!1001 &2146448018
 Prefab:
   m_ObjectHideFlags: 0

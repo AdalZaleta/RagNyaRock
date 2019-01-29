@@ -59,6 +59,7 @@ namespace mangos
             {
                 if(itemRigi.velocity.magnitude >= 30)
                 {
+                    Debug.Log("Mini KnockBack");
                     GetKnockbacked(itemRigi.velocity, _data.transform.position, _data.miniforce);
                 }
             }
@@ -84,7 +85,7 @@ namespace mangos
 
         IEnumerator RagdollAct()
         {
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.1f);
             for (int i = 0; i < m_righijos.Length; i++)
             {
                 m_righijos[i].isKinematic = false;
