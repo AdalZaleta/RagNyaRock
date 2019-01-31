@@ -6,11 +6,12 @@ public class Expand_Aro : MonoBehaviour {
 
 	private float scaleFactor = 1;
 	public float speedScale = 1;
+	public float limitExpand = 15.0f;
 	
 	void Update () {
 		transform.localScale = new Vector3(scaleFactor, 1.0f, scaleFactor);
 		scaleFactor += Time.deltaTime * speedScale;
-		if(scaleFactor > 20.0f)
+		if(scaleFactor > limitExpand)
 		{
 			gameObject.SetActive(false);
 		}
