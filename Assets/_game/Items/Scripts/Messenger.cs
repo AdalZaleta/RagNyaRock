@@ -8,26 +8,32 @@ namespace Mangos
     public class Messenger : MonoBehaviour
     {
         public HitData hData;
-        public GameObject gato;
         Rigidbody rigi;
 
         public float force;
+        public float scalingForce;
 
         private void Start()
         {
             rigi = GetComponent<Rigidbody>();
             hData.sender = gameObject;
-            hData.force = force;
-            hData.dir = Vector3.right;
-            hData.contactPoint = gato.transform.position;
+            hData.baseForce = force;
+            hData.scalingForce = scalingForce;
+            hData.dir = Vector3.right + Vector3.up;
         }
 
         void Update()
         {
-            if(Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.H))
             {
-                gato.SendMessage("HitReceiver", hData, SendMessageOptions.DontRequireReceiver);
+                //Activate collider and ssta
             }
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            hData.contactPoint = other.ClosestPoint(transform.position);
+            other.SendMessage("GetHit", hData, SendMessageOptions.DontRequireReceiver);
         }
     }
 }
