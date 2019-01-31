@@ -1,0 +1,255 @@
+fileFormatVersion: 2
+guid: f2ebbe201763ed84bbb9808adf9f84e3
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: ballesta
+    100004: Cabeza
+    100006: CabezaEnd
+    100008: Cintura
+    100010: Codo_D
+    100012: Codo_D 1
+    100014: CodoD
+    100016: Crtl_Cuello
+    100018: CTRL
+    100020: Ctrl_Brazo
+    100022: Ctrl_Brazo 1
+    100024: Ctrl_Cadera
+    100026: Ctrl_Cadera2
+    100028: Ctrl_Codo
+    100030: Ctrl_Codo 1
+    100032: Ctrl_Head
+    100034: Ctrl_Mano
+    100036: Ctrl_Mano 1
+    100038: Ctrl_Pierna
+    100040: Ctrl_Pierna 1
+    100042: Ctrl_Rodilla
+    100044: Ctrl_Rodilla 1
+    100046: CtrlRoot
+    100048: G_GatoBase
+    100050: Gato Caballero
+    100052: GEO
+    100054: Head
+    100056: HeadEn
+    100058: HID
+    100060: Hombro_D
+    100062: Hombro_I
+    100064: HombroD
+    100066: JHONNY
+    100068: LeTralp
+    100070: Locatos
+    100072: Mano_D
+    100074: Mano_D 1
+    100076: ManoD
+    100078: OffHandD
+    100080: OffHandI
+    100082: Pecho
+    100084: Pecho 1
+    100086: Pelvis
+    100088: Pie_D
+    100090: Pie_D 1
+    100092: PieD
+    100094: Pierna_D
+    100096: Pierna_I
+    100098: PiernaD
+    100100: polySurface2
+    100102: polySurface4
+    100104: Rodilla_D
+    100106: Rodilla_D 1
+    100108: RodillaD
+    100110: Ropa_Ballesta
+    100112: ScaleControlBrazoI
+    100114: ScaleControlPierna
+    100116: ScalePierna
+    100118: Torso
+    100120: transform1
+    100122: transform2
+    100124: transform3
+    100126: Z_Crtl_Cuello
+    100128: ZCtrl_Brazo
+    100130: ZCtrl_BrazoI
+    100132: ZCtrl_Cadera
+    100134: ZCtrl_Codo
+    100136: ZCtrl_Codo 1
+    100138: ZCtrl_Head
+    100140: ZCtrl_Mano
+    100142: ZCtrl_Mano 1
+    100144: ZCtrl_Pierna
+    100146: ZCtrl_Piernai
+    100148: ZCtrl_Rodilla
+    100150: ZCtrl_Rodilla 1
+    100152: ZCtrl_Root
+    400000: //RootNode
+    400002: ballesta
+    400004: Cabeza
+    400006: CabezaEnd
+    400008: Cintura
+    400010: Codo_D
+    400012: Codo_D 1
+    400014: CodoD
+    400016: Crtl_Cuello
+    400018: CTRL
+    400020: Ctrl_Brazo
+    400022: Ctrl_Brazo 1
+    400024: Ctrl_Cadera
+    400026: Ctrl_Cadera2
+    400028: Ctrl_Codo
+    400030: Ctrl_Codo 1
+    400032: Ctrl_Head
+    400034: Ctrl_Mano
+    400036: Ctrl_Mano 1
+    400038: Ctrl_Pierna
+    400040: Ctrl_Pierna 1
+    400042: Ctrl_Rodilla
+    400044: Ctrl_Rodilla 1
+    400046: CtrlRoot
+    400048: G_GatoBase
+    400050: Gato Caballero
+    400052: GEO
+    400054: Head
+    400056: HeadEn
+    400058: HID
+    400060: Hombro_D
+    400062: Hombro_I
+    400064: HombroD
+    400066: JHONNY
+    400068: LeTralp
+    400070: Locatos
+    400072: Mano_D
+    400074: Mano_D 1
+    400076: ManoD
+    400078: OffHandD
+    400080: OffHandI
+    400082: Pecho
+    400084: Pecho 1
+    400086: Pelvis
+    400088: Pie_D
+    400090: Pie_D 1
+    400092: PieD
+    400094: Pierna_D
+    400096: Pierna_I
+    400098: PiernaD
+    400100: polySurface2
+    400102: polySurface4
+    400104: Rodilla_D
+    400106: Rodilla_D 1
+    400108: RodillaD
+    400110: Ropa_Ballesta
+    400112: ScaleControlBrazoI
+    400114: ScaleControlPierna
+    400116: ScalePierna
+    400118: Torso
+    400120: transform1
+    400122: transform2
+    400124: transform3
+    400126: Z_Crtl_Cuello
+    400128: ZCtrl_Brazo
+    400130: ZCtrl_BrazoI
+    400132: ZCtrl_Cadera
+    400134: ZCtrl_Codo
+    400136: ZCtrl_Codo 1
+    400138: ZCtrl_Head
+    400140: ZCtrl_Mano
+    400142: ZCtrl_Mano 1
+    400144: ZCtrl_Pierna
+    400146: ZCtrl_Piernai
+    400148: ZCtrl_Rodilla
+    400150: ZCtrl_Rodilla 1
+    400152: ZCtrl_Root
+    2100000: lambert1
+    2100002: Caballero genial
+    2300000: ballesta
+    3300000: ballesta
+    4300000: ballesta
+    4300002: polySurface4
+    4300004: Ropa_Ballesta
+    4300006: G_GatoBase
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: G_GatoBase
+    13700002: polySurface4
+    13700004: Ropa_Ballesta
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
