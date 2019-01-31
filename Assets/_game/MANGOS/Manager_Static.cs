@@ -10,6 +10,7 @@ namespace Mangos
         public GameObject sender;
         public Vector3 dir;
         public float force;
+        public float damage;
         public Vector3 contactPoint;
     }
 

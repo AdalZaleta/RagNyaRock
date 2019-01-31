@@ -39,6 +39,8 @@ namespace Mangos
             }
             m_rigi.isKinematic = false;
             m_col.enabled = true;
+
+            m_rigi.AddForce(Vector3.up * 100);
         }
 
 
@@ -49,22 +51,26 @@ namespace Mangos
 
         void HitReceiver(HitData _data)
         {
-            percentage = percentage + _data.force;
+            Debug.Log("Recived hit");
             if (percentage >= 120)
             {
+                Debug.Log("Percentage is high, ragdolling");
                 ActivateRagdoll();
                 GetKnockbacked(_data.dir, _data.contactPoint, ForceReturnMax(_data.force));
                 m_rigi.isKinematic = true;
                 m_col.enabled = false;
             } else
             {
+                Debug.Log("Percentage not enough, just recieving hit");
                 GetKnockbacked(_data.dir, _data.contactPoint, ForceReturnMin(_data.force));
             }
+            percentage = percentage + _data.force;
             _data.sender.SendMessage("GetHit", dañoDevuelta, SendMessageOptions.DontRequireReceiver);
         }
 
         public void ActivateRagdoll()
         {
+            Debug.Log("Activating ragdoll");
             for (int i = 0; i < m_righijos.Length; i++)
             {
                 m_righijos[i].isKinematic = false;
@@ -88,6 +94,7 @@ namespace Mangos
 
         public void GetKnockbacked(Vector3 _dir,Vector3 _pos, float _force)
         {
+            Debug.Log("Should get knocked back with force: " + _force + " on dir " + _dir);
             _dir.Normalize();
             if(Ragdoll == false)
                 m_rigi.AddForceAtPosition(_force * _dir, _pos, ForceMode.Impulse);

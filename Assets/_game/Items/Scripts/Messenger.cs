@@ -11,12 +11,14 @@ namespace Mangos
         public GameObject gato;
         Rigidbody rigi;
 
+        public float force;
+
         private void Start()
         {
             rigi = GetComponent<Rigidbody>();
             hData.sender = gameObject;
-            hData.force = 60f;
-            hData.dir = rigi.velocity;
+            hData.force = force;
+            hData.dir = Vector3.right;
             hData.contactPoint = gato.transform.position;
         }
 
