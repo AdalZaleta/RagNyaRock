@@ -22,6 +22,17 @@ namespace Mangos
         GAME_END,
         MAIN_MENU
     }
+    
+    public enum Nota
+	{
+		CORCHEA,
+		CUADRUPLE_CORCHEA,
+		DOBLE_CORCHEA,
+		NEGRA,
+		SEMI_CORCHEA,
+		SILENCIO,
+		TRES_CUARTOS
+	}
 
     //ESTE SE ENCARGARA DE MANTENER A LOS DEMAS MANAGER COMUNICADOS ENTRE ELLOS
     public static class Manager_Static
