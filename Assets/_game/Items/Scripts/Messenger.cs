@@ -15,7 +15,7 @@ namespace Mangos
         {
             rigi = GetComponent<Rigidbody>();
             hData.sender = gameObject;
-            hData.force = 600f;
+            hData.force = 60f;
             hData.dir = rigi.velocity;
             hData.contactPoint = gato.transform.position;
         }
