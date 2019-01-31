@@ -27,11 +27,13 @@ namespace Mangos
         private float damage = 0;
 
         // Input Mapping
-        [Header("DEBBUGING MOVEMENT")]
-        public bool jump;
-        public bool shield;
-        public float xDir;
-        public float zDir;
+        private bool jump;
+        private bool shield;
+        private float xDir;
+        private float zDir;
+
+        // Animation Controls
+        private Animation anim;
 
         private void OnCollisionStay(Collision _col)
         {
