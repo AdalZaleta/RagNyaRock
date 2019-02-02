@@ -35,6 +35,7 @@ namespace Mangos
 
             rigi = GetComponent<Rigidbody>();
             rigi.useGravity = false;
+            rigi.isKinematic = true;
 
             render = GetComponent<MeshRenderer>();
             render.enabled = DebugMode;
@@ -57,7 +58,7 @@ namespace Mangos
         {
             Debug.Log("Entered trigger");
             UpdateHitData();
-            _col.SendMessage("GetHit", hitData, SendMessageOptions.DontRequireReceiver);
+            _col.SendMessage("ReceiveDamage", hitData, SendMessageOptions.DontRequireReceiver);
         }
 
     }

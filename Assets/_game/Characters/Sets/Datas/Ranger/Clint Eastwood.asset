@@ -13,4 +13,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   namae: High Noon Chilpa
   splash: {fileID: 21300000, guid: 28a4dabb51ca7094cb0ffe5ff63e81f9, type: 3}
-  model: {fileID: 1764698406212834, guid: 04c71bb51d77bef48bbf15f2f04b754d, type: 2}
+  model: {fileID: 1352421009748610, guid: 0e8f17569dac589418c31c6ad28b4c11, type: 2}

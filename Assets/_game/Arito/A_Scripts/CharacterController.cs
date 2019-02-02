@@ -28,10 +28,10 @@ namespace Mangos
         private GameObject heldItem;
         private bool hasItem;
 
-        public int currentComboSatus = 0;
-        public float comboCooldown = 0;
+        private int currentComboSatus = 0;
+        private float comboCooldown = 0;
 
-        public float attackCooldown = 0;
+        private float attackCooldown = 0;
 
         // Input Mapping
         private bool jump;
@@ -132,13 +132,10 @@ namespace Mangos
         {
             if (jump)
                 Jump();
-            if (shield)
-                Shield();
-            else
-                UnShield();
 
             if (attackCooldown <= 0)
             {
+                canMove = true;
                 if (lightAttack)
                 {
                     if (isAirborn)
@@ -164,11 +161,19 @@ namespace Mangos
                 if (heavyAttack)
                 {
                     Attack(4);
-                    attackCooldown = 0.5f;
+                    attackCooldown = 1f;
                 }
+
+                if (shield)
+                    Shield();
+                else
+                    UnShield();
             } else
             {
                 attackCooldown -= Time.deltaTime;
+                Vector3 hitVelocity = new Vector3(0, rig.velocity.y, 0);
+                rig.velocity = hitVelocity;
+                canMove = false;
             }
 
             Move(xDir, zDir);
@@ -266,16 +271,16 @@ namespace Mangos
             }
         }
 
-        public void ReceiveDamage(float _dmg)
+        public void ReceiveDamage(HitData _hitdata)
         {
             if (!isShielded)
-                damage += _dmg;
-        }
+            {
+                Debug.Log("Received Damage");
+                damage += _hitdata.damage;
 
-        public void HealDamage(float _heal)
-        {
-            if (!isShielded)
-               damage -= _heal;
+                // Animation Controls
+                anim.SetTrigger("Stun");
+            }
         }
 
         public void PickupItem(GameObject _obj)
@@ -300,6 +305,8 @@ namespace Mangos
 
         public void Attack(float _index)
         {
+
+            // Animation Controls
             anim.SetFloat("AttackStatus", (float)_index);
             anim.SetTrigger("Attack");
         }
