@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6bd26ede11d0384d9cbdbecd03dce30, type: 3}
+  m_Name: Mage
+  m_EditorClassIdentifier: 
+  namae: Panchita
+  skins:
+  - {fileID: 11400000, guid: 8300ced7f7ce19e41be454b31d36f609, type: 2}
+  - {fileID: 11400000, guid: 53270e1cf29ed4242abe7ae4bb76db51, type: 2}

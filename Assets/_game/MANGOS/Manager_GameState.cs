@@ -7,6 +7,7 @@ namespace Mangos
 {
     public class Manager_GameState : MonoBehaviour
     {
+        public GameState gameState;
 
         private void Awake()
         {

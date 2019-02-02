@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d3bfc4264f8bb743998433496cb04e5, type: 3}
+  m_Name: Astrocat
+  m_EditorClassIdentifier: 
+  namae: Astrocat
+  splash: {fileID: 21300000, guid: 90b39306528895e468cd63e9a25f2365, type: 3}
+  model: {fileID: 1352421009748610, guid: 0e8f17569dac589418c31c6ad28b4c11, type: 2}

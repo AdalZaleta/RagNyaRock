@@ -21,17 +21,29 @@ namespace Mangos
     //ESTE ES UN ENUMERADOR QUE NOS DICE LOS ESTADOS DE LA APLICACION
     public enum AppState
     {
+        LOADING,
+        RUNNING
+    }
+
+    public enum GameState
+    {
         PAUSE,
         GAMEPLAY,
         CREDITS,
         GAME_END,
         MAIN_MENU
     }
-
-    public enum GameState
-    {
-        
-    }
+    
+    public enum Nota
+	{
+		CORCHEA,
+		CUADRUPLE_CORCHEA,
+		DOBLE_CORCHEA,
+		NEGRA,
+		SEMI_CORCHEA,
+		SILENCIO,
+		TRES_CUARTOS
+	}
 
     //ESTE SE ENCARGARA DE MANTENER A LOS DEMAS MANAGER COMUNICADOS ENTRE ELLOS
     public static class Manager_Static
@@ -43,5 +55,8 @@ namespace Mangos
         public static Manager_Audio audioManager;
         public static Manager_GameState gameStateManager;
         public static Manager_UI uiManager;
-	}
+        public static PlayerAssigner playerAssigner;
+        public static Manager_Spawner spawnManager;
+
+    }
 }
