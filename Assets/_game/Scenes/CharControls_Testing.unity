@@ -432,7 +432,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   follower: {fileID: 822338788}
-  offset: {x: 0, y: 18, z: -15}
+  offset: {x: 0, y: 8, z: -12}
 --- !u!4 &240626072
 Transform:
   m_ObjectHideFlags: 0

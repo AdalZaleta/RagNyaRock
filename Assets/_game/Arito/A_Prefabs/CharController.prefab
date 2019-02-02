@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 500
-  jumpForce: 6
+  jumpForce: 12
   velSmoothSpeed: 0.2
   rotSmoothSpeed: 0.1
   airbornRotSpeed: 0.05

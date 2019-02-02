@@ -2733,10 +2733,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   director: {fileID: 4740395507764006}
   dir: {x: 3.22, y: 2.78, z: 4.66}
-  baseForce: 500
+  baseForce: 10
   scaleForce: 1
   damage: 10
-  DebugMode: 1
+  DebugMode: 0
 --- !u!114 &114391009096255776
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2750,10 +2750,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   director: {fileID: 4181535891308894}
   dir: {x: 3.22, y: 2.78, z: 4.66}
-  baseForce: 50
+  baseForce: 5
   scaleForce: 1
   damage: 10
-  DebugMode: 1
+  DebugMode: 0
 --- !u!137 &137195010070671736
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

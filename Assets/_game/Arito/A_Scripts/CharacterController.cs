@@ -238,7 +238,7 @@ namespace Mangos
             {
                 if (!isAirborn)
                 {
-                    rig.AddForce(Vector3.up * jumpForce * 1000, ForceMode.Impulse);
+                    rig.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
                     isAirborn = true;
 
                     // Animation Controls
