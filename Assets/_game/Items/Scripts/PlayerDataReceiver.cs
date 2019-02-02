@@ -20,9 +20,9 @@ namespace Mangos
         private Collider m_col;
         private Rigidbody[] m_righijos;
         private Collider[] m_colhijos;
-        
 
-        void Start()    
+
+        void Start()
         {
             m_rigi = GetComponent<Rigidbody>();
             m_col = GetComponent<Collider>();
