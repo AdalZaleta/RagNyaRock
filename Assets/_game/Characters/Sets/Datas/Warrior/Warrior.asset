@@ -14,4 +14,5 @@ MonoBehaviour:
   namae: Vader
   skins:
   - {fileID: 11400000, guid: 6309887d2f5c31343a30b5908bf3dd16, type: 2}
+  - {fileID: 11400000, guid: b6f1bc270c9903549b2690d30bb469d5, type: 2}
   - {fileID: 11400000, guid: 86b330abbdfff104095dd20c01967118, type: 2}
