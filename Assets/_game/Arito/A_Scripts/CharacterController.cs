@@ -25,15 +25,24 @@ namespace Mangos
         private bool canJump = true;
         private bool isShielded = false;
         private float damage = 0;
+        private GameObject heldItem;
+        private bool hasItem;
+
+        public int currentComboSatus = 0;
+        public float comboCooldown = 0;
+
+        public float attackCooldown = 0;
 
         // Input Mapping
         private bool jump;
         private bool shield;
         private float xDir;
         private float zDir;
+        private bool lightAttack;
+        private bool heavyAttack;
 
         // Animation Controls
-        private Animation anim;
+        private Animator anim;
 
         private void OnCollisionStay(Collision _col)
         {
@@ -78,6 +87,12 @@ namespace Mangos
             rig = gameObject.GetComponent<Rigidbody>();
             TestShield.SetActive(false);
             Instantiate(model, transform.position, transform.rotation, transform);
+            foreach(Transform child in gameObject.transform)
+            {
+                if (child.gameObject.CompareTag("Model"))
+                    anim = child.gameObject.GetComponent<Animator>();
+            }
+            Debug.Log("Animator: " + anim);
         }
 
         public void AssignID(int _id)
@@ -89,6 +104,14 @@ namespace Mangos
 
         void Update()
         {
+            if (currentComboSatus != 0 && comboCooldown <= 0)
+            {
+                currentComboSatus = 0;
+            } else if (currentComboSatus != 0)
+            {
+                comboCooldown -= Time.deltaTime;
+            }
+
             GetInputs();
             ProcessInputs();
         }
@@ -100,6 +123,9 @@ namespace Mangos
 
             jump = player.GetButtonDown("Jump");
             shield = player.GetButton("Block");
+
+            lightAttack = player.GetButtonDown("Low_Punch");
+            heavyAttack = player.GetButtonDown("Heavy_Punch");
         }
 
         private void ProcessInputs()
@@ -110,6 +136,40 @@ namespace Mangos
                 Shield();
             else
                 UnShield();
+
+            if (attackCooldown <= 0)
+            {
+                if (lightAttack)
+                {
+                    if (isAirborn)
+                    {
+                        Attack(3);
+                    } else
+                    {
+                        Attack(currentComboSatus);
+
+                        currentComboSatus++;
+
+                        if (currentComboSatus >= 3)
+                        {
+                            currentComboSatus = 0;
+                            comboCooldown = 2.0f;
+                        }
+                        else
+                            comboCooldown = 1.0f;
+                    }
+                    attackCooldown = 0.5f;
+                }
+
+                if (heavyAttack)
+                {
+                    Attack(4);
+                    attackCooldown = 0.5f;
+                }
+            } else
+            {
+                attackCooldown -= Time.deltaTime;
+            }
 
             Move(xDir, zDir);
         }
@@ -152,6 +212,13 @@ namespace Mangos
                 rig.velocity = smoothedVel;
                 rig.angularVelocity = Vector3.zero;
             }
+
+            // Animation Controller
+            Vector3 animVel;
+            animVel.x = rig.velocity.x;
+            animVel.y = 0;
+            animVel.z = rig.velocity.z;
+            anim.SetFloat("MovementVelocity", animVel.magnitude.Remap(0, 10, 0, 1));
         }
 
         public void Jump()
@@ -162,6 +229,9 @@ namespace Mangos
                 {
                     rig.AddForce(Vector3.up * jumpForce * 1000, ForceMode.Impulse);
                     isAirborn = true;
+
+                    // Animation Controls
+                    anim.SetTrigger("Jump");
                 }
             }
         }
@@ -176,6 +246,9 @@ namespace Mangos
                 canJump = false;
                 isShielded = true;
                 TestShield.SetActive(true);
+
+                // Animation Controls
+                anim.SetBool("Shield", true);
             }
         }
 
@@ -187,6 +260,9 @@ namespace Mangos
                 canJump = true;
                 isShielded = false;
                 TestShield.SetActive(false);
+
+                // Animation Controls
+                anim.SetBool("Shield", false);
             }
         }
 
@@ -202,15 +278,47 @@ namespace Mangos
                damage -= _heal;
         }
 
-        /*public void Interact(GameObject _obj)
+        public void PickupItem(GameObject _obj)
         {
-            // ItemBehaviour
-            // type.HEAVY / type.LIGHT
+            heldItem = _obj;
+            hasItem = true;
 
-            _obj.GetComponent<ItemBehaviour>().type
+            // Animation Controls
+            anim.SetTrigger("Pickup");
+        }
+        
+        public void ThrowItem()
+        {
+            if (hasItem)
+            {
+                hasItem = false;
+            }
 
-            switch(_obj)
-        }*/
+            // Animation Controls
+            anim.SetTrigger("Throw");
+        }
+
+        public void Attack(float _index)
+        {
+            anim.SetFloat("AttackStatus", (float)_index);
+            anim.SetTrigger("Attack");
+        }
+
+        public void Stun()
+        {
+            canMove = false;
+
+            // Animation Controls
+            anim.SetBool("Stun", true);
+        }
+
+        public void DeStun()
+        {
+            canMove = true;
+
+            // Animation Controls
+            anim.SetBool("Stun", false);
+        }
     }
 
     public static class Extensions
