@@ -10,7 +10,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d3bfc4264f8bb743998433496cb04e5, type: 3}
   m_Name: Clint Eastwood
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
   namae: High Noon Chilpa
   splash: {fileID: 21300006, guid: 879aa22ad8574e848b7f56aa56ce3898, type: 3}
   model: {fileID: 1625039141690452, guid: bf8dc68a171358045968e2b32e2c9c4e, type: 2}

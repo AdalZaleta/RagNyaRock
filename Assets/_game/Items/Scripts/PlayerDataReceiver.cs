@@ -43,14 +43,14 @@ namespace Mangos
             m_rigi.AddForce(Vector3.up * 100);
         }
 
-        void GetHit(HitData _data)
+        void ReceiveDamage(HitData _data)
         {
             if (percentage >= 120f)
             {
-                ActivateRagdoll();
+                //ActivateRagdoll();
                 GetKnockbacked(_data.dir, _data.contactPoint, ForceOfHit(_data.baseForce, _data.scalingForce));
-                m_rigi.isKinematic = true;
-                m_col.enabled = false;
+                //m_rigi.isKinematic = true;
+                //m_col.enabled = false;
             } else
             {
                 GetKnockbacked(_data.dir, _data.contactPoint, ForceOfHit(_data.baseForce, _data.scalingForce));

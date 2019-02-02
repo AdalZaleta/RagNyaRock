@@ -22,16 +22,17 @@ namespace Mangos
         private Rigidbody rig;
         private bool isAirborn = false;
         private bool canMove = true;
+        private bool isStunned = false;
         private bool canJump = true;
         private bool isShielded = false;
         private float damage = 0;
         private GameObject heldItem;
         private bool hasItem;
 
-        public int currentComboSatus = 0;
-        public float comboCooldown = 0;
+        private int currentComboSatus = 0;
+        private float comboCooldown = 0;
 
-        public float attackCooldown = 0;
+        private float attackCooldown = 0;
 
         // Input Mapping
         private bool jump;
@@ -92,7 +93,7 @@ namespace Mangos
                 if (child.gameObject.CompareTag("Model"))
                     anim = child.gameObject.GetComponent<Animator>();
             }
-            Debug.Log("Animator: " + anim);
+            SetLayers(gameObject, playerID + 8);
         }
 
         public void AssignID(int _id)
@@ -100,6 +101,13 @@ namespace Mangos
             playerID = _id;
             player = ReInput.players.GetPlayer(playerID);
             Debug.Log("Player was assigned id: " + playerID);
+        }
+
+        private void SetLayers(GameObject _root, int _layer)
+        {
+            _root.gameObject.layer = _layer;
+            foreach (Transform child in _root.transform)
+                SetLayers(child.gameObject, _layer);
         }
 
         void Update()
@@ -132,10 +140,6 @@ namespace Mangos
         {
             if (jump)
                 Jump();
-            if (shield)
-                Shield();
-            else
-                UnShield();
 
             if (attackCooldown <= 0)
             {
@@ -158,7 +162,7 @@ namespace Mangos
                         else
                             comboCooldown = 1.0f;
                     }
-                    attackCooldown = 0.5f;
+                    attackCooldown = 0.3f;
                 }
 
                 if (heavyAttack)
@@ -166,9 +170,16 @@ namespace Mangos
                     Attack(4);
                     attackCooldown = 0.5f;
                 }
+
+                if (shield)
+                    Shield();
+                else
+                    UnShield();
             } else
             {
                 attackCooldown -= Time.deltaTime;
+                Vector3 hitVelocity = new Vector3(0, rig.velocity.y, 0);
+                rig.velocity = hitVelocity;
             }
 
             Move(xDir, zDir);
@@ -176,7 +187,7 @@ namespace Mangos
 
         public void Move(float _xDir, float _zDir)
         {
-            if (canMove)
+            if (canMove && !isStunned)
             {
                 Vector3 finalVel = rig.velocity;
 
@@ -227,7 +238,7 @@ namespace Mangos
             {
                 if (!isAirborn)
                 {
-                    rig.AddForce(Vector3.up * jumpForce * 1000, ForceMode.Impulse);
+                    rig.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
                     isAirborn = true;
 
                     // Animation Controls
@@ -266,16 +277,25 @@ namespace Mangos
             }
         }
 
-        public void ReceiveDamage(float _dmg)
+        public void ReceiveDamage(HitData _hitdata)
         {
             if (!isShielded)
-                damage += _dmg;
+            {
+                damage += _hitdata.damage;
+
+                StartCoroutine(freeze());
+
+                // Animation Controls
+                anim.SetTrigger("Stun");
+            }
         }
 
-        public void HealDamage(float _heal)
+        IEnumerator freeze()
         {
-            if (!isShielded)
-               damage -= _heal;
+            Debug.Log("Received Damage");
+            isStunned = true;
+            yield return new WaitForSeconds(1.0f);
+            isStunned = false;
         }
 
         public void PickupItem(GameObject _obj)
@@ -300,6 +320,8 @@ namespace Mangos
 
         public void Attack(float _index)
         {
+
+            // Animation Controls
             anim.SetFloat("AttackStatus", (float)_index);
             anim.SetTrigger("Attack");
         }
