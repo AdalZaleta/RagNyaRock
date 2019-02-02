@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class Safe_Zone : MonoBehaviour {
 
-	public Transform[] spanws;
-
+	[ContextMenu("Se encarga de mandar un mensaje a las cosas que se salen")]
 	void OnTriggerExit(Collider other)
 	{
 		other.SendMessage("ExitSafeZone",SendMessageOptions.DontRequireReceiver);
-		other.transform.localPosition = spanws[Random.Range(0, spanws.Length)].localPosition;
 	}
 }
