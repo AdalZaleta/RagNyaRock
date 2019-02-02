@@ -1,0 +1,261 @@
+fileFormatVersion: 2
+guid: ac69c20a795c81149aea9df55810f48a
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: ballesta
+    100002: //RootNode
+    100004: bottom
+    100006: Cabeza
+    100008: CabezaEnd
+    100010: Cintura
+    100012: Codo_D
+    100014: Codo_D 1
+    100016: CodoD
+    100018: Crtl_Cuello
+    100020: CTRL
+    100022: Ctrl_Brazo
+    100024: Ctrl_Brazo 1
+    100026: Ctrl_Cadera
+    100028: Ctrl_Cadera2
+    100030: Ctrl_Codo
+    100032: Ctrl_Codo 1
+    100034: Ctrl_Head
+    100036: Ctrl_Mano
+    100038: Ctrl_Mano 1
+    100040: Ctrl_Pierna
+    100042: Ctrl_Pierna 1
+    100044: Ctrl_Rodilla
+    100046: Ctrl_Rodilla 1
+    100048: CtrlRoot
+    100050: G_GatoBase
+    100052: Gato Caballero
+    100054: GEO
+    100056: Head
+    100058: HeadEn
+    100060: HID
+    100062: Hombro_D
+    100064: Hombro_I
+    100066: HombroD
+    100068: JHONNY
+    100070: LeCattoRigo
+    100072: LeTralp
+    100074: Locatos
+    100076: Mano_D
+    100078: Mano_D 1
+    100080: ManoD
+    100082: OffHandD
+    100084: OffHandI
+    100086: Pecho
+    100088: Pecho 1
+    100090: Pelvis
+    100092: Pie_D
+    100094: Pie_D 1
+    100096: PieD
+    100098: Pierna_D
+    100100: Pierna_I
+    100102: PiernaD
+    100104: polySurface2
+    100106: polySurface4
+    100108: Rodilla_D
+    100110: Rodilla_D 1
+    100112: RodillaD
+    100114: Ropa_Ballesta
+    100116: ScaleControlBrazoI
+    100118: ScaleControlPierna
+    100120: ScalePierna
+    100122: Torso
+    100124: transform1
+    100126: transform2
+    100128: transform3
+    100130: Z_Crtl_Cuello
+    100132: ZCtrl_Brazo
+    100134: ZCtrl_BrazoI
+    100136: ZCtrl_Cadera
+    100138: ZCtrl_Codo
+    100140: ZCtrl_Codo 1
+    100142: ZCtrl_Head
+    100144: ZCtrl_Mano
+    100146: ZCtrl_Mano 1
+    100148: ZCtrl_Pierna
+    100150: ZCtrl_Piernai
+    100152: ZCtrl_Rodilla
+    100154: ZCtrl_Rodilla 1
+    100156: ZCtrl_Root
+    400000: ballesta
+    400002: //RootNode
+    400004: bottom
+    400006: Cabeza
+    400008: CabezaEnd
+    400010: Cintura
+    400012: Codo_D
+    400014: Codo_D 1
+    400016: CodoD
+    400018: Crtl_Cuello
+    400020: CTRL
+    400022: Ctrl_Brazo
+    400024: Ctrl_Brazo 1
+    400026: Ctrl_Cadera
+    400028: Ctrl_Cadera2
+    400030: Ctrl_Codo
+    400032: Ctrl_Codo 1
+    400034: Ctrl_Head
+    400036: Ctrl_Mano
+    400038: Ctrl_Mano 1
+    400040: Ctrl_Pierna
+    400042: Ctrl_Pierna 1
+    400044: Ctrl_Rodilla
+    400046: Ctrl_Rodilla 1
+    400048: CtrlRoot
+    400050: G_GatoBase
+    400052: Gato Caballero
+    400054: GEO
+    400056: Head
+    400058: HeadEn
+    400060: HID
+    400062: Hombro_D
+    400064: Hombro_I
+    400066: HombroD
+    400068: JHONNY
+    400070: LeCattoRigo
+    400072: LeTralp
+    400074: Locatos
+    400076: Mano_D
+    400078: Mano_D 1
+    400080: ManoD
+    400082: OffHandD
+    400084: OffHandI
+    400086: Pecho
+    400088: Pecho 1
+    400090: Pelvis
+    400092: Pie_D
+    400094: Pie_D 1
+    400096: PieD
+    400098: Pierna_D
+    400100: Pierna_I
+    400102: PiernaD
+    400104: polySurface2
+    400106: polySurface4
+    400108: Rodilla_D
+    400110: Rodilla_D 1
+    400112: RodillaD
+    400114: Ropa_Ballesta
+    400116: ScaleControlBrazoI
+    400118: ScaleControlPierna
+    400120: ScalePierna
+    400122: Torso
+    400124: transform1
+    400126: transform2
+    400128: transform3
+    400130: Z_Crtl_Cuello
+    400132: ZCtrl_Brazo
+    400134: ZCtrl_BrazoI
+    400136: ZCtrl_Cadera
+    400138: ZCtrl_Codo
+    400140: ZCtrl_Codo 1
+    400142: ZCtrl_Head
+    400144: ZCtrl_Mano
+    400146: ZCtrl_Mano 1
+    400148: ZCtrl_Pierna
+    400150: ZCtrl_Piernai
+    400152: ZCtrl_Rodilla
+    400154: ZCtrl_Rodilla 1
+    400156: ZCtrl_Root
+    2000000: bottom
+    2100000: lambert1
+    2100002: Caballero genial
+    2300000: ballesta
+    3300000: ballesta
+    4300000: ballesta
+    4300002: polySurface4
+    4300004: Ropa_Ballesta
+    4300006: G_GatoBase
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: G_GatoBase
+    13700002: polySurface4
+    13700004: Ropa_Ballesta
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

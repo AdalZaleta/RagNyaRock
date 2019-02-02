@@ -162,6 +162,11 @@ namespace Mangos
 
         public void StartGame()
         {
+            for (int i = 0; i < 4; i++)
+            {
+                ReInput.players.GetPlayer(i).controllers.maps.SetMapsEnabled(false, "UI");
+                ReInput.players.GetPlayer(i).controllers.maps.SetMapsEnabled(true, "Default");
+            }
             SceneManager.LoadScene(1);
         }
     }
