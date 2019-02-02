@@ -4,30 +4,23 @@ using UnityEngine;
 
 public class Expand_Aro : MonoBehaviour {
 
-	private float scaleFactor = 1;
+	private float scaleFactor = 0.1f;
 	public float speedScale = 1;
-	public float limitExpand = 15.0f;
 	
 	void Update () {
 		transform.localScale = new Vector3(scaleFactor, 1.0f, scaleFactor);
 		scaleFactor += Time.deltaTime * speedScale;
-		if(scaleFactor > limitExpand)
-		{
-			gameObject.SetActive(false);
-		}
-		if(scaleFactor <= 1.1f)
-		{
-			gameObject.SetActive(true);
-		}
 	}
 
 	void OnEnable() {
-		scaleFactor = 1;
+		scaleFactor = 0.1f;
+		transform.localScale = new Vector3(scaleFactor, 1.0f, scaleFactor);
 		foreach (GameObject child in transform)
 			child.gameObject.SetActive(true);
 	}
 
 	void OnDisable() {
-		scaleFactor = 1;	
+		scaleFactor = 0.1f;
+		transform.localScale = new Vector3(scaleFactor, 1.0f, scaleFactor);
 	}
 }

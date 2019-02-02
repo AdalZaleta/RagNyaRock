@@ -7,14 +7,22 @@ namespace Mangos
 	public class Spawner_Meteor : MonoBehaviour {
 
 		[SerializeField]
-		private Vector2 timeToSpawn;
+		private Vector2 timeToSpawnMeteor;
 		[SerializeField]
 		private float cooldownMeteor;
 		[SerializeField]
 		private GameObject meteor;
+		[Space(10)]
+		[SerializeField]
+		private Vector2 timeToSpawnBlackHole;
+		[SerializeField]
+		private float cooldownBlackHole;
+		[SerializeField]
+		private GameObject blackHole;
 
 		private void Start() {
-			cooldownMeteor = Random.Range(timeToSpawn.x, timeToSpawn.y);
+			cooldownMeteor = Random.Range(timeToSpawnMeteor.x, timeToSpawnMeteor.y);
+			cooldownBlackHole = Random.Range(timeToSpawnBlackHole.x, timeToSpawnBlackHole.y);
 			PoolManager.MakePool(meteor, 5, 3, true);
 		}
 
@@ -22,14 +30,25 @@ namespace Mangos
 			if(cooldownMeteor < 0.0f)
 			{
 				PoolManager.Spawn(meteor, meteor.transform.position, Quaternion.identity);
-				MakeNewCooldown();
+				MakeNewCooldownMeteor();
+			}
+			if(cooldownBlackHole < 0.0f)
+			{
+				blackHole.GetComponent<Animator>().SetTrigger("MakeAnimation");
+				MakeNewCooldownBlackHole();
 			}
 			cooldownMeteor -= Time.deltaTime;
+			cooldownBlackHole -= Time.deltaTime;
 		}
 
-		private void MakeNewCooldown()
+		private void MakeNewCooldownBlackHole()
 		{
-			cooldownMeteor = Random.Range(timeToSpawn.x, timeToSpawn.y);
+			cooldownBlackHole = Random.Range(timeToSpawnBlackHole.x, timeToSpawnBlackHole.y);
+		}
+
+		private void MakeNewCooldownMeteor()
+		{
+			cooldownMeteor = Random.Range(timeToSpawnMeteor.x, timeToSpawnMeteor.y);
 		}
 	}
 }
