@@ -417,7 +417,7 @@ GameObject:
   - component: {fileID: 95675602123313938}
   m_Layer: 0
   m_Name: GuerreroMagico
-  m_TagString: Untagged
+  m_TagString: Model
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2491,7 +2491,7 @@ Animator:
   m_GameObject: {fileID: 1310110514296756}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: dbb175d7137e41745b50fb0fbcb2416c, type: 3}
-  m_Controller: {fileID: 9100000, guid: d0728daa74f08af48b24b50806be7fea, type: 2}
+  m_Controller: {fileID: 9100000, guid: 917c977f339cf2b439089289f55d603c, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

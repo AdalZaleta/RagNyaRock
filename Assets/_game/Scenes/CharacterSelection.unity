@@ -3456,6 +3456,58 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1954422978}
   m_CullTransparentMesh: 0
+--- !u!1001 &2071525253
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4921195344078782, guid: 701d76575cc56b04f8379c720ac71f9c, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921195344078782, guid: 701d76575cc56b04f8379c720ac71f9c, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921195344078782, guid: 701d76575cc56b04f8379c720ac71f9c, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921195344078782, guid: 701d76575cc56b04f8379c720ac71f9c, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921195344078782, guid: 701d76575cc56b04f8379c720ac71f9c, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921195344078782, guid: 701d76575cc56b04f8379c720ac71f9c, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921195344078782, guid: 701d76575cc56b04f8379c720ac71f9c, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4921195344078782, guid: 701d76575cc56b04f8379c720ac71f9c, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114391009096255776, guid: 701d76575cc56b04f8379c720ac71f9c,
+        type: 2}
+      propertyPath: baseForce
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114262326893261634, guid: 701d76575cc56b04f8379c720ac71f9c,
+        type: 2}
+      propertyPath: baseForce
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 701d76575cc56b04f8379c720ac71f9c, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &2130089075
 GameObject:
   m_ObjectHideFlags: 0

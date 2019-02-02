@@ -2733,7 +2733,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   director: {fileID: 4740395507764006}
   dir: {x: 3.22, y: 2.78, z: 4.66}
-  baseForce: 5
+  baseForce: 500
   scaleForce: 1
   damage: 10
   DebugMode: 1
@@ -2750,7 +2750,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   director: {fileID: 4181535891308894}
   dir: {x: 3.22, y: 2.78, z: 4.66}
-  baseForce: 5
+  baseForce: 50
   scaleForce: 1
   damage: 10
   DebugMode: 1

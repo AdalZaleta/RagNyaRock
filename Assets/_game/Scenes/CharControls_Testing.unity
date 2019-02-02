@@ -810,7 +810,7 @@ GameObject:
   - component: {fileID: 544522502}
   - component: {fileID: 544522501}
   - component: {fileID: 544522505}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cube (6)
   m_TagString: Map
   m_Icon: {fileID: 0}
@@ -939,7 +939,7 @@ GameObject:
   - component: {fileID: 569763436}
   - component: {fileID: 569763435}
   - component: {fileID: 569763439}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cube
   m_TagString: Map
   m_Icon: {fileID: 0}
@@ -1040,7 +1040,7 @@ GameObject:
   - component: {fileID: 634066845}
   - component: {fileID: 634066844}
   - component: {fileID: 634066847}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Ramp (0)
   m_TagString: Map
   m_Icon: {fileID: 0}
@@ -1142,7 +1142,7 @@ GameObject:
   - component: {fileID: 822338792}
   - component: {fileID: 822338794}
   - component: {fileID: 822338793}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -1598,7 +1598,7 @@ GameObject:
   - component: {fileID: 1158511648}
   - component: {fileID: 1158511647}
   - component: {fileID: 1158511651}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cube (5)
   m_TagString: Map
   m_Icon: {fileID: 0}
@@ -1812,7 +1812,7 @@ GameObject:
   - component: {fileID: 1191851490}
   - component: {fileID: 1191851489}
   - component: {fileID: 1191851492}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Ramp (2)
   m_TagString: Map
   m_Icon: {fileID: 0}
@@ -1910,7 +1910,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1204173558}
   - component: {fileID: 1204173559}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Map
   m_TagString: Map
   m_Icon: {fileID: 0}
@@ -2377,7 +2377,7 @@ MonoBehaviour:
   - {fileID: 58032628}
   - {fileID: 2145171503}
   pivotPlacer: {fileID: 240626071}
-  charPrefab: {fileID: 1352421009748610, guid: f0621e8a48a491244bea6ff4bd7dc0fc, type: 2}
+  charPrefab: {fileID: 1352421009748610, guid: 0e8f17569dac589418c31c6ad28b4c11, type: 2}
 --- !u!4 &1598821725
 Transform:
   m_ObjectHideFlags: 0
@@ -2459,7 +2459,7 @@ GameObject:
   - component: {fileID: 1706901978}
   - component: {fileID: 1706901977}
   - component: {fileID: 1706901981}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cube (4)
   m_TagString: Map
   m_Icon: {fileID: 0}
@@ -2645,7 +2645,7 @@ GameObject:
   - component: {fileID: 1856926332}
   - component: {fileID: 1856926331}
   - component: {fileID: 1856926334}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Ramp (3)
   m_TagString: Map
   m_Icon: {fileID: 0}
@@ -2746,7 +2746,7 @@ GameObject:
   - component: {fileID: 1936066793}
   - component: {fileID: 1936066792}
   - component: {fileID: 1936066795}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Ramp (1)
   m_TagString: Map
   m_Icon: {fileID: 0}
@@ -2847,7 +2847,7 @@ GameObject:
   - component: {fileID: 1988254678}
   - component: {fileID: 1988254677}
   - component: {fileID: 1988254681}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Map
   m_Icon: {fileID: 0}
@@ -2948,7 +2948,7 @@ GameObject:
   - component: {fileID: 2012328391}
   - component: {fileID: 2012328390}
   - component: {fileID: 2012328394}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cube (3)
   m_TagString: Map
   m_Icon: {fileID: 0}
@@ -3134,7 +3134,7 @@ GameObject:
   - component: {fileID: 2131703423}
   - component: {fileID: 2131703422}
   - component: {fileID: 2131703426}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Map
   m_Icon: {fileID: 0}
