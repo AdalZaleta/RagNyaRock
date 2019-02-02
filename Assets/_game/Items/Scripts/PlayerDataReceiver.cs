@@ -51,6 +51,7 @@ namespace Mangos
 
         void GetHit(HitData _data)
         {
+            Debug.Log("Got hit");
             if (percentage >= 120)
             {
                 ActivateRagdoll();
