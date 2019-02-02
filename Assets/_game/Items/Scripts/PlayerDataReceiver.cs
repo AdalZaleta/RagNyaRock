@@ -20,9 +20,9 @@ namespace Mangos
         private Collider m_col;
         private Rigidbody[] m_righijos;
         private Collider[] m_colhijos;
-        
 
-        void Start()    
+
+        void Start()
         {
             m_rigi = GetComponent<Rigidbody>();
             m_col = GetComponent<Collider>();
@@ -43,15 +43,9 @@ namespace Mangos
             m_rigi.AddForce(Vector3.up * 100);
         }
 
-
-        void Update()
-        {
-            
-        }
-
         void GetHit(HitData _data)
         {
-            if (percentage >= 120)
+            if (percentage >= 120f)
             {
                 ActivateRagdoll();
                 GetKnockbacked(_data.dir, _data.contactPoint, ForceOfHit(_data.baseForce, _data.scalingForce));

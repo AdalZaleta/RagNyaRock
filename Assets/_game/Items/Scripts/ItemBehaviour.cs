@@ -4,41 +4,40 @@ using UnityEngine;
 
 namespace Mangos
 {
-    public enum TYPE
-    {
-        HEAVY,
-        LIGHT
-    }
-
     [RequireComponent(typeof(Rigidbody))]
     public class ItemBehaviour : MonoBehaviour
     {
-        public string name;
-        public TYPE type;
         public int durability;
         public int addingPercentage;
-        public int force;       //Variable en negativos, Hace el knockback final.
-        public int miniforce; //Esta variable es con el knockback que no saca volando (Usar negativos)
+        public HitData hData;
+        public float force;
+        public float scalingForce;
         Rigidbody rigi;
 
         private void Start()
         {
             rigi = GetComponent<Rigidbody>();
+            hData.sender = gameObject;
+            hData.baseForce = force;
+            hData.scalingForce = scalingForce;
+            hData.dir = Vector3.right + Vector3.up;
+            hData.damage = addingPercentage;
         }
 
         private void OnTriggerEnter(Collider _col)
         {
-            _col.SendMessage("HitReceiver", this, SendMessageOptions.DontRequireReceiver);
+            hData.contactPoint = transform.position;
+            _col.SendMessage("GetHit", hData, SendMessageOptions.DontRequireReceiver);
         }
 
         public void GetHit(int damage)
         {
             durability = durability - damage;
             if (durability <= 0)
-                destroyMyself();
+                DestroyMyself();
         }
 
-        public void destroyMyself()
+        public void DestroyMyself()
         {
             GetComponent<BoxCollider>().enabled = false;
 
