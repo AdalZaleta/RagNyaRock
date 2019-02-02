@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Name: Astrocat
   m_EditorClassIdentifier: 
   namae: Astrocat
-  splash: {fileID: 21300000, guid: 90b39306528895e468cd63e9a25f2365, type: 3}
-  model: {fileID: 1352421009748610, guid: 0e8f17569dac589418c31c6ad28b4c11, type: 2}
+  splash: {fileID: 21300002, guid: 879aa22ad8574e848b7f56aa56ce3898, type: 3}
+  model: {fileID: 1854263748673796, guid: 9fdf735cacc7ee74e95afb497c13361f, type: 2}

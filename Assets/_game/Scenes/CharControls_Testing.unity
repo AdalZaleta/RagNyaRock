@@ -2377,6 +2377,7 @@ MonoBehaviour:
   - {fileID: 58032628}
   - {fileID: 2145171503}
   pivotPlacer: {fileID: 240626071}
+  charPrefab: {fileID: 1352421009748610, guid: f0621e8a48a491244bea6ff4bd7dc0fc, type: 2}
 --- !u!4 &1598821725
 Transform:
   m_ObjectHideFlags: 0

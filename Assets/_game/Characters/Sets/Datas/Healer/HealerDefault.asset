@@ -11,6 +11,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3bfc4264f8bb743998433496cb04e5, type: 3}
   m_Name: HealerDefault
   m_EditorClassIdentifier: 
-  namae: 
+  namae: Tibert
   splash: {fileID: 21300004, guid: 124085867b125944e9ba2eddc77a4418, type: 3}
-  model: {fileID: 1352421009748610, guid: 0e8f17569dac589418c31c6ad28b4c11, type: 2}
+  model: {fileID: 1660194180531460, guid: 80bb4252c91d78c4aa15c1525ea394c5, type: 2}

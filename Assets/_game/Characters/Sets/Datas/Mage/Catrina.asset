@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Name: Catrina
   m_EditorClassIdentifier: 
   namae: 
-  splash: {fileID: 21300000, guid: 44e592b58e25d134ca1a4487ee73e347, type: 3}
-  model: {fileID: 1575160532979860, guid: 56c40b6c3d470fe4c8295697fd7bc359, type: 2}
+  splash: {fileID: 21300000, guid: 879aa22ad8574e848b7f56aa56ce3898, type: 3}
+  model: {fileID: 1918203123887436, guid: 701d76575cc56b04f8379c720ac71f9c, type: 2}

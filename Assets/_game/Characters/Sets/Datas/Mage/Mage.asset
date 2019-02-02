@@ -14,4 +14,5 @@ MonoBehaviour:
   namae: Panchita
   skins:
   - {fileID: 11400000, guid: 8300ced7f7ce19e41be454b31d36f609, type: 2}
+  - {fileID: 11400000, guid: 9d9f213bed0ff3249b32ede97a384bfd, type: 2}
   - {fileID: 11400000, guid: 53270e1cf29ed4242abe7ae4bb76db51, type: 2}

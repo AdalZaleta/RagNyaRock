@@ -8,6 +8,7 @@ namespace Mangos
     {
         public Transform[] spawnPoints = new Transform[4];
         public GroupPivotPlacer pivotPlacer;
+        public GameObject charPrefab;
 
         private CharacterSet[] characterSets;
 
@@ -27,10 +28,10 @@ namespace Mangos
                 if (temp.ready)
                 {
                     Debug.Log("Character selected " + temp.charSelected + ", skin selected " + temp.skinSelected);
-                    GameObject go = Instantiate(characterSets[temp.charSelected].skins[temp.skinSelected].model, spawnPoints[i].position, Quaternion.identity);
+                    GameObject go = Instantiate(charPrefab, spawnPoints[i].position, Quaternion.identity);
                     go.GetComponent<CharacterController>().AssignID(temp.rewiredPlayerId);
+                    go.GetComponent<CharacterController>().model = characterSets[temp.charSelected].skins[temp.skinSelected].model;
                     pivotPlacer.members[i] = go;
-                    //TODO: hacer que instancie el mismo prefab de personaje, ya ese darle el modelo para que los instancie
                 }
             }
         }
