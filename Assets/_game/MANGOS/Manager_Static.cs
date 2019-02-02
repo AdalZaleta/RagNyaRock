@@ -5,6 +5,17 @@ using UnityEngine;
 namespace Mangos
 {
 
+    public struct HitData
+    {
+        public GameObject sender;    //El objeto que lo mandó
+        public Vector3 dir;          //La dirección del mundo a la que tiene que salir
+        public float baseForce;          //La fuerza base con la que debe de ser lanzado
+        public float scalingForce;       //Que tanto aumenta la fuerza dependiedo de el procentaje que tenga el gato golpeado
+        public float damage;             //El daño que hace el golpe / el porcentaje que aumenta
+        public Vector3 contactPoint;     //El punto en donde golpeó, sirve para añadir torque natural
+
+    }
+
     //ES EL MANAGER STATICO ES UN SCRIPT QUE SE COMUNICA CON TODOS LOS DEMAS SCRIPTS SIN IMPORTA SI ESTA EN LA ESCENA
 
     //ESTE ES UN ENUMERADOR QUE NOS DICE LOS ESTADOS DE LA APLICACION
@@ -22,6 +33,17 @@ namespace Mangos
         GAME_END,
         MAIN_MENU
     }
+    
+    public enum Nota
+	{
+		CORCHEA,
+		CUADRUPLE_CORCHEA,
+		DOBLE_CORCHEA,
+		NEGRA,
+		SEMI_CORCHEA,
+		SILENCIO,
+		TRES_CUARTOS
+	}
 
     //ESTE SE ENCARGARA DE MANTENER A LOS DEMAS MANAGER COMUNICADOS ENTRE ELLOS
     public static class Manager_Static

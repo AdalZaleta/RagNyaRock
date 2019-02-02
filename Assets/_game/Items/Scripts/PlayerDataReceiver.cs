@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace mangos
+namespace Mangos
 {
     [RequireComponent(typeof(Rigidbody))]
     public class PlayerDataReceiver : MonoBehaviour
@@ -11,7 +11,7 @@ namespace mangos
         [Tooltip("El daño que le hará al PROP que le envió el golpe")]
         public int dañoDevuelta;
         [Tooltip("Porcentaje de daño que tiene actualmente")]
-        public int percentage;
+        public float percentage;
 
         public bool Ragdoll;
 
@@ -20,9 +20,9 @@ namespace mangos
         private Collider m_col;
         private Rigidbody[] m_righijos;
         private Collider[] m_colhijos;
-        
 
-        void Start()    
+
+        void Start()
         {
             m_rigi = GetComponent<Rigidbody>();
             m_col = GetComponent<Collider>();
@@ -39,27 +39,56 @@ namespace mangos
             }
             m_rigi.isKinematic = false;
             m_col.enabled = true;
+
+            m_rigi.AddForce(Vector3.up * 100);
         }
 
-
-        void Update()
+        void GetHit(HitData _data)
         {
-            
-        }
-
-        void HitReceiver(ItemBehaviour data)
-        {
-            percentage = percentage + data.addingPercentage;
-            if(percentage >= 120)
+            if (percentage >= 120f)
             {
                 ActivateRagdoll();
+                GetKnockbacked(_data.dir, _data.contactPoint, ForceOfHit(_data.baseForce, _data.scalingForce));
+                m_rigi.isKinematic = true;
+                m_col.enabled = false;
+            } else
+            {
+                GetKnockbacked(_data.dir, _data.contactPoint, ForceOfHit(_data.baseForce, _data.scalingForce));
             }
-            data.GetHit(dañoDevuelta);
+            percentage = percentage + _data.damage;
+
+            _data.sender.SendMessage("GetHit", dañoDevuelta, SendMessageOptions.DontRequireReceiver);
         }
 
         public void ActivateRagdoll()
         {
+            Debug.Log("Activating ragdoll");
+            for (int i = 0; i < m_righijos.Length; i++)
+            {
+                m_righijos[i].isKinematic = false;
+            }
+            for (int i = 0; i < m_colhijos.Length; i++)
+            {
+                m_colhijos[i].enabled = true;
+            }
+            Ragdoll = true;
+        }
 
+        public float ForceOfHit(float _baseForce, float _scalingForce)
+        {
+            return _baseForce + (percentage/2.0f) * _scalingForce;
+        }
+
+        public void GetKnockbacked(Vector3 _dir,Vector3 _pos, float _force)
+        {
+            _dir.Normalize();
+            if(Ragdoll == false)
+                m_rigi.AddForceAtPosition(_force * _dir, _pos, ForceMode.Impulse);
+            else
+            {
+                for(int i = 0; i < m_righijos.Length; i++)
+                    m_righijos[i].AddForceAtPosition(_force * _dir, _pos, ForceMode.Impulse);
+            }
         }
     }
 }
