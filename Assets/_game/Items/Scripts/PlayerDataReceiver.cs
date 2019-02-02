@@ -43,15 +43,9 @@ namespace Mangos
             m_rigi.AddForce(Vector3.up * 100);
         }
 
-
-        void Update()
-        {
-            
-        }
-
         void GetHit(HitData _data)
         {
-            if (percentage >= 120)
+            if (percentage >= 120f)
             {
                 ActivateRagdoll();
                 GetKnockbacked(_data.dir, _data.contactPoint, ForceOfHit(_data.baseForce, _data.scalingForce));
