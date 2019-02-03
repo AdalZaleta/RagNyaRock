@@ -14,7 +14,25 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/_game/Scenes/SpawnTesting.unity
     guid: 6f96e0c9101b2bf4ea692654b51928c2
-  - enabled: 1
+  - enabled: 0
     path: Assets/_game/Scenes/CharControls_Testing.unity
     guid: cdede5a16d404444292e5d4794f43151
+  - enabled: 0
+    path: Assets/_game/Scenes/Escenarios/Cascada.unity
+    guid: 0f49838f8bd3f5c4b816181c2afbc1be
+  - enabled: 0
+    path: Assets/_game/Scenes/Escenarios/Espacio.unity
+    guid: 8058ea4cd570b5d4ab59949e3eadc250
+  - enabled: 0
+    path: "Assets/_game/Scenes/Escenarios/M\xF9sica.unity"
+    guid: 5337b33f8e0372542b1960c4160280f3
+  - enabled: 1
+    path: Assets/_game/Scenes/Cascada ShaderTest.unity
+    guid: d746595a270476741872d320aa2658f6
+  - enabled: 1
+    path: Assets/_game/Scenes/Espacio ShaderTest.unity
+    guid: f46eab0e778beca4287d527b5fbec8c7
+  - enabled: 1
+    path: Assets/_game/Scenes/Music ShaderTest.unity
+    guid: 76be83bda6d564a48950a86848871ca9
   m_configObjects: {}
