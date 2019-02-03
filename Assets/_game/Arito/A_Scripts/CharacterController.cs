@@ -13,6 +13,7 @@ namespace Mangos
         public float rotSmoothSpeed;
         public float airbornRotSpeed;
         public GameObject model;
+        public GameObject ultController;
 
         public GameObject TestShield;
 
@@ -89,7 +90,9 @@ namespace Mangos
             rig = gameObject.GetComponent<Rigidbody>();
             TestShield.SetActive(false);
             Instantiate(model, transform.position, transform.rotation, transform);
-            foreach(Transform child in gameObject.transform)
+            if (ultController)
+                Instantiate(ultController, transform.position, transform.rotation, transform);
+            foreach (Transform child in gameObject.transform)
             {
                 if (child.gameObject.CompareTag("Model"))
                     anim = child.gameObject.GetComponent<Animator>();
@@ -175,7 +178,6 @@ namespace Mangos
 
                 if (specialAttack)
                 {
-                    Attack(5);
                     SpecialAttack();
                     attackCooldown = 1.2f;
                 }
@@ -344,12 +346,16 @@ namespace Mangos
                 }
                 else if (child.gameObject.CompareTag("ULT_Warrior"))
                 {
-                    child.gameObject.GetComponent<ULT_Warrior>().SpawnYutapon(1);
+                    child.gameObject.GetComponent<ULT_Warrior>().SpawnYutapon(1, 0.8f);
                 } else if (child.gameObject.CompareTag("ULT_Sorcerer"))
                 {
                     //child.gameObject.GetComponent<ULT_Sorcerer>().SpawnPaw();
+                } else if (child.gameObject.CompareTag("ULT_Mage"))
+                {
+                    // child.gameObject.GetComponent<ULT_Mage>().fireball();
                 }
             }
+            Attack(5);
         }
 
         public void Stun()

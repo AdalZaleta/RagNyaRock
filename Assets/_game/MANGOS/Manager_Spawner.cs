@@ -31,6 +31,9 @@ namespace Mangos
                     GameObject go = Instantiate(charPrefab, spawnPoints[i].position, Quaternion.identity);
                     go.GetComponent<CharacterController>().AssignID(temp.rewiredPlayerId);
                     go.GetComponent<CharacterController>().model = characterSets[temp.charSelected].skins[temp.skinSelected].model;
+
+                    if (characterSets[temp.charSelected].ult_controller)
+                        go.GetComponent<CharacterController>().ultController = characterSets[temp.charSelected].ult_controller;
                     pivotPlacer.members[i] = go;
                 }
             }

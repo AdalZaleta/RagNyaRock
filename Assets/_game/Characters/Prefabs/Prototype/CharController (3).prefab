@@ -143,12 +143,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 500
-  runningMultiplier: 1.5
   jumpForce: 6
   velSmoothSpeed: 0.2
   rotSmoothSpeed: 0.1
   airbornRotSpeed: 0.05
-  model: {fileID: 1126689916963276, guid: 9828c05c438277742bd7e9109f4e8586, type: 2}
+  model: {fileID: 1310110514296756, guid: b494f00d3a69359489daeae1e25701fc, type: 2}
   TestShield: {fileID: 1139604685385992}
 --- !u!135 &135613420468932808
 SphereCollider:

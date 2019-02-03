@@ -8,6 +8,10 @@ TagManager:
   - Shield
   - Model
   - Floor
+  - ULT_Warrior
+  - ULT_Sorcerer
+  - ULT_Ranger
+  - ULT_Mage
   layers:
   - Default
   - TransparentFX

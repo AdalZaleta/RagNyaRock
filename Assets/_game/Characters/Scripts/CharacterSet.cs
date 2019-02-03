@@ -9,6 +9,7 @@ namespace Mangos
         public string namae;
         //public Sprite icon;
         public SkinInfo[] skins;
+        public GameObject ult_controller;
 
         public void BuildCharacter(int _skin)
         {

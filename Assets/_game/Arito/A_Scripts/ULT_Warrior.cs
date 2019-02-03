@@ -24,8 +24,14 @@ public class ULT_Warrior : MonoBehaviour {
         explosionRadius.enabled = false;
 	}
 
-    public void SpawnYutapon(float _offsetPower)
+    public void SpawnYutapon(float _offsetPower, float _delay)
     {
+        StartCoroutine(YutaponDelayer(_delay));
+    }
+
+    IEnumerator YutaponDelayer(float _delay)
+    {
+        yield return new WaitForSeconds(_delay);
         GameObject go = Instantiate(yutaponBundle, transform.position, Quaternion.identity);
         Destroy(go, 5.0f);
         explosionRadius.enabled = true;
