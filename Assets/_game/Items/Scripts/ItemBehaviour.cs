@@ -12,6 +12,7 @@ namespace Mangos
         public HitData hData;
         public float force;
         public float scalingForce;
+        public bool throwed;
         Rigidbody rigi;
 
         private void Start()
@@ -22,19 +23,34 @@ namespace Mangos
             hData.scalingForce = scalingForce;
             hData.dir = Vector3.right + Vector3.up;
             hData.damage = addingPercentage;
+            throwed = false;
         }
 
         private void OnTriggerEnter(Collider _col)
         {
-            hData.contactPoint = transform.position;
-            _col.SendMessage("GetHit", hData, SendMessageOptions.DontRequireReceiver);
+            if(throwed == true)
+            {
+                hData.contactPoint = transform.position;
+                _col.SendMessage("GetHit", hData, SendMessageOptions.DontRequireReceiver);
+            }
+        }
+
+        private void OnCollisionEnter(Collision _col)
+        {
+            if(_col.gameObject.CompareTag("Floor"))
+            {
+                throwed = false;
+            }
         }
 
         public void GetHit(int damage)
         {
-            durability = durability - damage;
-            if (durability <= 0)
-                DestroyMyself();
+            if(throwed == true)
+            {
+                durability = durability - damage;
+                if (durability <= 0)
+                    DestroyMyself();
+            }
         }
 
         public void DestroyMyself()
