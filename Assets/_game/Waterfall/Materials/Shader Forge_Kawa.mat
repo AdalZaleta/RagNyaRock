@@ -36,13 +36,13 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Cutoff: 0.5
-    - _DepthBlend: 0.98
+    - _DepthBlend: 0.58
     - _FoamPanVel: 0.1
-    - _FoamThreshold: 0.284
-    - _OffsetMag: 0.261
+    - _FoamThreshold: 0.256
+    - _OffsetMag: 0.225
     - _Steps: 5
     - _Tesselation: 10
-    - _Velocity: 0.25
+    - _Velocity: 0.76
     m_Colors:
     - _Dark1: {r: 0.05678178, g: 0.2316239, b: 0.4150943, a: 1}
     - _Dark2: {r: 0.06915272, g: 0.3827845, b: 0.6981132, a: 1}
