@@ -19,7 +19,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4506481742030324}
-  - component: {fileID: 114894501401115256}
+  - component: {fileID: 54731065080975426}
+  - component: {fileID: 65178278433979654}
+  - component: {fileID: 114906960405901850}
   m_Layer: 0
   m_Name: Sorcery
   m_TagString: Untagged
@@ -51,7 +53,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1198898362834650}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.72, z: 0.683}
+  m_LocalPosition: {x: -3.503, y: 0.837, z: -10.15254}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4878427763808770}
@@ -113,7 +115,34 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1869233038069786}
   m_Mesh: {fileID: 4300002, guid: 359694473c1aed242ad17a97c9e3a9c0, type: 3}
---- !u!114 &114894501401115256
+--- !u!54 &54731065080975426
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1198898362834650}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &65178278433979654
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1198898362834650}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.90869665, y: 0.9105984, z: 0.037422888}
+  m_Center: {x: 0.0019021034, y: 0.0009511113, z: 0.000043746084}
+--- !u!114 &114906960405901850
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,10 +150,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1198898362834650}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52f9f6e9d831382479450a76a24b1145, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e693f5e564372a47b6aa6d5eed61a36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  magicCircle: {fileID: 1869233038069786}
-  magicPaw: {fileID: 1663178687178224, guid: f927762ccd99e5347bbee2f5b3787374, type: 2}
+  magicCircle: {fileID: 1198898362834650}
+  magicMeteor: {fileID: 1626262988900802, guid: 081376835294d2d4e8f6e84b67e4ce6a,
+    type: 2}
   rotSpeed: 5
   pawSpeed: 10

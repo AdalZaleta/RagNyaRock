@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ULT_Sorcerer : MonoBehaviour {
+public class ULT_Meteor : MonoBehaviour {
 
     public GameObject magicCircle;
-    public GameObject magicPaw;
+    public GameObject magicMeteor;
 
     public float rotSpeed;
     public float pawSpeed;
@@ -14,7 +14,7 @@ public class ULT_Sorcerer : MonoBehaviour {
 
     private void Start()
     {
-        Invoke("LaunchPaw", 5);
+        //Invoke("LaunchMeteor", 5);
     }
 
     // Update is called once per frame
@@ -24,7 +24,7 @@ public class ULT_Sorcerer : MonoBehaviour {
 
     private void LaunchPaw()
     {
-        GameObject go = Instantiate(magicPaw, transform.position, transform.rotation);
+        GameObject go = Instantiate(magicMeteor, transform.position, transform.rotation);
         go.GetComponent<Rigidbody>().velocity = go.transform.forward * pawSpeed;
     }
 }

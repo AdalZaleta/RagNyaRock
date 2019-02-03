@@ -21,9 +21,9 @@ GameObject:
   - component: {fileID: 4877623234404274}
   - component: {fileID: 33461574900986418}
   - component: {fileID: 23398520366153798}
-  - component: {fileID: 114960336328059946}
   - component: {fileID: 54457884753619750}
   - component: {fileID: 64681195073789858}
+  - component: {fileID: 114884603966017800}
   m_Layer: 0
   m_Name: MeteoroLava
   m_TagString: Untagged
@@ -115,7 +115,7 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: d721433386f54064dbc6b109ab635920, type: 3}
---- !u!114 &114960336328059946
+--- !u!114 &114884603966017800
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -123,24 +123,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1626262988900802}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51cdcf8231531d9448ddedc43705241a, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a3cbddc9e1e9e740a0d0a816996b1fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  recoilMeteor:
-  - {fileID: 1047257963023100, guid: f9cfe66f4a9ef3041ab90a1a5cf40f5a, type: 2}
-  - {fileID: 1319470547119512, guid: f9cfe66f4a9ef3041ab90a1a5cf40f5a, type: 2}
-  - {fileID: 1324920093017306, guid: f9cfe66f4a9ef3041ab90a1a5cf40f5a, type: 2}
-  - {fileID: 1949396560256766, guid: f9cfe66f4a9ef3041ab90a1a5cf40f5a, type: 2}
-  - {fileID: 1255899206144408, guid: f9cfe66f4a9ef3041ab90a1a5cf40f5a, type: 2}
-  - {fileID: 1961695495050492, guid: f9cfe66f4a9ef3041ab90a1a5cf40f5a, type: 2}
-  - {fileID: 1272992550736414, guid: f9cfe66f4a9ef3041ab90a1a5cf40f5a, type: 2}
-  - {fileID: 1578835769166180, guid: f9cfe66f4a9ef3041ab90a1a5cf40f5a, type: 2}
-  - {fileID: 1652146938803996, guid: f9cfe66f4a9ef3041ab90a1a5cf40f5a, type: 2}
-  - {fileID: 1692952520033568, guid: f9cfe66f4a9ef3041ab90a1a5cf40f5a, type: 2}
-  burningFloor: {fileID: 1906685831519482, guid: bcdfa4349f38b2e4d99fea752d0b9ffb,
-    type: 2}
-  rangeX: {x: -6, y: 6}
-  rangeZ: {x: -4.5, y: 5}
-  origin: {x: 0, y: 5, z: 0}
-  destination: {x: 0, y: 0, z: 0}
-  directionForce: {x: 0, y: 0, z: 0}
+  durability: 1
+  addingPercentage: 60
+  force: 10
+  scalingForce: 1
+  throwed: 1

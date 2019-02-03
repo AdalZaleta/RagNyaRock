@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 4385684906742780}
   - component: {fileID: 54668947265242856}
   - component: {fileID: 65634952247816494}
+  - component: {fileID: 114221366953831312}
   m_Layer: 0
   m_Name: Paw
   m_TagString: Untagged
@@ -141,3 +142,14 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1.8}
   m_Center: {x: 0, y: 0.25, z: 1}
+--- !u!114 &114221366953831312
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1663178687178224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d718dbaa195de499a4b567455aac24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
