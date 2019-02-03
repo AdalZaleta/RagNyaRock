@@ -11,6 +11,7 @@ namespace Mangos
         public int maxPlayers = 4;
         public bool gameReadyToStart;
         public CharacterSet[] characterSets;
+        public StageCycler cycler;
 
         private int stageSelected;
         private int keyboardPlayer = -1;
@@ -168,7 +169,9 @@ namespace Mangos
                 ReInput.players.GetPlayer(i).controllers.maps.SetMapsEnabled(true, "Default");
             }
 
-            SceneManager.LoadScene(Random.Range(1,3));
+            SceneManager.LoadScene(cycler.Int+1);
+            cycler.Int++;
+            cycler.Int %= 3;
         }
     }
 }
