@@ -29,6 +29,7 @@ namespace Mangos
         private float damage = 0;
         private GameObject heldItem;
         private bool hasItem;
+        private Vector3 restingvelocity = Vector3.zero; 
 
         private int currentComboSatus = 0;
         private float comboCooldown = 0;
@@ -196,14 +197,20 @@ namespace Mangos
             Move(xDir, zDir);
         }
 
+        public void SetRestingVelocity(Vector3 _vel)
+        {
+            restingvelocity = _vel;
+        }
+
         public void Move(float _xDir, float _zDir)
         {
             if (canMove && !isStunned)
             {
                 Vector3 finalVel = rig.velocity;
 
-                finalVel.x = _xDir * Time.deltaTime * movementSpeed;
-                finalVel.z = _zDir * Time.deltaTime * movementSpeed;
+                finalVel.x = _xDir * Time.deltaTime * movementSpeed + restingvelocity.x;
+                finalVel.y = rig.velocity.y + restingvelocity.y;
+                finalVel.z = _zDir * Time.deltaTime * movementSpeed + restingvelocity.z;
 
                 if (finalVel != Vector3.zero)
                 {
