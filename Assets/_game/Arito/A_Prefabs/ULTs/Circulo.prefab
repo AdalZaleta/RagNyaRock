@@ -35,7 +35,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1465311620703006}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: -0.6903456, y: -0.15304574, z: 0.15304574, w: 0.6903456}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children: []
@@ -95,6 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52f9f6e9d831382479450a76a24b1145, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  magicCircle: {fileID: 0}
   magicPaw: {fileID: 1663178687178224, guid: f927762ccd99e5347bbee2f5b3787374, type: 2}
   rotSpeed: 5
   pawSpeed: 10
