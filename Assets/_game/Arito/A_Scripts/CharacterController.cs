@@ -294,18 +294,23 @@ namespace Mangos
             {
                 damage += _hitdata.damage;
 
-                StartCoroutine(freeze());
+                StartCoroutine(Freeze(1.0f));
 
                 // Animation Controls
                 anim.SetTrigger("Stun");
             }
         }
 
-        IEnumerator freeze()
+        public void Stun(float _delay)
+        {
+            StartCoroutine(Freeze(_delay));
+        }
+
+        private IEnumerator Freeze(float _delay)
         {
             Debug.Log("Received Damage");
             isStunned = true;
-            yield return new WaitForSeconds(1.0f);
+            yield return new WaitForSeconds(_delay);
             isStunned = false;
         }
 
