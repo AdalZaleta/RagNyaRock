@@ -7,21 +7,24 @@ namespace Mangos
 {
     public enum Sounds : int
     {
-        TESLA_SHOCK,
-        STANDARD_BULLET,
-        PLAYER_SPECIAL,
-        ENEMY_DIE,
-        TURRET_LEVELUP,
-        ICE_BALL,
-        PLAYER_BULLET,
-        PLAYER_DAMAGED,
-        TURRET_SET,
-        MENU_BUTTON,
-        MENU_BACK,
-        MENU_MUSIC,
-        GAME_MUSIC,
-        WIN,
-        LOSE
+        CASCADA,
+        CASCADA_ESCENARIO,
+        ESPACIO_SONIDOS_Y_MUSICA, //Espacio 2
+        METEORO,
+        NOTAS_ESCENARIO,
+        ASTRONAUTA,
+        BALLESTERO_FLECHA, //Espacio 2
+        MAROMETA,
+        CAIDA_CABALLERO,
+        GOLPE_CABALLERO,
+        CAMINAR_CABALLERO,
+        MAGO_SUMMON,
+        BOLA_FUEGO,
+        EXPLOSION,
+        SKIN_CALAVERA,
+        DISPARO_VAQUERO,
+        LANZAMIENTO_OBJETOS,
+        MUSICA_MENU
     }
 
     public class Manager_Audio : MonoBehaviour

@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 33629554084580740}
   - component: {fileID: 23779486873485296}
   - component: {fileID: 64746692966838188}
-  - component: {fileID: 54847368119451448}
   m_Layer: 0
   m_Name: meteoro3_Part_1
   m_TagString: Untagged
@@ -38,6 +37,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4971510852540096}
+  - component: {fileID: 54535172370387338}
   m_Layer: 0
   m_Name: MeteorFather4
   m_TagString: Untagged
@@ -56,7 +56,6 @@ GameObject:
   - component: {fileID: 33294132213914074}
   - component: {fileID: 23805183736288120}
   - component: {fileID: 64942504222728832}
-  - component: {fileID: 54860778966523462}
   m_Layer: 0
   m_Name: meteoro3_Part_5
   m_TagString: Untagged
@@ -75,7 +74,6 @@ GameObject:
   - component: {fileID: 33694970772776780}
   - component: {fileID: 23291784414912438}
   - component: {fileID: 64175728805191680}
-  - component: {fileID: 54085999440712962}
   m_Layer: 0
   m_Name: meteoro3_Part_7
   m_TagString: Untagged
@@ -94,7 +92,6 @@ GameObject:
   - component: {fileID: 33894016804341344}
   - component: {fileID: 23832848387539318}
   - component: {fileID: 64812662052800936}
-  - component: {fileID: 54837109081048762}
   m_Layer: 0
   m_Name: meteoro3_Part_2
   m_TagString: Untagged
@@ -113,7 +110,6 @@ GameObject:
   - component: {fileID: 33401780370831828}
   - component: {fileID: 23087529526921912}
   - component: {fileID: 64824410487344224}
-  - component: {fileID: 54922838718180786}
   m_Layer: 0
   m_Name: meteoro3_Part_3
   m_TagString: Untagged
@@ -129,6 +125,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4614315940677348}
+  - component: {fileID: 54184522720693832}
   m_Layer: 0
   m_Name: MeteorFather7
   m_TagString: Untagged
@@ -144,6 +141,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4232897894380864}
+  - component: {fileID: 54537138431496706}
   m_Layer: 0
   m_Name: MeteorFather9
   m_TagString: Untagged
@@ -174,6 +172,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4208288171591390}
+  - component: {fileID: 54712317753829996}
   m_Layer: 0
   m_Name: MeteorFather10
   m_TagString: Untagged
@@ -192,7 +191,6 @@ GameObject:
   - component: {fileID: 33033962758398594}
   - component: {fileID: 23352976607564354}
   - component: {fileID: 64710445830071190}
-  - component: {fileID: 54367866910267704}
   m_Layer: 0
   m_Name: meteoro3_Part_8
   m_TagString: Untagged
@@ -208,6 +206,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4470507735261758}
+  - component: {fileID: 54131986737255694}
   m_Layer: 0
   m_Name: MeteorFather8
   m_TagString: Untagged
@@ -226,7 +225,6 @@ GameObject:
   - component: {fileID: 33651294506213942}
   - component: {fileID: 23864789227147986}
   - component: {fileID: 64653080955686346}
-  - component: {fileID: 54746899951946572}
   m_Layer: 0
   m_Name: meteoro3_Part_9
   m_TagString: Untagged
@@ -242,6 +240,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4517712519008464}
+  - component: {fileID: 54404205247594938}
   m_Layer: 0
   m_Name: MeteorFather1
   m_TagString: Untagged
@@ -260,7 +259,6 @@ GameObject:
   - component: {fileID: 33114210164325560}
   - component: {fileID: 23267501747564800}
   - component: {fileID: 64964214980967106}
-  - component: {fileID: 54586207060977470}
   m_Layer: 0
   m_Name: meteoro3_Part_10
   m_TagString: Untagged
@@ -276,6 +274,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4526880861740760}
+  - component: {fileID: 54753061035847454}
   m_Layer: 0
   m_Name: MeteorFather5
   m_TagString: Untagged
@@ -291,6 +290,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4745271918889160}
+  - component: {fileID: 54936398775277026}
   m_Layer: 0
   m_Name: MeteorFather6
   m_TagString: Untagged
@@ -306,6 +306,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4658427816780350}
+  - component: {fileID: 54801025750595412}
   m_Layer: 0
   m_Name: MeteorFather3
   m_TagString: Untagged
@@ -321,6 +322,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4786543155479102}
+  - component: {fileID: 54744632413474088}
   m_Layer: 0
   m_Name: MeteorFather2
   m_TagString: Untagged
@@ -339,7 +341,6 @@ GameObject:
   - component: {fileID: 33719170842654062}
   - component: {fileID: 23562238365941848}
   - component: {fileID: 64679845104844748}
-  - component: {fileID: 54905261093447670}
   m_Layer: 0
   m_Name: meteoro3_Part_4
   m_TagString: Untagged
@@ -358,7 +359,6 @@ GameObject:
   - component: {fileID: 33321748185416518}
   - component: {fileID: 23265192646384094}
   - component: {fileID: 64179765184291922}
-  - component: {fileID: 54857499301832998}
   m_Layer: 0
   m_Name: meteoro3_Part_6
   m_TagString: Untagged
@@ -1079,12 +1079,12 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1319470547119512}
   m_Mesh: {fileID: 4300002, guid: 3776f558f252acd4b9187c95962b0520, type: 3}
---- !u!54 &54085999440712962
+--- !u!54 &54131986737255694
 Rigidbody:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1272992550736414}
+  m_GameObject: {fileID: 1602284786214806}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -1094,12 +1094,12 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!54 &54367866910267704
+--- !u!54 &54184522720693832
 Rigidbody:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1578835769166180}
+  m_GameObject: {fileID: 1409784241642338}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -1109,12 +1109,12 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!54 &54586207060977470
+--- !u!54 &54404205247594938
 Rigidbody:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1692952520033568}
+  m_GameObject: {fileID: 1689651947996336}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -1124,12 +1124,12 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!54 &54746899951946572
+--- !u!54 &54535172370387338
 Rigidbody:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1652146938803996}
+  m_GameObject: {fileID: 1180262591989810}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -1139,12 +1139,12 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!54 &54837109081048762
+--- !u!54 &54537138431496706
 Rigidbody:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1319470547119512}
+  m_GameObject: {fileID: 1547604889094256}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -1154,12 +1154,12 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!54 &54847368119451448
+--- !u!54 &54712317753829996
 Rigidbody:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1047257963023100}
+  m_GameObject: {fileID: 1558521882848678}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -1169,12 +1169,12 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!54 &54857499301832998
+--- !u!54 &54744632413474088
 Rigidbody:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1961695495050492}
+  m_GameObject: {fileID: 1874029699971904}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -1184,12 +1184,12 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!54 &54860778966523462
+--- !u!54 &54753061035847454
 Rigidbody:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1255899206144408}
+  m_GameObject: {fileID: 1724888836969252}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -1199,12 +1199,12 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!54 &54905261093447670
+--- !u!54 &54801025750595412
 Rigidbody:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1949396560256766}
+  m_GameObject: {fileID: 1753260443800880}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -1214,12 +1214,12 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!54 &54922838718180786
+--- !u!54 &54936398775277026
 Rigidbody:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1324920093017306}
+  m_GameObject: {fileID: 1749966424121108}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
