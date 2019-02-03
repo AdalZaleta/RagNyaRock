@@ -41,6 +41,7 @@ namespace Mangos
         private float zDir;
         private bool lightAttack;
         private bool heavyAttack;
+        private bool specialAttack;
 
         // Animation Controls
         private Animator anim;
@@ -134,6 +135,7 @@ namespace Mangos
 
             lightAttack = player.GetButtonDown("Low_Punch");
             heavyAttack = player.GetButtonDown("Heavy_Punch");
+            specialAttack = player.GetButtonDown("Special");
         }
 
         private void ProcessInputs()
@@ -169,6 +171,13 @@ namespace Mangos
                 {
                     Attack(4);
                     attackCooldown = 0.5f;
+                }
+
+                if (specialAttack)
+                {
+                    Attack(5);
+                    SpecialAttack();
+                    attackCooldown = 1.2f;
                 }
 
                 if (shield)
@@ -323,6 +332,24 @@ namespace Mangos
             // Animation Controls
             anim.SetFloat("AttackStatus", (float)_index);
             anim.SetTrigger("Attack");
+        }
+
+        private void SpecialAttack()
+        {
+            foreach(Transform child in transform)
+            {
+                if (child.gameObject.CompareTag("ULT_Mage"))
+                {
+                    //child.gameObject.GetComponent<ULT_Mage>().etc;
+                }
+                else if (child.gameObject.CompareTag("ULT_Warrior"))
+                {
+                    child.gameObject.GetComponent<ULT_Warrior>().SpawnYutapon(1);
+                } else if (child.gameObject.CompareTag("ULT_Sorcerer"))
+                {
+                    //child.gameObject.GetComponent<ULT_Sorcerer>().SpawnPaw();
+                }
+            }
         }
 
         public void Stun()
