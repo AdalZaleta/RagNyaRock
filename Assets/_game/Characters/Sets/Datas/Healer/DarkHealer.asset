@@ -11,6 +11,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3bfc4264f8bb743998433496cb04e5, type: 3}
   m_Name: DarkHealer
   m_EditorClassIdentifier: 
-  namae: 
-  splash: {fileID: 21300004, guid: 124085867b125944e9ba2eddc77a4418, type: 3}
-  model: {fileID: 1352421009748610, guid: 0e8f17569dac589418c31c6ad28b4c11, type: 2}
+  namae: Dark Tibert
+  splash: {fileID: 21300030, guid: 879aa22ad8574e848b7f56aa56ce3898, type: 3}
+  model: {fileID: 1346826610735474, guid: ff12cc62e8817ad4fadb8a5402dab601, type: 2}

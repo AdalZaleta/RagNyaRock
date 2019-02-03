@@ -14,4 +14,5 @@ MonoBehaviour:
   namae: Chilpayata
   skins:
   - {fileID: 11400000, guid: 344a5586a955d4646904c6b46891095d, type: 2}
+  - {fileID: 11400000, guid: 37ddc6f32ac138941a3ebfa19d663f92, type: 2}
   - {fileID: 11400000, guid: db75cb969767d30408d4c69a3e2d46cd, type: 2}

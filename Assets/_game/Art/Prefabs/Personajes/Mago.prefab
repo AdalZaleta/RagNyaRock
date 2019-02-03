@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 95572100954648834}
   m_Layer: 0
   m_Name: Mago
-  m_TagString: Untagged
+  m_TagString: Model
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2669,7 +2669,7 @@ Animator:
   m_GameObject: {fileID: 1013275771610270}
   m_Enabled: 0
   m_Avatar: {fileID: 9000000, guid: 2d95c649960a5b443b1c426ca229870b, type: 3}
-  m_Controller: {fileID: 9100000, guid: e2da4a93597f2e842af239607c6f58e9, type: 2}
+  m_Controller: {fileID: 9100000, guid: 917c977f339cf2b439089289f55d603c, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

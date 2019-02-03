@@ -897,7 +897,7 @@ GameObject:
   - component: {fileID: 95213812067682122}
   m_Layer: 0
   m_Name: Vaquero
-  m_TagString: Untagged
+  m_TagString: Model
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2682,7 +2682,7 @@ Animator:
   m_GameObject: {fileID: 1625039141690452}
   m_Enabled: 0
   m_Avatar: {fileID: 9000000, guid: 2c5f09bf37fee2045bb73848dfa9f0be, type: 3}
-  m_Controller: {fileID: 9100000, guid: c01284264ce686c4782fc87b835ca23f, type: 2}
+  m_Controller: {fileID: 9100000, guid: 917c977f339cf2b439089289f55d603c, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

@@ -201,7 +201,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Jump_looped
       takeName: Take 001
-      firstFrame: 0
+      firstFrame: 3
       lastFrame: 18
       wrapMode: 0
       orientationOffsetY: 0

@@ -7,6 +7,7 @@ TagManager:
   - Map
   - Shield
   - Model
+  - Floor
   layers:
   - Default
   - TransparentFX
@@ -16,12 +17,12 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - PlayerA_collisions
+  - PlayerB_collisions
+  - PlayerC_collisions
+  - playerD_collisions
+  - heightBuffer
+  - slicesBuffer
   - 
   - 
   - 

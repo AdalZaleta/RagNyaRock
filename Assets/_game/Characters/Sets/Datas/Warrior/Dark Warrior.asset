@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d3bfc4264f8bb743998433496cb04e5, type: 3}
+  m_Name: Dark Warrior
+  m_EditorClassIdentifier: 
+  namae: Vader
+  splash: {fileID: 21300034, guid: 879aa22ad8574e848b7f56aa56ce3898, type: 3}
+  model: {fileID: 1126713619689014, guid: 9d76ad2857a5c2843a833d5fe7704658, type: 2}

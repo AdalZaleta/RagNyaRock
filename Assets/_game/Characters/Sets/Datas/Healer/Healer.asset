@@ -14,4 +14,5 @@ MonoBehaviour:
   namae: Tibert
   skins:
   - {fileID: 11400000, guid: 70b80f763b2a08a42a647ee8bb6fb5dc, type: 2}
+  - {fileID: 11400000, guid: 08044f248eb228e49ae8eb7b9bd98a29, type: 2}
   - {fileID: 11400000, guid: 2ed9ff90a99482644bfdb1a22eb5afb7, type: 2}
