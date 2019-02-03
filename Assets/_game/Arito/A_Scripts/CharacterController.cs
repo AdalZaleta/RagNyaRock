@@ -29,11 +29,14 @@ namespace Mangos
         private float damage = 0;
         private GameObject heldItem;
         private bool hasItem;
+        private Vector3 restingVelocity = Vector3.zero;
 
         private int currentComboSatus = 0;
         private float comboCooldown = 0;
 
         private float attackCooldown = 0;
+
+        private bool ultFreeze = false;
 
         // Input Mapping
         private bool jump;
@@ -43,6 +46,7 @@ namespace Mangos
         private bool lightAttack;
         private bool heavyAttack;
         private bool specialAttack;
+        private bool specialAttackUp;
 
         // Animation Controls
         private Animator anim;
@@ -139,6 +143,7 @@ namespace Mangos
             lightAttack = player.GetButtonDown("Low_Punch");
             heavyAttack = player.GetButtonDown("Heavy_Punch");
             specialAttack = player.GetButtonDown("Special");
+            specialAttackUp = player.GetButtonUp("Special");
         }
 
         private void ProcessInputs()
@@ -193,17 +198,29 @@ namespace Mangos
                 rig.velocity = hitVelocity;
             }
 
+            if (specialAttackUp && ultFreeze)
+            {
+                ultController.GetComponent<MageULTController>().SpawnMeteor();
+                ultFreeze = false;
+            }
+
             Move(xDir, zDir);
+        }
+
+        public void SetRestingVelocity(Vector3 _vel)
+        {
+            restingVelocity = _vel;
         }
 
         public void Move(float _xDir, float _zDir)
         {
-            if (canMove && !isStunned)
+            if (canMove && !isStunned && !ultFreeze)
             {
                 Vector3 finalVel = rig.velocity;
 
-                finalVel.x = _xDir * Time.deltaTime * movementSpeed;
-                finalVel.z = _zDir * Time.deltaTime * movementSpeed;
+                finalVel.x = _xDir * Time.deltaTime * movementSpeed + restingVelocity.x;
+                finalVel.y = rig.velocity.y + restingVelocity.y;
+                finalVel.z = _zDir * Time.deltaTime * movementSpeed + restingVelocity.z;
 
                 if (finalVel != Vector3.zero)
                 {
@@ -233,6 +250,9 @@ namespace Mangos
                 Vector3 smoothedVel = Vector3.Lerp(rig.velocity, finalVel, velSmoothSpeed);
                 rig.velocity = smoothedVel;
                 rig.angularVelocity = Vector3.zero;
+            } else if (ultFreeze)
+            {
+                ultController.GetComponent<MageULTController>().MoveSorcery(_xDir, _zDir);
             }
 
             // Animation Controller
@@ -347,7 +367,8 @@ namespace Mangos
             {
                 if (child.gameObject.CompareTag("ULT_Mage"))
                 {
-                    //child.gameObject.GetComponent<ULT_Mage>().etc;
+                    child.GetComponent<MageULTController>().SpawnPointer();
+                    ultFreeze = true;
                 }
                 else if (child.gameObject.CompareTag("ULT_Warrior"))
                 {
@@ -355,7 +376,7 @@ namespace Mangos
                 } else if (child.gameObject.CompareTag("ULT_Sorcerer"))
                 {
                     //child.gameObject.GetComponent<ULT_Sorcerer>().SpawnPaw();
-                } else if (child.gameObject.CompareTag("ULT_Mage"))
+                } else if (child.gameObject.CompareTag("ULT_Ranger"))
                 {
                     // child.gameObject.GetComponent<ULT_Mage>().fireball();
                 }
