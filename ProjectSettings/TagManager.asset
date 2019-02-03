@@ -21,8 +21,8 @@ TagManager:
   - PlayerB_collisions
   - PlayerC_collisions
   - playerD_collisions
-  - 
-  - 
+  - heightBuffer
+  - slicesBuffer
   - 
   - 
   - 

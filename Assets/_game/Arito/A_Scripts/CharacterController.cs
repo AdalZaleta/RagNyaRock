@@ -320,7 +320,6 @@ namespace Mangos
 
         public void Attack(float _index)
         {
-
             // Animation Controls
             anim.SetFloat("AttackStatus", (float)_index);
             anim.SetTrigger("Attack");
