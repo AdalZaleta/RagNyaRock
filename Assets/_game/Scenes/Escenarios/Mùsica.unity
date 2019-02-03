@@ -512,10 +512,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 533734760}
+  - {fileID: 1091700975}
+  - {fileID: 911607927}
+  - {fileID: 2059006092}
   pivotPlacer: {fileID: 1992515635}
   charPrefab: {fileID: 1352421009748610, guid: f0621e8a48a491244bea6ff4bd7dc0fc, type: 2}
 --- !u!4 &626778968
@@ -1565,8 +1565,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1852815598}
-  m_LocalRotation: {x: 0.42261827, y: 0, z: 0, w: 0.9063079}
-  m_LocalPosition: {x: 0, y: 18, z: -15}
+  m_LocalRotation: {x: -0.3243653, y: -0.00226803, z: 0.0007796299, w: -0.9459289}
+  m_LocalPosition: {x: -1.0429646, y: 6.535593, z: -11.612232}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1647,7 +1647,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   follower: {fileID: 1852815598}
-  offset: {x: 0, y: 18, z: -15}
+  offset: {x: 0, y: 12, z: -10}
 --- !u!4 &1992515636
 Transform:
   m_ObjectHideFlags: 0

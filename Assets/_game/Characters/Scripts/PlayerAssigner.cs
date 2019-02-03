@@ -167,7 +167,8 @@ namespace Mangos
                 ReInput.players.GetPlayer(i).controllers.maps.SetMapsEnabled(false, "UI");
                 ReInput.players.GetPlayer(i).controllers.maps.SetMapsEnabled(true, "Default");
             }
-            SceneManager.LoadScene(1);
+
+            SceneManager.LoadScene(Random.Range(1,3));
         }
     }
 }
