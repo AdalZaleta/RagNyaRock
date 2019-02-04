@@ -93,7 +93,12 @@ namespace Mangos
             player = ReInput.players.GetPlayer(playerID);
             rig = gameObject.GetComponent<Rigidbody>();
             TestShield.SetActive(false);
-            Instantiate(model, transform.position, transform.rotation, transform);
+            GameObject instModel = Instantiate(model, transform.position, transform.rotation, transform);
+
+            var temp = GetComponent<PlayerDataReceiver>();
+            if (temp)
+                temp.anim = instModel.GetComponent<Animator>();
+
             if (ultController)
                 Instantiate(ultController, transform.position, transform.rotation, transform);
             foreach (Transform child in gameObject.transform)

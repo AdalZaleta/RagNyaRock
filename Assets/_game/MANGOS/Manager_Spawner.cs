@@ -29,12 +29,16 @@ namespace Mangos
                 {
                     Debug.Log("Character selected " + temp.charSelected + ", skin selected " + temp.skinSelected);
                     GameObject go = Instantiate(charPrefab, spawnPoints[i].position, Quaternion.identity);
-                    go.GetComponent<CharacterController>().AssignID(temp.rewiredPlayerId);
-                    go.GetComponent<CharacterController>().model = characterSets[temp.charSelected].skins[temp.skinSelected].model;
+
+                    CharacterController goController = go.GetComponent<CharacterController>();
+
+                    goController.AssignID(temp.rewiredPlayerId);
+                    goController.model = characterSets[temp.charSelected].skins[temp.skinSelected].model;
 
                     if (characterSets[temp.charSelected].ult_controller)
-                        go.GetComponent<CharacterController>().ultController = characterSets[temp.charSelected].ult_controller;
-                    pivotPlacer.members[i] = go;
+                        goController.ultController = characterSets[temp.charSelected].ult_controller;
+                    if(pivotPlacer)
+                        pivotPlacer.members[i] = go;
                 }
             }
         }
