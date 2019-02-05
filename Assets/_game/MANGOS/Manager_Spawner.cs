@@ -19,7 +19,9 @@ namespace Mangos
 
         public void ReSpawn(GameObject _who)
         {
+            Debug.Log(_who.name + " es quien se salio de la zona");
             _who.transform.position = spawnPoints[Random.Range(0, 4)].transform.position;
+            _who.GetComponent<Rigidbody>().velocity = Vector3.zero;
         }
 
         private void Start()
