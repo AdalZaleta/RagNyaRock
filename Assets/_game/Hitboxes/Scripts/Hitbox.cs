@@ -32,6 +32,7 @@ namespace Mangos
 
             boxCollider = GetComponent<BoxCollider>();
             boxCollider.isTrigger = true;
+            boxCollider.enabled = false;
 
             rigi = GetComponent<Rigidbody>();
             rigi.useGravity = false;

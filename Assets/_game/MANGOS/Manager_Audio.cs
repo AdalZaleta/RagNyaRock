@@ -100,6 +100,8 @@ namespace Mangos
 
         public void PlaySoundGlobal(AudioClip clip)
         {
+            if (!cam)
+                cam = Camera.main;
             Transform sound = PoolManager.Spawn(audioDad, cam.transform.position, Quaternion.identity);
             sound.parent = cam.transform;
             AudioSource temp = sound.GetComponent<AudioSource>();
@@ -110,6 +112,8 @@ namespace Mangos
 
         public void PlaySoundGlobal(Sounds clip)
         {
+            if (!cam)
+                cam = Camera.main;
             Debug.Log((int)clip);
             Debug.Log(clipIndex.Length);
             int index = Random.Range(clipIndex[(int)clip], clipIndex[(int)clip] + groupSizes[(int)clip]);
@@ -123,6 +127,8 @@ namespace Mangos
 
         public void PlayMusic(AudioClip clip)
         {
+            if (!cam)
+                cam = Camera.main;
             if (!GameObject.Find("jukebox"))
             {
                 Transform jukebox = PoolManager.Spawn(audioDad, cam.transform.position, Quaternion.identity);
@@ -145,6 +151,8 @@ namespace Mangos
 
         public void PlayMusic(Sounds clip)
         {
+            if (!cam)
+                cam = Camera.main;
             int index = Random.Range(clipIndex[(int)clip], clipIndex[(int)clip] + groupSizes[(int)clip]);
 
             if (!GameObject.Find("jukebox"))
