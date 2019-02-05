@@ -76,7 +76,8 @@ namespace Mangos
                 return;
             }
 
-            int gamePlayerId = GetNextGamePlayerId();
+            //int gamePlayerId = GetNextGamePlayerId();
+            int gamePlayerId = rewiredPlayerId;
 
             // Add the Rewired Player as the next open game player slot
             playerMap.Add(new PlayerMap(rewiredPlayerId, gamePlayerId));
