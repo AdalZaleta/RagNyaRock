@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_game/Scenes/Ragdoll hospital.unity
     guid: 501ef97b0381bb44e8f036587cb1ce8c
+  - enabled: 1
+    path: Assets/_game/Scenes/ThrowItems test.unity
+    guid: e3e7126fe6838384c8fd382517a4f8e9
   m_configObjects: {}

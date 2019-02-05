@@ -12,6 +12,7 @@ TagManager:
   - ULT_Sorcerer
   - ULT_Ranger
   - ULT_Mage
+  - Item
   layers:
   - Default
   - TransparentFX
