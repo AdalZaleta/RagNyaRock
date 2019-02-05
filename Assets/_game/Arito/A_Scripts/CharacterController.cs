@@ -38,7 +38,6 @@ namespace Mangos
         private int lifes = 3;
         private bool itemInHand = false;
         private GameObject itemInRange;
-        private float damage = 0;
         private GameObject heldItem;
         private GameObject instModel;
         private bool hasItem;
