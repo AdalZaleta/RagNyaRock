@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Shader Forge_Kawa
+  m_Shader: {fileID: 4800000, guid: fff0a391cde9d214d91c00aa87c790bf, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _DisplacementTexture:
+        m_Texture: {fileID: 2800000, guid: aa88289adde4d6345995d2b671b610e8, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FoamNoise:
+        m_Texture: {fileID: 2800000, guid: 71cd4c822995f9c4ba6e471b0f988de7, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NoiseMap:
+        m_Texture: {fileID: 2800000, guid: 5faaf61a1fc056541a01fcc5168e57c2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OffsetNoise:
+        m_Texture: {fileID: 2800000, guid: 71cd4c822995f9c4ba6e471b0f988de7, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Cutoff: 0.5
+    - _DepthBlend: 0.58
+    - _FoamPanVel: 0.1
+    - _FoamThreshold: 0.256
+    - _OffsetMag: 0.225
+    - _Steps: 5
+    - _Tesselation: 10
+    - _Velocity: 0.76
+    m_Colors:
+    - _Dark1: {r: 0.05678178, g: 0.2316239, b: 0.4150943, a: 1}
+    - _Dark2: {r: 0.06915272, g: 0.3827845, b: 0.6981132, a: 1}
+    - _FoamColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Light1: {r: 1, g: 1, b: 1, a: 1}
+    - _Light2: {r: 0.4230153, g: 0.7851403, b: 0.9245283, a: 1}
