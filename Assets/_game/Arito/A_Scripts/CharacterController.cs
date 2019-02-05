@@ -280,13 +280,6 @@ namespace Mangos
             anim.SetFloat("MovementVelocity", animVel.magnitude.Remap(0, 10, 0, 1));
         }
 
-        public void ExitSafeZone()
-        {
-            lifes--;
-            if(lifes < 1)
-                itsAlive = false;
-        }
-
         public void Jump()
         {
             if (canJump)

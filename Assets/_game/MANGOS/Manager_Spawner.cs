@@ -36,6 +36,7 @@ namespace Mangos
                 {
                     Debug.Log("Character selected " + temp.charSelected + ", skin selected " + temp.skinSelected);
                     GameObject go = Instantiate(charPrefab, spawnPoints[i].position, Quaternion.identity);
+                    Manager_Static.controlHandicap.SetGameObject(i, go);
 
                     CharacterController goController = go.GetComponent<CharacterController>();
 

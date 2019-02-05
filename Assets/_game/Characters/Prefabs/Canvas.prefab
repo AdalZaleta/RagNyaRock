@@ -27,7 +27,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1191194956905106
 GameObject:
   m_ObjectHideFlags: 0
@@ -62,7 +62,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1863372535417868
 GameObject:
   m_ObjectHideFlags: 0
@@ -79,7 +79,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1945598406506962
 GameObject:
   m_ObjectHideFlags: 0
@@ -96,7 +96,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &114001654438044588
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -466,13 +466,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e682461fb47e5641aa75f1038beeee5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jugador_1: {fileID: 0}
+  jugadores:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   TMP_1: {fileID: 1463129863103052}
-  jugador_2: {fileID: 0}
   TMP_2: {fileID: 1142750544769648}
-  jugador_3: {fileID: 0}
   TMP_3: {fileID: 1945598406506962}
-  jugador_4: {fileID: 0}
   TMP_4: {fileID: 1863372535417868}
 --- !u!114 &114990116936284782
 MonoBehaviour:

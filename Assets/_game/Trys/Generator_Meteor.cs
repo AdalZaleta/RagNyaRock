@@ -42,15 +42,10 @@ public class Generator_Meteor : MonoBehaviour
 
 	private void OnCollisionEnter(Collision other) 
 	{
-		foreach (ContactPoint contact in other.contacts)
+		if(other.gameObject.CompareTag("Map") || other.gameObject.CompareTag("Player"))
 		{
-			if(other.gameObject.CompareTag("Floor") || other.gameObject.CompareTag("Player"))
-			{
-				Debug.Log("Valor de contact.normal" + contact.point);
-				Instantiate(recoilMeteor[Random.Range(0, recoilMeteor.Length)], transform.position, Quaternion.identity);
-				Instantiate(burningFloor, new Vector3(contact.point.x, 0, contact.point.z), Quaternion.identity);
-				gameObject.SetActive(false);
-			}
+			Instantiate(recoilMeteor[Random.Range(0, recoilMeteor.Length)], transform.position, Quaternion.identity);
+			gameObject.SetActive(false);
 		}
 	}
 }
