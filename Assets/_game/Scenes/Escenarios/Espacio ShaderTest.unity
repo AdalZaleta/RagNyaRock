@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.011296507, g: 0.0117369, b: 0.040285327, a: 1}
+  m_IndirectSpecularColor: {r: 0.011285274, g: 0.011666195, b: 0.040281314, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -235,6 +235,8 @@ GameObject:
   - component: {fileID: 415384654}
   - component: {fileID: 415384653}
   - component: {fileID: 415384652}
+  - component: {fileID: 415384658}
+  - component: {fileID: 415384659}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -368,7 +370,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 3895
   m_RenderingPath: 3
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -386,13 +388,41 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 415384651}
-  m_LocalRotation: {x: -0.40670547, y: -0.0008197628, z: 0.00036691685, w: -0.9135589}
-  m_LocalPosition: {x: 0.05436089, y: 7.0956497, z: -6.778452}
+  m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
+  m_LocalPosition: {x: 0, y: 5, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 50, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
+--- !u!114 &415384658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 415384651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddac05fb66f22fe40862040df0aa8183, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &415384659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 415384651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b52362c8c209e7149b5d06f9ffcfd814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToSpawnMeteor: {x: 0, y: 0}
+  cooldownMeteor: 0
+  meteor: {fileID: 0}
+  timeToSpawnBlackHole: {x: 0, y: 0}
+  cooldownBlackHole: 0
+  blackHole: {fileID: 0}
 --- !u!1 &423680724
 GameObject:
   m_ObjectHideFlags: 0
@@ -5316,7 +5346,7 @@ MonoBehaviour:
   - {fileID: 1245314856}
   - {fileID: 999932282}
   pivotPlacer: {fileID: 21994262}
-  charPrefab: {fileID: 1352421009748610, guid: f0621e8a48a491244bea6ff4bd7dc0fc, type: 2}
+  charPrefab: {fileID: 1352421009748610, guid: 0e8f17569dac589418c31c6ad28b4c11, type: 2}
 --- !u!4 &960262667
 Transform:
   m_ObjectHideFlags: 0
@@ -5448,7 +5478,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: 83e36c51c0fcf9d45899b7ca6724564f, type: 2}
     - target: {fileID: 100000, guid: b43fdb8df34375c4eb9fd91f128ff4a7, type: 3}
       propertyPath: m_TagString
-      value: Floor
+      value: Map
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b43fdb8df34375c4eb9fd91f128ff4a7, type: 3}

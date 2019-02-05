@@ -5,7 +5,7 @@ AnimatorController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: CharacterAnimator
+  m_Name: CharacterAnimator_Mage
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: MovementVelocity
@@ -87,7 +87,7 @@ AnimatorController:
     m_Mask: {fileID: 31900000, guid: 944cff94145398449a2c54653b3f88ba, type: 2}
     m_Motions: []
     m_Behaviours: []
-    m_BlendingMode: 0
+    m_BlendingMode: 1
     m_SyncedLayerIndex: -1
     m_DefaultWeight: 1
     m_IKPass: 0
@@ -728,7 +728,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: a34291aa7ebc9a5449ce6eb1f4674e89, type: 3}
+  m_Motion: {fileID: 7400000, guid: 679d76afb93951540b2e5b82003a18e2, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

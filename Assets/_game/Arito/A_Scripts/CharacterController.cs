@@ -5,6 +5,7 @@ using Rewired;
 
 namespace Mangos
 {
+    [RequireComponent(typeof(PlayerDataReceiver))]
     public class CharacterController : MonoBehaviour
     {
         public float movementSpeed;
@@ -13,26 +14,34 @@ namespace Mangos
         public float rotSmoothSpeed;
         public float airbornRotSpeed;
         public GameObject model;
+        public GameObject ultController;
+        
 
         public GameObject TestShield;
 
         private int playerID = 0; // Set to 0 by default
         private Player player;
 
+        private PlayerDataReceiver dataReceiver;
         private Rigidbody rig;
         private bool isAirborn = false;
         private bool canMove = true;
         private bool isStunned = false;
         private bool canJump = true;
+        private bool isRagdoll = false;
         private bool isShielded = false;
         private float damage = 0;
         private GameObject heldItem;
+        private GameObject instModel;
         private bool hasItem;
+        private Vector3 restingVelocity = Vector3.zero;
 
         private int currentComboSatus = 0;
         private float comboCooldown = 0;
 
         private float attackCooldown = 0;
+
+        private bool ultFreeze = false;
 
         // Input Mapping
         private bool jump;
@@ -41,6 +50,8 @@ namespace Mangos
         private float zDir;
         private bool lightAttack;
         private bool heavyAttack;
+        private bool specialAttack;
+        private bool specialAttackUp;
 
         // Animation Controls
         private Animator anim;
@@ -87,20 +98,27 @@ namespace Mangos
             player = ReInput.players.GetPlayer(playerID);
             rig = gameObject.GetComponent<Rigidbody>();
             TestShield.SetActive(false);
-            Instantiate(model, transform.position, transform.rotation, transform);
-            foreach(Transform child in gameObject.transform)
+            instModel = Instantiate(model, transform.position, transform.rotation, transform);
+
+            var temp = GetComponent<PlayerDataReceiver>();
+            if (temp)
+                temp.anim = instModel.GetComponent<Animator>();
+
+            foreach (Transform child in gameObject.transform)
             {
                 if (child.gameObject.CompareTag("Model"))
                     anim = child.gameObject.GetComponent<Animator>();
             }
             SetLayers(gameObject, playerID + 8);
+
+            dataReceiver = GetComponent<PlayerDataReceiver>();
+            dataReceiver.controller = this;
         }
 
         public void AssignID(int _id)
         {
             playerID = _id;
             player = ReInput.players.GetPlayer(playerID);
-            Debug.Log("Player was assigned id: " + playerID);
         }
 
         private void SetLayers(GameObject _root, int _layer)
@@ -122,6 +140,12 @@ namespace Mangos
 
             GetInputs();
             ProcessInputs();
+
+            //Debug
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                dataReceiver.DeactivateRagdoll();
+            }
         }
 
         private void GetInputs()
@@ -134,6 +158,8 @@ namespace Mangos
 
             lightAttack = player.GetButtonDown("Low_Punch");
             heavyAttack = player.GetButtonDown("Heavy_Punch");
+            specialAttack = player.GetButtonDown("Special");
+            specialAttackUp = player.GetButtonUp("Special");
         }
 
         private void ProcessInputs()
@@ -171,6 +197,12 @@ namespace Mangos
                     attackCooldown = 0.5f;
                 }
 
+                if (specialAttack)
+                {
+                    SpecialAttack();
+                    attackCooldown = 1.2f;
+                }
+
                 if (shield)
                     Shield();
                 else
@@ -182,17 +214,29 @@ namespace Mangos
                 rig.velocity = hitVelocity;
             }
 
+            if (specialAttackUp && ultFreeze)
+            {
+                ultController.GetComponent<MageULTController>().SpawnMeteor();
+                ultFreeze = false;
+            }
+
             Move(xDir, zDir);
+        }
+
+        public void SetRestingVelocity(Vector3 _vel)
+        {
+            restingVelocity = _vel;
         }
 
         public void Move(float _xDir, float _zDir)
         {
-            if (canMove && !isStunned)
+            if (canMove && !isStunned && !ultFreeze && !isRagdoll)
             {
                 Vector3 finalVel = rig.velocity;
 
-                finalVel.x = _xDir * Time.deltaTime * movementSpeed;
-                finalVel.z = _zDir * Time.deltaTime * movementSpeed;
+                finalVel.x = _xDir * Time.deltaTime * movementSpeed + restingVelocity.x;
+                finalVel.y = rig.velocity.y + restingVelocity.y;
+                finalVel.z = _zDir * Time.deltaTime * movementSpeed + restingVelocity.z;
 
                 if (finalVel != Vector3.zero)
                 {
@@ -222,6 +266,9 @@ namespace Mangos
                 Vector3 smoothedVel = Vector3.Lerp(rig.velocity, finalVel, velSmoothSpeed);
                 rig.velocity = smoothedVel;
                 rig.angularVelocity = Vector3.zero;
+            } else if (ultFreeze)
+            {
+                ultController.GetComponent<MageULTController>().MoveSorcery(_xDir, _zDir);
             }
 
             // Animation Controller
@@ -240,7 +287,7 @@ namespace Mangos
                 {
                     rig.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
                     isAirborn = true;
-
+                    Manager_Static.audioManager.PlaySoundGlobal(Sounds.MAROMETA);
                     // Animation Controls
                     anim.SetTrigger("Jump");
                 }
@@ -282,20 +329,28 @@ namespace Mangos
             if (!isShielded)
             {
                 damage += _hitdata.damage;
-
-                StartCoroutine(freeze());
-
-                // Animation Controls
-                anim.SetTrigger("Stun");
+                StartCoroutine(Freeze(0.01f * _hitdata.baseForce + damage * 0.5f * _hitdata.scalingForce));
             }
         }
 
-        IEnumerator freeze()
+        public void SetRagdoll(bool _ragdoll)
+        {
+            isRagdoll = _ragdoll;
+        }
+
+        public void Stun(float _delay)
+        {
+            StartCoroutine(Freeze(_delay));
+        }
+
+        private IEnumerator Freeze(float _delay)
         {
             Debug.Log("Received Damage");
             isStunned = true;
-            yield return new WaitForSeconds(1.0f);
+            anim.SetBool("Stun", true);
+            yield return new WaitForSeconds(_delay);
             isStunned = false;
+            anim.SetBool("Stun", false);
         }
 
         public void PickupItem(GameObject _obj)
@@ -325,6 +380,29 @@ namespace Mangos
             anim.SetTrigger("Attack");
         }
 
+        private void SpecialAttack()
+        {
+
+            if (ultController.gameObject.CompareTag("ULT_Mage"))
+            {
+                //child.GetComponent<MageULTController>().SpawnPointer();
+                ultFreeze = true;
+            }
+            else if (ultController.gameObject.CompareTag("ULT_Warrior"))
+            {
+                GameObject ult = Instantiate(ultController, transform.position, Quaternion.identity);
+                ult.layer = gameObject.layer;
+                ult.GetComponent<ULT_Warrior>().SpawnYutapon(1, 0.8f);
+            } else if (ultController.gameObject.CompareTag("ULT_Sorcerer"))
+            {
+                //child.gameObject.GetComponent<ULT_Sorcerer>().SpawnPaw();
+            } else if (ultController.gameObject.CompareTag("ULT_Ranger"))
+            {
+                // child.gameObject.GetComponent<ULT_Mage>().fireball();
+            }
+            Attack(5);
+        }
+
         public void Stun()
         {
             canMove = false;
@@ -340,6 +418,11 @@ namespace Mangos
             // Animation Controls
             anim.SetBool("Stun", false);
         }
+
+        public Vector3 GetModelOffset()
+        {
+            return instModel.transform.localPosition;
+        }
     }
 
     public static class Extensions
@@ -353,5 +436,7 @@ namespace Mangos
         {
             return new Vector3(value.x.Remap(inMin, inMax, outMin, outMax), value.y.Remap(inMin, inMax, outMin, outMax), value.z.Remap(inMin, inMax, outMin, outMax));
         }
+
+        
     }
 }

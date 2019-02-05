@@ -7,14 +7,14 @@ namespace Mangos
 {
     public enum Sounds : int
     {
-        CASCADA,
-        CASCADA_ESCENARIO,
-        ESPACIO_SONIDOS_Y_MUSICA, //Espacio 2
+        CASCADA, //listo
+        CASCADA_ESCENARIO, //listo
+        ESPACIO_SONIDOS_Y_MUSICA, //Espacio 2 //listo
         METEORO,
-        NOTAS_ESCENARIO,
+        NOTAS_ESCENARIO, //listo
         ASTRONAUTA,
         BALLESTERO_FLECHA, //Espacio 2
-        MAROMETA,
+        MAROMETA, //Listo
         CAIDA_CABALLERO,
         GOLPE_CABALLERO,
         CAMINAR_CABALLERO,
@@ -24,7 +24,7 @@ namespace Mangos
         SKIN_CALAVERA,
         DISPARO_VAQUERO,
         LANZAMIENTO_OBJETOS,
-        MUSICA_MENU
+        MUSICA_MENU  //Listo
     }
 
     public class Manager_Audio : MonoBehaviour
@@ -52,6 +52,8 @@ namespace Mangos
         void Start()
         {
             SetVolumenGeneral(1);
+
+            DontDestroyOnLoad(this);
 
             //Getting clip group index for easier use
             clipIndex = new int[groupSizes.Length];
@@ -108,8 +110,9 @@ namespace Mangos
 
         public void PlaySoundGlobal(Sounds clip)
         {
+            Debug.Log((int)clip);
+            Debug.Log(clipIndex.Length);
             int index = Random.Range(clipIndex[(int)clip], clipIndex[(int)clip] + groupSizes[(int)clip]);
-
             Transform sound = PoolManager.Spawn(audioDad, cam.transform.position, Quaternion.identity);
             sound.parent = cam.transform;
             AudioSource temp = sound.GetComponent<AudioSource>();

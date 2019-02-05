@@ -58,7 +58,7 @@ namespace Mangos
         {
             Debug.Log("Entered trigger");
             UpdateHitData();
-            _col.SendMessage("ReceiveDamage", hitData, SendMessageOptions.DontRequireReceiver);
+            _col.SendMessageUpwards("ReceiveDamage", hitData, SendMessageOptions.DontRequireReceiver);
         }
 
     }

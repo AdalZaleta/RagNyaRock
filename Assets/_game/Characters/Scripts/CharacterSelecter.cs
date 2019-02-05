@@ -55,6 +55,7 @@ namespace Mangos {
 
         // Use this for initialization
         void Start() {
+            Manager_Static.audioManager.PlaySoundGlobal(Sounds.MUSICA_MENU);
             sets = Manager_Static.playerAssigner.characterSets;
             currentChar = PlayerId % sets.Length;
             currentSkin = new int[sets.Length];
@@ -75,7 +76,7 @@ namespace Mangos {
             ProcessInput();
 
             //toggleConnect = 
-           
+            
         }
 
         private void GetInput()

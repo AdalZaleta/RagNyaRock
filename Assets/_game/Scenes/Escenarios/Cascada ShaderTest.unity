@@ -674,7 +674,7 @@ GameObject:
   - component: {fileID: 1044099815}
   m_Layer: 0
   m_Name: piso
-  m_TagString: Untagged
+  m_TagString: Map
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -784,7 +784,7 @@ MonoBehaviour:
   - {fileID: 1379752067}
   - {fileID: 1879654801}
   pivotPlacer: {fileID: 940032211}
-  charPrefab: {fileID: 1352421009748610, guid: f0621e8a48a491244bea6ff4bd7dc0fc, type: 2}
+  charPrefab: {fileID: 1352421009748610, guid: 0e8f17569dac589418c31c6ad28b4c11, type: 2}
 --- !u!4 &1333304989
 Transform:
   m_ObjectHideFlags: 0
@@ -1296,6 +1296,7 @@ GameObject:
   - component: {fileID: 2000238273}
   - component: {fileID: 2000238272}
   - component: {fileID: 2000238271}
+  - component: {fileID: 2000238277}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1429,7 +1430,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 3895
   m_RenderingPath: 3
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -1447,13 +1448,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2000238270}
-  m_LocalRotation: {x: -0.45139945, y: -0.004816236, z: 0.0024384547, w: -0.8923057}
-  m_LocalPosition: {x: -0.24423988, y: 8.861113, z: -8.404857}
+  m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
+  m_LocalPosition: {x: 0, y: 5, z: -8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 50, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
+--- !u!114 &2000238277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2000238270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: affa7709164bf92479f10b7fe02e8234, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2033774121
 Prefab:
   m_ObjectHideFlags: 0

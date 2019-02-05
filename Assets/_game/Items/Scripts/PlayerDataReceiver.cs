@@ -6,6 +6,7 @@ using UnityEngine.UI;
 namespace Mangos
 {
     [RequireComponent(typeof(Rigidbody))]
+    [RequireComponent(typeof(CharacterController))]
     public class PlayerDataReceiver : MonoBehaviour
     {
         [Tooltip("El daño que le hará al PROP que le envió el golpe")]
@@ -14,13 +15,14 @@ namespace Mangos
         public float percentage;
 
         public bool Ragdoll;
-
+        public CharacterController controller;
 
         private Rigidbody m_rigi;
         private Collider m_col;
         private Rigidbody[] m_righijos;
         private Collider[] m_colhijos;
-
+        [HideInInspector]
+        public Animator anim;//Anim que se asigna al spawnear
 
         void Start()
         {
@@ -47,10 +49,10 @@ namespace Mangos
         {
             if (percentage >= 120f)
             {
-                //ActivateRagdoll();
+                ActivateRagdoll();
                 GetKnockbacked(_data.dir, _data.contactPoint, ForceOfHit(_data.baseForce, _data.scalingForce));
-                //m_rigi.isKinematic = true;
-                //m_col.enabled = false;
+                m_rigi.isKinematic = true;
+                m_col.enabled = false;
             } else
             {
                 GetKnockbacked(_data.dir, _data.contactPoint, ForceOfHit(_data.baseForce, _data.scalingForce));
@@ -72,6 +74,28 @@ namespace Mangos
                 m_colhijos[i].enabled = true;
             }
             Ragdoll = true;
+            anim.enabled = false;
+            GetComponent<CharacterController>().SetRagdoll(true);
+        }
+
+        public void DeactivateRagdoll()
+        {
+            Debug.Log("Deactivating ragdoll");
+            Vector3 offset = controller.GetModelOffset();
+            Debug.Log("Offset was " + offset);
+            for (int i = 0; i < m_righijos.Length; i++)
+            {
+                m_righijos[i].isKinematic = true;
+            }
+            for (int i = 0; i < m_colhijos.Length; i++)
+            {
+                m_colhijos[i].enabled = false;
+            }
+            Ragdoll = false;
+            anim.enabled = true;
+            m_rigi.isKinematic = false;
+            m_col.enabled = true;
+            transform.Translate(offset);
         }
 
         public float ForceOfHit(float _baseForce, float _scalingForce)
@@ -81,12 +105,14 @@ namespace Mangos
 
         public void GetKnockbacked(Vector3 _dir,Vector3 _pos, float _force)
         {
+            m_rigi.velocity = Vector3.zero;
             _dir.Normalize();
             if(Ragdoll == false)
                 m_rigi.AddForceAtPosition(_force * _dir, _pos, ForceMode.Impulse);
             else
             {
-                for(int i = 0; i < m_righijos.Length; i++)
+                m_rigi.AddForceAtPosition(_force * _dir, _pos, ForceMode.Impulse);
+                for (int i = 0; i < m_righijos.Length; i++)
                     m_righijos[i].AddForceAtPosition(_force * _dir, _pos, ForceMode.Impulse);
             }
         }

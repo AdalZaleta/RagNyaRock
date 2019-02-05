@@ -13,6 +13,10 @@ namespace Mangos
         public CharacterSet[] characterSets;
         public StageCycler cycler;
 
+        [Header("Debug options")]
+        public bool ForceStage;
+        public int StageID;
+
         private int stageSelected;
         private int keyboardPlayer = -1;
 
@@ -72,7 +76,8 @@ namespace Mangos
                 return;
             }
 
-            int gamePlayerId = GetNextGamePlayerId();
+            //int gamePlayerId = GetNextGamePlayerId();
+            int gamePlayerId = rewiredPlayerId;
 
             // Add the Rewired Player as the next open game player slot
             playerMap.Add(new PlayerMap(rewiredPlayerId, gamePlayerId));
@@ -169,7 +174,11 @@ namespace Mangos
                 ReInput.players.GetPlayer(i).controllers.maps.SetMapsEnabled(true, "Default");
             }
 
-            SceneManager.LoadScene(cycler.Int+1);
+            if(ForceStage)
+                SceneManager.LoadScene(StageID); 
+            else
+                SceneManager.LoadScene(cycler.Int+1);
+
             cycler.Int++;
             cycler.Int %= 3;
         }

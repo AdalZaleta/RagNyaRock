@@ -11,6 +11,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3bfc4264f8bb743998433496cb04e5, type: 3}
   m_Name: Magical Girl Vader
   m_EditorClassIdentifier: 
-  namae: 
+  namae: Luno
   splash: {fileID: 21300004, guid: 879aa22ad8574e848b7f56aa56ce3898, type: 3}
-  model: {fileID: 1126713619689014, guid: 9d76ad2857a5c2843a833d5fe7704658, type: 2}
+  model: {fileID: 1310110514296756, guid: b494f00d3a69359489daeae1e25701fc, type: 2}
