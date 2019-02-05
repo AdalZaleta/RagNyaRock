@@ -53,6 +53,8 @@ namespace Mangos
         {
             SetVolumenGeneral(1);
 
+            DontDestroyOnLoad(this);
+
             //Getting clip group index for easier use
             clipIndex = new int[groupSizes.Length];
             int counter = 0;
@@ -108,8 +110,9 @@ namespace Mangos
 
         public void PlaySoundGlobal(Sounds clip)
         {
+            Debug.Log((int)clip);
+            Debug.Log(clipIndex.Length);
             int index = Random.Range(clipIndex[(int)clip], clipIndex[(int)clip] + groupSizes[(int)clip]);
-
             Transform sound = PoolManager.Spawn(audioDad, cam.transform.position, Quaternion.identity);
             sound.parent = cam.transform;
             AudioSource temp = sound.GetComponent<AudioSource>();
