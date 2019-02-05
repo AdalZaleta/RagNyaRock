@@ -15,7 +15,7 @@ namespace Mangos
         public float airbornRotSpeed;
         public GameObject model;
         public GameObject ultController;
-        
+        public Transform rightHand;
 
         public GameObject TestShield;
 
@@ -32,6 +32,8 @@ namespace Mangos
         private bool canJump = true;
         private bool isRagdoll = false;
         private bool isShielded = false;
+        private bool itemInHand = false;
+        private GameObject itemInRange;
         private float damage = 0;
         private GameObject heldItem;
         private GameObject instModel;
@@ -116,8 +118,10 @@ namespace Mangos
             dataReceiver = GetComponent<PlayerDataReceiver>();
             dataReceiver.controller = this;
             //Finding pelvis
-            pelvis = GetComponentInChildren<PelvisFinder>().pelvis;
+            PelvisFinder finder = GetComponentInChildren<PelvisFinder>();
+            pelvis = finder.pelvis;
             originalPelvisOffset = pelvis.transform.localPosition;
+            rightHand = finder.rightHand;
         }
 
         public void AssignID(int _id)
@@ -173,7 +177,35 @@ namespace Mangos
                     if (isAirborn)
                     {
                         Attack(3);
-                    } else
+                    }
+                    else if (itemInRange && !itemInHand)
+                    {
+                        itemInRange.GetComponent<Rigidbody>().isKinematic = true;
+                        itemInRange.transform.parent = rightHand;
+                        itemInRange.transform.localPosition = Vector3.zero;
+
+                        itemInRange.GetComponent<Collider>().enabled = false;
+                        Collider[] cols = itemInRange.GetComponentsInChildren<Collider>();
+                        for (int i = 0; i < cols.Length; i++)
+                            cols[i].enabled = false;
+
+                        itemInHand = true;
+                    }
+                    else if(itemInHand){
+                        itemInRange.transform.parent = null;
+                        Rigidbody temp = itemInRange.GetComponent<Rigidbody>();
+
+                        itemInRange.GetComponent<Collider>().enabled = true;
+                        Collider[] cols = itemInRange.GetComponentsInChildren<Collider>();
+                        for (int i = 0; i < cols.Length; i++)
+                            cols[i].enabled = true;
+
+                        temp.isKinematic = false;
+                        temp.velocity = rig.velocity + transform.forward * 10;
+
+                        itemInHand = false;
+                    }
+                    else
                     {
                         Attack(currentComboSatus);
 
@@ -421,6 +453,22 @@ namespace Mangos
         public Vector3 GetModelOffset()
         {
             return pelvis.transform.localPosition - originalPelvisOffset; 
+        }
+
+        public void OnTriggerEnter(Collider other)
+        {
+            if (other.CompareTag("Item"))
+            {
+                itemInRange = other.gameObject;
+            }
+        }
+
+        public void OnTriggerExit(Collider other)
+        {
+            if (other.CompareTag("Item"))
+            {
+                itemInRange = null;
+            }
         }
     }
 

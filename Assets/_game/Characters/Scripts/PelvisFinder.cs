@@ -5,4 +5,5 @@ using UnityEngine;
 public class PelvisFinder : MonoBehaviour {
 
     public GameObject pelvis;
+    public Transform rightHand;
 }
