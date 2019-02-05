@@ -26,7 +26,8 @@ namespace Mangos
         private bool isStunned = false;
         private bool canJump = true;
         private bool isShielded = false;
-        private float damage = 0;
+        private int lifes = 3;
+        public float damage = 0;
         private GameObject heldItem;
         private bool hasItem;
         private Vector3 restingVelocity = Vector3.zero;
@@ -80,6 +81,11 @@ namespace Mangos
                     }
                 }  
             }
+        }
+
+        public void ExitSafeZone()
+        {
+            Manager_Static.spawnManager.ReSpawn(gameObject);
         }
 
         private void OnCollisionExit(Collision _col)

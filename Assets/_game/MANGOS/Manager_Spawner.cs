@@ -17,6 +17,11 @@ namespace Mangos
             Manager_Static.spawnManager = this;
         }
 
+        public void ReSpawn(GameObject _who)
+        {
+            _who.transform.position = spawnPoints[Random.Range(0, 4)].transform.position;
+        }
+
         private void Start()
         {
             characterSets = Manager_Static.playerAssigner.characterSets;
