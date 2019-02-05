@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4739999849302776}
   - component: {fileID: 33130258655889224}
   - component: {fileID: 23554532917814690}
+  - component: {fileID: 114656845983131884}
   m_Layer: 0
   m_Name: MSH_Patita
   m_TagString: Untagged
@@ -83,3 +84,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1257044746012196}
   m_Mesh: {fileID: 4300000, guid: 359694473c1aed242ad17a97c9e3a9c0, type: 3}
+--- !u!114 &114656845983131884
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1257044746012196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49b7d6cb7f26f4f48bff1b13e713dcec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pelvis: {fileID: 0}

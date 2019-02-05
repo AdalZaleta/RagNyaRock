@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4397425361952088}
   - component: {fileID: 95572100954648834}
   - component: {fileID: 65444710488262344}
+  - component: {fileID: 114426835439372862}
   m_Layer: 0
   m_Name: Mago
   m_TagString: Model
@@ -1909,7 +1910,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1013275771610270}
   m_LocalRotation: {x: 0, y: -0.9131902, z: 0, w: 0.40753376}
-  m_LocalPosition: {x: 3.8563056, y: 1.541992e-16, z: -6.244514}
+  m_LocalPosition: {x: 0.85951346, y: 0, z: -1.5982966}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4610889630306450}
@@ -2984,6 +2985,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114426835439372862
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1013275771610270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49b7d6cb7f26f4f48bff1b13e713dcec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pelvis: {fileID: 1612779362005208}
 --- !u!114 &114679488237915716
 MonoBehaviour:
   m_ObjectHideFlags: 1

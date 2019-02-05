@@ -778,6 +778,7 @@ GameObject:
   - component: {fileID: 4486775114041866}
   - component: {fileID: 95386294302241140}
   - component: {fileID: 65975094093067962}
+  - component: {fileID: 114315588017336660}
   m_Layer: 0
   m_Name: Priest
   m_TagString: Model
@@ -1932,7 +1933,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1660194180531460}
   m_LocalRotation: {x: -0, y: -0.9226806, z: -0, w: -0.38556513}
-  m_LocalPosition: {x: -5.4900002, y: 0, z: -6.7899995}
+  m_LocalPosition: {x: 0.6140884, y: 0, z: -2.569353}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4800173651959350}
@@ -2943,6 +2944,18 @@ MonoBehaviour:
   scaleForce: 1
   damage: 10
   DebugMode: 0
+--- !u!114 &114315588017336660
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1660194180531460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49b7d6cb7f26f4f48bff1b13e713dcec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pelvis: {fileID: 1913164637977106}
 --- !u!114 &114922401097306248
 MonoBehaviour:
   m_ObjectHideFlags: 1

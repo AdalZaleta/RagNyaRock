@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4063576034371094}
   - component: {fileID: 33481284170153220}
   - component: {fileID: 23201308074730476}
+  - component: {fileID: 114093263716080926}
   m_Layer: 0
   m_Name: Circulp
   m_TagString: Untagged
@@ -83,3 +84,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1293771561503978}
   m_Mesh: {fileID: 4300002, guid: 359694473c1aed242ad17a97c9e3a9c0, type: 3}
+--- !u!114 &114093263716080926
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1293771561503978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49b7d6cb7f26f4f48bff1b13e713dcec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pelvis: {fileID: 0}

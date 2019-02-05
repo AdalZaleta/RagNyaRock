@@ -23,6 +23,8 @@ namespace Mangos
         private Player player;
 
         private PlayerDataReceiver dataReceiver;
+        private GameObject pelvis;
+        private Vector3 originalPelvisOffset;
         private Rigidbody rig;
         private bool isAirborn = false;
         private bool canMove = true;
@@ -110,9 +112,12 @@ namespace Mangos
                     anim = child.gameObject.GetComponent<Animator>();
             }
             SetLayers(gameObject, playerID + 8);
-
+            //Link to data reciever
             dataReceiver = GetComponent<PlayerDataReceiver>();
             dataReceiver.controller = this;
+            //Finding pelvis
+            pelvis = GetComponentInChildren<PelvisFinder>().pelvis;
+            originalPelvisOffset = pelvis.transform.localPosition;
         }
 
         public void AssignID(int _id)
@@ -140,12 +145,6 @@ namespace Mangos
 
             GetInputs();
             ProcessInputs();
-
-            //Debug
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                dataReceiver.DeactivateRagdoll();
-            }
         }
 
         private void GetInputs()
@@ -421,7 +420,7 @@ namespace Mangos
 
         public Vector3 GetModelOffset()
         {
-            return instModel.transform.localPosition;
+            return pelvis.transform.localPosition - originalPelvisOffset; 
         }
     }
 

@@ -1057,6 +1057,7 @@ GameObject:
   - component: {fileID: 4579957319858312}
   - component: {fileID: 95395517061454270}
   - component: {fileID: 65638335348384112}
+  - component: {fileID: 114658546933124542}
   m_Layer: 0
   m_Name: Mago Obscuro
   m_TagString: Model
@@ -1979,7 +1980,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1748357564010958}
   m_LocalRotation: {x: -0, y: -0.81760156, z: -0, w: 0.57578444}
-  m_LocalPosition: {x: 4.546, y: 0, z: -7.567}
+  m_LocalPosition: {x: 0.20612785, y: 0, z: -2.4081244}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4309584767927064}
@@ -3001,6 +3002,18 @@ MonoBehaviour:
   scaleForce: 1
   damage: 10
   DebugMode: 0
+--- !u!114 &114658546933124542
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1748357564010958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49b7d6cb7f26f4f48bff1b13e713dcec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pelvis: {fileID: 1440624083672276}
 --- !u!114 &114731297789516182
 MonoBehaviour:
   m_ObjectHideFlags: 1

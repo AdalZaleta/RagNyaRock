@@ -96,6 +96,7 @@ namespace Mangos
             m_rigi.isKinematic = false;
             m_col.enabled = true;
             transform.Translate(offset);
+            controller.SetRagdoll(false);
         }
 
         public float ForceOfHit(float _baseForce, float _scalingForce)

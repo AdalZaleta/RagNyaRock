@@ -144,6 +144,7 @@ GameObject:
   - component: {fileID: 4149877543536338}
   - component: {fileID: 95907879455748634}
   - component: {fileID: 65632737291743752}
+  - component: {fileID: 114827180385931240}
   m_Layer: 0
   m_Name: Guerrero Obscuro
   m_TagString: Model
@@ -1525,7 +1526,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1116207637731400}
   m_LocalRotation: {x: -0, y: -0.92326546, z: -0, w: 0.3841626}
-  m_LocalPosition: {x: 2.78, y: 0, z: -5.63}
+  m_LocalPosition: {x: 1.6658324, y: 0, z: -1.5226359}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4801823194679402}
@@ -3033,6 +3034,18 @@ MonoBehaviour:
   scaleForce: 1
   damage: 10
   DebugMode: 0
+--- !u!114 &114827180385931240
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1116207637731400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49b7d6cb7f26f4f48bff1b13e713dcec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pelvis: {fileID: 1269572687742238}
 --- !u!135 &135165721811476572
 SphereCollider:
   m_ObjectHideFlags: 1
