@@ -15,8 +15,6 @@ public class Expand_Aro : MonoBehaviour {
 	void OnEnable() {
 		scaleFactor = 0.1f;
 		transform.localScale = new Vector3(scaleFactor, 1.0f, scaleFactor);
-		foreach (GameObject child in transform)
-			child.gameObject.SetActive(true);
 	}
 
 	void OnDisable() {

@@ -17,8 +17,10 @@ namespace Mangos
 		private TextMeshProUGUI hand_3;
 		public GameObject TMP_4;
 		private TextMeshProUGUI hand_4;
+		private int playersAlive;
+		public Image victory;
 
-		private void Start() {
+		private void Awake() {
 			Manager_Static.controlHandicap = this;
 		}
 
@@ -52,6 +54,29 @@ namespace Mangos
 				hand_4 = TMP_4.GetComponent<TextMeshProUGUI>();
 				hand_4.SetText("{0:2}", jugadores[3].GetComponent<CharacterController>().damage);
 			}
+
+			for(int i = 0; i < 4; i++)
+			{
+				if(jugadores[i] != null)
+					if(jugadores[i].gameObject.activeSelf)
+						playersAlive++;
+			}
+
+			if(playersAlive <= 1)
+			{
+				Debug.Log("VICTORY ROYAL");
+				victory.gameObject.SetActive(true);
+				StartCoroutine("RegresarCharacter");
+			}
+
+			Debug.Log("Jugadores Activos: " + playersAlive);
+			playersAlive = 0;
+		}
+
+		IEnumerator RegresarCharacter()
+		{
+			yield return new WaitForSeconds(5.0f);
+			Manager_Static.sceneManager.LoadScene(0);
 		}
 	}
 }
