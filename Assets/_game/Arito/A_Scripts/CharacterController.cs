@@ -87,7 +87,13 @@ namespace Mangos
 
         public void ExitSafeZone()
         {
-            Manager_Static.spawnManager.ReSpawn(gameObject);
+            if(lifes > 0)
+            {
+                Manager_Static.spawnManager.ReSpawn(gameObject);
+            }
+            lifes--;
+            if(lifes <= 0)
+                itsAlive = false;
         }
 
         private void OnCollisionExit(Collision _col)

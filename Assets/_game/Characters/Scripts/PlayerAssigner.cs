@@ -31,7 +31,11 @@ namespace Mangos
 
         private void Start()
         {
+            Debug.Log("Hola");
             DontDestroyOnLoad(gameObject);
+            var objets = FindObjectsOfType(typeof(PlayerAssigner));
+            if(objets.Length > 1)
+                Destroy(gameObject);
         }
 
         void Update()
