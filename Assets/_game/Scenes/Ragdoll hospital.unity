@@ -142,12 +142,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 15b9fae6de04ebf459e39c023c0d247a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   director: {fileID: 319371724}
   dir: {x: 0, y: 0, z: 0}
   baseForce: 5
-  scaleForce: 0
+  scaleForce: 0.02
   damage: 20
   DebugMode: 0
 --- !u!54 &86320725
@@ -667,8 +667,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 15b9fae6de04ebf459e39c023c0d247a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   director: {fileID: 192294830}
   dir: {x: 0, y: 0, z: 0}
   baseForce: 5
@@ -905,8 +905,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 15b9fae6de04ebf459e39c023c0d247a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   director: {fileID: 1239910728}
   dir: {x: 0, y: 0, z: 0}
   baseForce: 5
@@ -1195,8 +1195,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 15b9fae6de04ebf459e39c023c0d247a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   director: {fileID: 1350075648}
   dir: {x: 0, y: 0, z: 0}
   baseForce: 5
@@ -1969,8 +1969,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d640a951e79e0d547a4a8bb78e80b4ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   gameState: 1
 --- !u!4 &1832410132
 Transform:
@@ -1994,8 +1994,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a9151b7e82b6bd342a06a89d3662e05b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   spawnPoints:
   - {fileID: 1196247989}
   - {fileID: 1196247989}

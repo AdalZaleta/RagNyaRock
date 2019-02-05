@@ -40,6 +40,16 @@ namespace Mangos
             GameObject go = Instantiate(yutaponBundle, transform.position, Quaternion.identity);
             Destroy(go, 5.0f);
             explosionRadius.enabled = true;
+            yield return new WaitForSeconds(0.1f);
+            explosionRadius.enabled = false;
+            Destroy(gameObject, 5.0f);
         }
     }
 }
+
+
+
+
+
+
+
