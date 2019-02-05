@@ -28,6 +28,7 @@ namespace Mangos
         private bool canMove = true;
         private bool isStunned = false;
         private bool canJump = true;
+        private bool isRagdoll = false;
         private bool isShielded = false;
         private float damage = 0;
         private GameObject heldItem;
@@ -103,8 +104,6 @@ namespace Mangos
             if (temp)
                 temp.anim = instModel.GetComponent<Animator>();
 
-            if (ultController)
-                Instantiate(ultController, transform.position, transform.rotation, transform);
             foreach (Transform child in gameObject.transform)
             {
                 if (child.gameObject.CompareTag("Model"))
@@ -120,7 +119,6 @@ namespace Mangos
         {
             playerID = _id;
             player = ReInput.players.GetPlayer(playerID);
-            Debug.Log("Player was assigned id: " + playerID);
         }
 
         private void SetLayers(GameObject _root, int _layer)
@@ -232,7 +230,7 @@ namespace Mangos
 
         public void Move(float _xDir, float _zDir)
         {
-            if (canMove && !isStunned && !ultFreeze)
+            if (canMove && !isStunned && !ultFreeze && !isRagdoll)
             {
                 Vector3 finalVel = rig.velocity;
 
@@ -289,7 +287,7 @@ namespace Mangos
                 {
                     rig.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
                     isAirborn = true;
-
+                    Manager_Static.audioManager.PlaySoundGlobal(Sounds.MAROMETA);
                     // Animation Controls
                     anim.SetTrigger("Jump");
                 }
@@ -331,12 +329,13 @@ namespace Mangos
             if (!isShielded)
             {
                 damage += _hitdata.damage;
-
-                StartCoroutine(Freeze(1.0f));
-
-                // Animation Controls
-                anim.SetTrigger("Stun");
+                StartCoroutine(Freeze(0.01f * _hitdata.baseForce + damage * 0.5f * _hitdata.scalingForce));
             }
+        }
+
+        public void SetRagdoll(bool _ragdoll)
+        {
+            isRagdoll = _ragdoll;
         }
 
         public void Stun(float _delay)
@@ -348,8 +347,10 @@ namespace Mangos
         {
             Debug.Log("Received Damage");
             isStunned = true;
+            anim.SetBool("Stun", true);
             yield return new WaitForSeconds(_delay);
             isStunned = false;
+            anim.SetBool("Stun", false);
         }
 
         public void PickupItem(GameObject _obj)
@@ -381,23 +382,23 @@ namespace Mangos
 
         private void SpecialAttack()
         {
-            foreach(Transform child in transform)
+
+            if (ultController.gameObject.CompareTag("ULT_Mage"))
             {
-                if (child.gameObject.CompareTag("ULT_Mage"))
-                {
-                    child.GetComponent<MageULTController>().SpawnPointer();
-                    ultFreeze = true;
-                }
-                else if (child.gameObject.CompareTag("ULT_Warrior"))
-                {
-                    child.gameObject.GetComponent<ULT_Warrior>().SpawnYutapon(1, 0.8f);
-                } else if (child.gameObject.CompareTag("ULT_Sorcerer"))
-                {
-                    //child.gameObject.GetComponent<ULT_Sorcerer>().SpawnPaw();
-                } else if (child.gameObject.CompareTag("ULT_Ranger"))
-                {
-                    // child.gameObject.GetComponent<ULT_Mage>().fireball();
-                }
+                //child.GetComponent<MageULTController>().SpawnPointer();
+                ultFreeze = true;
+            }
+            else if (ultController.gameObject.CompareTag("ULT_Warrior"))
+            {
+                GameObject ult = Instantiate(ultController, transform.position, Quaternion.identity);
+                ult.layer = gameObject.layer;
+                ult.GetComponent<ULT_Warrior>().SpawnYutapon(1, 0.8f);
+            } else if (ultController.gameObject.CompareTag("ULT_Sorcerer"))
+            {
+                //child.gameObject.GetComponent<ULT_Sorcerer>().SpawnPaw();
+            } else if (ultController.gameObject.CompareTag("ULT_Ranger"))
+            {
+                // child.gameObject.GetComponent<ULT_Mage>().fireball();
             }
             Attack(5);
         }
