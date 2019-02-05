@@ -113,7 +113,6 @@ namespace Mangos
         {
             playerID = _id;
             player = ReInput.players.GetPlayer(playerID);
-            Debug.Log("Player was assigned id: " + playerID);
         }
 
         private void SetLayers(GameObject _root, int _layer)
@@ -276,7 +275,7 @@ namespace Mangos
                 {
                     rig.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
                     isAirborn = true;
-
+                    Manager_Static.audioManager.PlaySoundGlobal(Sounds.MAROMETA);
                     // Animation Controls
                     anim.SetTrigger("Jump");
                 }

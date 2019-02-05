@@ -236,6 +236,7 @@ GameObject:
   - component: {fileID: 415384653}
   - component: {fileID: 415384652}
   - component: {fileID: 415384658}
+  - component: {fileID: 415384659}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -405,6 +406,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddac05fb66f22fe40862040df0aa8183, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &415384659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 415384651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b52362c8c209e7149b5d06f9ffcfd814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToSpawnMeteor: {x: 0, y: 0}
+  cooldownMeteor: 0
+  meteor: {fileID: 0}
+  timeToSpawnBlackHole: {x: 0, y: 0}
+  cooldownBlackHole: 0
+  blackHole: {fileID: 0}
 --- !u!1 &423680724
 GameObject:
   m_ObjectHideFlags: 0

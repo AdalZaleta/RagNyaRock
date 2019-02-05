@@ -7,14 +7,14 @@ namespace Mangos
 {
     public enum Sounds : int
     {
-        CASCADA,
-        CASCADA_ESCENARIO,
-        ESPACIO_SONIDOS_Y_MUSICA, //Espacio 2
+        CASCADA, //listo
+        CASCADA_ESCENARIO, //listo
+        ESPACIO_SONIDOS_Y_MUSICA, //Espacio 2 //listo
         METEORO,
-        NOTAS_ESCENARIO,
+        NOTAS_ESCENARIO, //listo
         ASTRONAUTA,
         BALLESTERO_FLECHA, //Espacio 2
-        MAROMETA,
+        MAROMETA, //Listo
         CAIDA_CABALLERO,
         GOLPE_CABALLERO,
         CAMINAR_CABALLERO,
@@ -24,7 +24,7 @@ namespace Mangos
         SKIN_CALAVERA,
         DISPARO_VAQUERO,
         LANZAMIENTO_OBJETOS,
-        MUSICA_MENU
+        MUSICA_MENU  //Listo
     }
 
     public class Manager_Audio : MonoBehaviour
