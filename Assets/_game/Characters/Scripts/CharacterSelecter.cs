@@ -76,7 +76,7 @@ namespace Mangos {
             ProcessInput();
 
             //toggleConnect = 
-           
+            
         }
 
         private void GetInput()

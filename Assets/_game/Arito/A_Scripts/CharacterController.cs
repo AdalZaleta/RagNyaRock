@@ -5,6 +5,7 @@ using Rewired;
 
 namespace Mangos
 {
+    [RequireComponent(typeof(PlayerDataReceiver))]
     public class CharacterController : MonoBehaviour
     {
         public float movementSpeed;
@@ -14,12 +15,14 @@ namespace Mangos
         public float airbornRotSpeed;
         public GameObject model;
         public GameObject ultController;
+        
 
         public GameObject TestShield;
 
         private int playerID = 0; // Set to 0 by default
         private Player player;
 
+        private PlayerDataReceiver dataReceiver;
         private Rigidbody rig;
         private bool isAirborn = false;
         private bool canMove = true;
@@ -28,6 +31,7 @@ namespace Mangos
         private bool isShielded = false;
         private float damage = 0;
         private GameObject heldItem;
+        private GameObject instModel;
         private bool hasItem;
         private Vector3 restingVelocity = Vector3.zero;
 
@@ -93,7 +97,7 @@ namespace Mangos
             player = ReInput.players.GetPlayer(playerID);
             rig = gameObject.GetComponent<Rigidbody>();
             TestShield.SetActive(false);
-            GameObject instModel = Instantiate(model, transform.position, transform.rotation, transform);
+            instModel = Instantiate(model, transform.position, transform.rotation, transform);
 
             var temp = GetComponent<PlayerDataReceiver>();
             if (temp)
@@ -107,6 +111,9 @@ namespace Mangos
                     anim = child.gameObject.GetComponent<Animator>();
             }
             SetLayers(gameObject, playerID + 8);
+
+            dataReceiver = GetComponent<PlayerDataReceiver>();
+            dataReceiver.controller = this;
         }
 
         public void AssignID(int _id)
@@ -135,6 +142,12 @@ namespace Mangos
 
             GetInputs();
             ProcessInputs();
+
+            //Debug
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                dataReceiver.DeactivateRagdoll();
+            }
         }
 
         private void GetInputs()
@@ -404,6 +417,11 @@ namespace Mangos
             // Animation Controls
             anim.SetBool("Stun", false);
         }
+
+        public Vector3 GetModelOffset()
+        {
+            return instModel.transform.localPosition;
+        }
     }
 
     public static class Extensions
@@ -417,5 +435,7 @@ namespace Mangos
         {
             return new Vector3(value.x.Remap(inMin, inMax, outMin, outMax), value.y.Remap(inMin, inMax, outMin, outMax), value.z.Remap(inMin, inMax, outMin, outMax));
         }
+
+        
     }
 }

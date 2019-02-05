@@ -6,6 +6,7 @@ using UnityEngine.UI;
 namespace Mangos
 {
     [RequireComponent(typeof(Rigidbody))]
+    [RequireComponent(typeof(CharacterController))]
     public class PlayerDataReceiver : MonoBehaviour
     {
         [Tooltip("El daño que le hará al PROP que le envió el golpe")]
@@ -14,7 +15,7 @@ namespace Mangos
         public float percentage;
 
         public bool Ragdoll;
-
+        public CharacterController controller;
 
         private Rigidbody m_rigi;
         private Collider m_col;
@@ -79,6 +80,8 @@ namespace Mangos
         public void DeactivateRagdoll()
         {
             Debug.Log("Deactivating ragdoll");
+            Vector3 offset = controller.GetModelOffset();
+            Debug.Log("Offset was " + offset);
             for (int i = 0; i < m_righijos.Length; i++)
             {
                 m_righijos[i].isKinematic = true;
@@ -91,6 +94,7 @@ namespace Mangos
             anim.enabled = true;
             m_rigi.isKinematic = false;
             m_col.enabled = true;
+            transform.Translate(offset);
         }
 
         public float ForceOfHit(float _baseForce, float _scalingForce)
