@@ -26,11 +26,13 @@ namespace Mangos
         private bool isStunned = false;
         private bool canJump = true;
         private bool isShielded = false;
-        private int lifes = 3;
+        private Vector3 restingVelocity = Vector3.zero;
         public float damage = 0;
+        [SerializeField]
+        private int lifes = 3;
         private GameObject heldItem;
         private bool hasItem;
-        private Vector3 restingVelocity = Vector3.zero;
+        private bool itsAlive = true;
 
         private int currentComboSatus = 0;
         private float comboCooldown = 0;
@@ -131,6 +133,10 @@ namespace Mangos
 
         void Update()
         {
+            if(!itsAlive)
+            {
+                gameObject.SetActive(false);
+            }
             if (currentComboSatus != 0 && comboCooldown <= 0)
             {
                 currentComboSatus = 0;
@@ -272,6 +278,13 @@ namespace Mangos
             animVel.y = 0;
             animVel.z = rig.velocity.z;
             anim.SetFloat("MovementVelocity", animVel.magnitude.Remap(0, 10, 0, 1));
+        }
+
+        public void ExitSafeZone()
+        {
+            lifes--;
+            if(lifes < 1)
+                itsAlive = false;
         }
 
         public void Jump()
