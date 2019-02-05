@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1222318492928716}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 8.11832, y: 0.61707616, z: 8.14576}
+  m_LocalPosition: {x: -0.33444795, y: 1.63, z: 3.8534813}
   m_LocalScale: {x: 6, y: 6, z: 6}
   m_Children: []
   m_Father: {fileID: 0}
@@ -127,16 +127,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   recoilMeteor:
-  - {fileID: 1047257963023100, guid: f9cfe66f4a9ef3041ab90a1a5cf40f5a, type: 2}
-  - {fileID: 1319470547119512, guid: f9cfe66f4a9ef3041ab90a1a5cf40f5a, type: 2}
-  - {fileID: 1324920093017306, guid: f9cfe66f4a9ef3041ab90a1a5cf40f5a, type: 2}
-  - {fileID: 1949396560256766, guid: f9cfe66f4a9ef3041ab90a1a5cf40f5a, type: 2}
-  - {fileID: 1255899206144408, guid: f9cfe66f4a9ef3041ab90a1a5cf40f5a, type: 2}
-  - {fileID: 1961695495050492, guid: f9cfe66f4a9ef3041ab90a1a5cf40f5a, type: 2}
-  - {fileID: 1272992550736414, guid: f9cfe66f4a9ef3041ab90a1a5cf40f5a, type: 2}
-  - {fileID: 1578835769166180, guid: f9cfe66f4a9ef3041ab90a1a5cf40f5a, type: 2}
-  - {fileID: 1652146938803996, guid: f9cfe66f4a9ef3041ab90a1a5cf40f5a, type: 2}
-  - {fileID: 1692952520033568, guid: f9cfe66f4a9ef3041ab90a1a5cf40f5a, type: 2}
+  - {fileID: 1689651947996336, guid: f9cfe66f4a9ef3041ab90a1a5cf40f5a, type: 2}
+  - {fileID: 1874029699971904, guid: f9cfe66f4a9ef3041ab90a1a5cf40f5a, type: 2}
+  - {fileID: 1753260443800880, guid: f9cfe66f4a9ef3041ab90a1a5cf40f5a, type: 2}
+  - {fileID: 1180262591989810, guid: f9cfe66f4a9ef3041ab90a1a5cf40f5a, type: 2}
+  - {fileID: 1724888836969252, guid: f9cfe66f4a9ef3041ab90a1a5cf40f5a, type: 2}
+  - {fileID: 1749966424121108, guid: f9cfe66f4a9ef3041ab90a1a5cf40f5a, type: 2}
+  - {fileID: 1409784241642338, guid: f9cfe66f4a9ef3041ab90a1a5cf40f5a, type: 2}
+  - {fileID: 1602284786214806, guid: f9cfe66f4a9ef3041ab90a1a5cf40f5a, type: 2}
+  - {fileID: 1547604889094256, guid: f9cfe66f4a9ef3041ab90a1a5cf40f5a, type: 2}
+  - {fileID: 1558521882848678, guid: f9cfe66f4a9ef3041ab90a1a5cf40f5a, type: 2}
   burningFloor: {fileID: 1906685831519482, guid: bcdfa4349f38b2e4d99fea752d0b9ffb,
     type: 2}
   rangeX: {x: -6, y: 6}

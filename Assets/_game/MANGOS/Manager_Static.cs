@@ -58,5 +58,7 @@ namespace Mangos
         public static PlayerAssigner playerAssigner;
         public static Manager_Spawner spawnManager;
 
+        public static Handicap controlHandicap;
+
     }
 }

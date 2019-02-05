@@ -157,8 +157,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_Material: {fileID: 0}
   m_Color: {r: 0.9490196, g: 0.95686275, b: 0.9529412, a: 1}
   m_RaycastTarget: 1
@@ -226,8 +226,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_RaycastTarget: 1
@@ -282,8 +282,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 581b3e3c96df0ef42aef16b63b27b87f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   _dontDestroyOnLoad: 1
   _userData:
     configVars:
@@ -551,8 +551,8 @@ MonoBehaviour:
       _name: Jump
       _type: 1
       _descriptiveName: Jump
-      _positiveDescriptiveName: 
-      _negativeDescriptiveName: 
+      _positiveDescriptiveName:
+      _negativeDescriptiveName:
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 0
@@ -560,8 +560,8 @@ MonoBehaviour:
       _name: Special
       _type: 1
       _descriptiveName: Special
-      _positiveDescriptiveName: 
-      _negativeDescriptiveName: 
+      _positiveDescriptiveName:
+      _negativeDescriptiveName:
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 0
@@ -569,8 +569,8 @@ MonoBehaviour:
       _name: Low_Punch
       _type: 1
       _descriptiveName: Low Punch
-      _positiveDescriptiveName: 
-      _negativeDescriptiveName: 
+      _positiveDescriptiveName:
+      _negativeDescriptiveName:
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 0
@@ -578,8 +578,8 @@ MonoBehaviour:
       _name: Heavy_Punch
       _type: 1
       _descriptiveName: Heavy Punch
-      _positiveDescriptiveName: 
-      _negativeDescriptiveName: 
+      _positiveDescriptiveName:
+      _negativeDescriptiveName:
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 0
@@ -587,8 +587,8 @@ MonoBehaviour:
       _name: Grab
       _type: 1
       _descriptiveName: Grab
-      _positiveDescriptiveName: 
-      _negativeDescriptiveName: 
+      _positiveDescriptiveName:
+      _negativeDescriptiveName:
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 0
@@ -596,8 +596,8 @@ MonoBehaviour:
       _name: Block
       _type: 1
       _descriptiveName: Block
-      _positiveDescriptiveName: 
-      _negativeDescriptiveName: 
+      _positiveDescriptiveName:
+      _negativeDescriptiveName:
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 0
@@ -605,8 +605,8 @@ MonoBehaviour:
       _name: Taunt
       _type: 1
       _descriptiveName: Taunt
-      _positiveDescriptiveName: 
-      _negativeDescriptiveName: 
+      _positiveDescriptiveName:
+      _negativeDescriptiveName:
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 0
@@ -614,8 +614,8 @@ MonoBehaviour:
       _name: Join
       _type: 1
       _descriptiveName: PressStartToJoin
-      _positiveDescriptiveName: 
-      _negativeDescriptiveName: 
+      _positiveDescriptiveName:
+      _negativeDescriptiveName:
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 0
@@ -632,8 +632,8 @@ MonoBehaviour:
       _name: NextSkin
       _type: 1
       _descriptiveName: Changes to next skin
-      _positiveDescriptiveName: 
-      _negativeDescriptiveName: 
+      _positiveDescriptiveName:
+      _negativeDescriptiveName:
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 2
@@ -641,8 +641,8 @@ MonoBehaviour:
       _name: PreviousSkin
       _type: 1
       _descriptiveName: Changes to previous skin
-      _positiveDescriptiveName: 
-      _negativeDescriptiveName: 
+      _positiveDescriptiveName:
+      _negativeDescriptiveName:
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 2
@@ -650,8 +650,8 @@ MonoBehaviour:
       _name: Back
       _type: 1
       _descriptiveName: BackButton
-      _positiveDescriptiveName: 
-      _negativeDescriptiveName: 
+      _positiveDescriptiveName:
+      _negativeDescriptiveName:
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 2
@@ -659,8 +659,8 @@ MonoBehaviour:
       _name: ToggleReady
       _type: 1
       _descriptiveName: Toggles ready
-      _positiveDescriptiveName: 
-      _negativeDescriptiveName: 
+      _positiveDescriptiveName:
+      _negativeDescriptiveName:
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 2
@@ -668,8 +668,8 @@ MonoBehaviour:
       _name: Action
       _type: 1
       _descriptiveName: Select char, change stuff etc.
-      _positiveDescriptiveName: 
-      _negativeDescriptiveName: 
+      _positiveDescriptiveName:
+      _negativeDescriptiveName:
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 2
@@ -677,20 +677,20 @@ MonoBehaviour:
       _name: KeyboardJoin
       _type: 1
       _descriptiveName: When a keyboard joins
-      _positiveDescriptiveName: 
-      _negativeDescriptiveName: 
+      _positiveDescriptiveName:
+      _negativeDescriptiveName:
       _behaviorId: 0
       _userAssignable: 1
       _categoryId: 0
     actionCategories:
     - _name: Default
       _descriptiveName: Gameplay Controls
-      _tag: 
+      _tag:
       _id: 0
       _userAssignable: 1
     - _name: UI
       _descriptiveName: UI Controls
-      _tag: 
+      _tag:
       _id: 2
       _userAssignable: 1
     actionCategoryMap:
@@ -726,25 +726,25 @@ MonoBehaviour:
     mapCategories:
     - _name: Default
       _descriptiveName: Default
-      _tag: 
+      _tag:
       _id: 0
       _userAssignable: 1
       _checkConflictsWithAllCategories: 1
-      _checkConflictsCategoryIds: 
+      _checkConflictsCategoryIds:
     - _name: UI
       _descriptiveName: CharacterSelect
-      _tag: 
+      _tag:
       _id: 1
       _userAssignable: 1
       _checkConflictsWithAllCategories: 1
-      _checkConflictsCategoryIds: 
+      _checkConflictsCategoryIds:
     - _name: Assignment
       _descriptiveName: PressStartToJoin
-      _tag: 
+      _tag:
       _id: 3
       _userAssignable: 1
       _checkConflictsWithAllCategories: 1
-      _checkConflictsCategoryIds: 
+      _checkConflictsCategoryIds:
     joystickLayouts:
     - _name: Default
       _descriptiveName: Default
@@ -765,7 +765,7 @@ MonoBehaviour:
     - id: 0
       categoryId: 0
       layoutId: 0
-      name: 
+      name:
       hardwareGuidString: 83b427e4-086f-47f3-bb06-be266abd1ca5
       customControllerUid: 0
       actionElementMaps:
@@ -893,7 +893,7 @@ MonoBehaviour:
     - id: 2
       categoryId: 1
       layoutId: 0
-      name: 
+      name:
       hardwareGuidString: 83b427e4-086f-47f3-bb06-be266abd1ca5
       customControllerUid: 0
       actionElementMaps:
@@ -999,7 +999,7 @@ MonoBehaviour:
     - id: 3
       categoryId: 3
       layoutId: 0
-      name: 
+      name:
       hardwareGuidString: 83b427e4-086f-47f3-bb06-be266abd1ca5
       customControllerUid: 0
       actionElementMaps:
@@ -1018,8 +1018,8 @@ MonoBehaviour:
     - id: 0
       categoryId: 0
       layoutId: 0
-      name: 
-      hardwareGuidString: 
+      name:
+      hardwareGuidString:
       customControllerUid: 0
       actionElementMaps:
       - _actionCategoryId: 0
@@ -1080,8 +1080,8 @@ MonoBehaviour:
     - id: 1
       categoryId: 1
       layoutId: 0
-      name: 
-      hardwareGuidString: 
+      name:
+      hardwareGuidString:
       customControllerUid: 0
       actionElementMaps:
       - _actionCategoryId: 0
@@ -1164,8 +1164,8 @@ MonoBehaviour:
     - id: 2
       categoryId: 3
       layoutId: 0
-      name: 
-      hardwareGuidString: 
+      name:
+      hardwareGuidString:
       customControllerUid: 0
       actionElementMaps:
       - _actionCategoryId: 0
@@ -1255,8 +1255,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_RaycastTarget: 1
@@ -1330,8 +1330,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0.5921569}
   m_RaycastTarget: 1
@@ -1402,8 +1402,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a3f6a7806333ee4ea6e5629a33ac908, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   PlayerId: 2
   splash: {fileID: 773061006}
   darkOverlay: {fileID: 217663878}
@@ -1609,8 +1609,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 317000d682f71c34181786ba12c8995a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   OnStartEvents:
   - {fileID: 11400000, guid: 0212eefcc255af741a10a3614f6b8280, type: 2}
 --- !u!1 &480822263
@@ -1674,8 +1674,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -1692,8 +1692,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -619905303, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
@@ -1754,8 +1754,8 @@ MonoBehaviour:
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0.5921569}
   m_RaycastTarget: 1
@@ -1823,8 +1823,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_Material: {fileID: 0}
   m_Color: {r: 0.9490196, g: 0.95686275, b: 0.9529412, a: 1}
   m_RaycastTarget: 1
@@ -1875,8 +1875,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_IgnoreReversedGraphics: 1
   m_BlockingObjects: 0
   m_BlockingMask:
@@ -1891,8 +1891,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
@@ -1992,8 +1992,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
@@ -2055,8 +2055,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d640a951e79e0d547a4a8bb78e80b4ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   gameState: 4
 --- !u!1 &736513767
 GameObject:
@@ -2102,8 +2102,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_Material: {fileID: 0}
   m_Color: {r: 0.9490196, g: 0.95686275, b: 0.9529412, a: 1}
   m_RaycastTarget: 1
@@ -2171,8 +2171,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
@@ -2240,8 +2240,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_Material: {fileID: 0}
   m_Color: {r: 0.9490196, g: 0.95686275, b: 0.9529412, a: 1}
   m_RaycastTarget: 1
@@ -2312,8 +2312,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a3f6a7806333ee4ea6e5629a33ac908, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   PlayerId: 3
   splash: {fileID: 1681190641}
   darkOverlay: {fileID: 1671480356}
@@ -2375,8 +2375,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
@@ -2513,8 +2513,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_RaycastTarget: 1
@@ -2572,8 +2572,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c192ce9fcda4f8c499e7187ac1893d3a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   Event: {fileID: 11400000, guid: 0212eefcc255af741a10a3614f6b8280, type: 2}
   Response:
     m_PersistentCalls:
@@ -2586,7 +2586,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument:
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
@@ -2600,8 +2600,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78546eb515a122946b3790b26b120b05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   allReadyNotice: {fileID: 1157043134}
 --- !u!4 &1211558669
 Transform:
@@ -2660,8 +2660,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
@@ -2732,8 +2732,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a3f6a7806333ee4ea6e5629a33ac908, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   PlayerId: 0
   splash: {fileID: 987605215}
   darkOverlay: {fileID: 559907484}
@@ -2795,8 +2795,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
@@ -2862,12 +2862,12 @@ Prefab:
     - target: {fileID: 114038232395121676, guid: 7974fa9ba6da7404696b63559154b7d5,
         type: 2}
       propertyPath: audioDad
-      value: 
+      value:
       objectReference: {fileID: 1747980642}
     - target: {fileID: 114038232395121676, guid: 7974fa9ba6da7404696b63559154b7d5,
         type: 2}
       propertyPath: cam
-      value: 
+      value:
       objectReference: {fileID: 453785728}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7974fa9ba6da7404696b63559154b7d5, type: 2}
@@ -2897,8 +2897,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ae6d9ec8fe000354e8a2e81248a693de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   maxPlayers: 4
   gameReadyToStart: 0
   characterSets:
@@ -2966,8 +2966,8 @@ MonoBehaviour:
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0.5921569}
   m_RaycastTarget: 1
@@ -3035,8 +3035,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 0.5921569}
   m_RaycastTarget: 1
@@ -3104,8 +3104,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
@@ -3155,8 +3155,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f2ed69317e7e3774388bd56226ed18f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!82 &1747980644
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3309,8 +3309,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_RaycastTarget: 1
@@ -3387,8 +3387,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6a3f6a7806333ee4ea6e5629a33ac908, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   PlayerId: 1
   splash: {fileID: 1954422980}
   darkOverlay: {fileID: 1613338293}
@@ -3450,8 +3450,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_Material: {fileID: 2100000, guid: ebc915dc8a6c39541b509da72ddc0df0, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
@@ -3519,8 +3519,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
@@ -3623,8 +3623,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0.9372549}
   m_RaycastTarget: 1
@@ -3692,8 +3692,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
@@ -3761,8 +3761,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
