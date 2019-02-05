@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b45a5bcec39f1fe46a0fd9488d7ed180, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 100
+  movementSpeed: 200
   jumpForce: 12
   velSmoothSpeed: 0.2
   rotSmoothSpeed: 0.1
@@ -165,6 +165,8 @@ MonoBehaviour:
   "da\xF1oDevuelta": 1
   percentage: 0
   Ragdoll: 0
+  controller: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!135 &135231352673664062
 SphereCollider:
   m_ObjectHideFlags: 1

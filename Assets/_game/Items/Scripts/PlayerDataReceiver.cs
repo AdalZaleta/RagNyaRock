@@ -76,6 +76,7 @@ namespace Mangos
             Ragdoll = true;
             anim.enabled = false;
             GetComponent<CharacterController>().SetRagdoll(true);
+            Invoke("DeactivateRagdoll", 2.0f);
         }
 
         public void DeactivateRagdoll()
