@@ -30,11 +30,14 @@ namespace Mangos
         private bool canJump = true;
         private bool isRagdoll = false;
         private bool isShielded = false;
-        private float damage = 0;
+        private Vector3 restingVelocity = Vector3.zero;
+        public float damage = 0;
+        [SerializeField]
+        private int lifes = 3;
         private GameObject heldItem;
         private GameObject instModel;
         private bool hasItem;
-        private Vector3 restingVelocity = Vector3.zero;
+        private bool itsAlive = true;
 
         private int currentComboSatus = 0;
         private float comboCooldown = 0;
@@ -87,6 +90,11 @@ namespace Mangos
             }
         }
 
+        public void ExitSafeZone()
+        {
+            Manager_Static.spawnManager.ReSpawn(gameObject);
+        }
+
         private void OnCollisionExit(Collision _col)
         {
             gameObject.GetComponent<CapsuleCollider>().material.staticFriction = 0.0f;
@@ -130,6 +138,10 @@ namespace Mangos
 
         void Update()
         {
+            if(!itsAlive)
+            {
+                gameObject.SetActive(false);
+            }
             if (currentComboSatus != 0 && comboCooldown <= 0)
             {
                 currentComboSatus = 0;

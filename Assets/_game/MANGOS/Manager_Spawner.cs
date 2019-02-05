@@ -17,6 +17,13 @@ namespace Mangos
             Manager_Static.spawnManager = this;
         }
 
+        public void ReSpawn(GameObject _who)
+        {
+            Debug.Log(_who.name + " es quien se salio de la zona");
+            _who.transform.position = spawnPoints[Random.Range(0, 4)].transform.position;
+            _who.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        }
+
         private void Start()
         {
             characterSets = Manager_Static.playerAssigner.characterSets;
@@ -29,6 +36,7 @@ namespace Mangos
                 {
                     Debug.Log("Character selected " + temp.charSelected + ", skin selected " + temp.skinSelected);
                     GameObject go = Instantiate(charPrefab, spawnPoints[i].position, Quaternion.identity);
+                    Manager_Static.controlHandicap.SetGameObject(i, go);
 
                     CharacterController goController = go.GetComponent<CharacterController>();
 
