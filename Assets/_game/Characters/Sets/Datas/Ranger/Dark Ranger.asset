@@ -11,6 +11,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3bfc4264f8bb743998433496cb04e5, type: 3}
   m_Name: Dark Ranger
   m_EditorClassIdentifier: 
-  namae: 
+  namae: Dark Ranger
   splash: {fileID: 21300036, guid: 879aa22ad8574e848b7f56aa56ce3898, type: 3}
   model: {fileID: 1804610637621384, guid: 2bf5a8bd04702fc46a9a6cd05338b070, type: 2}
