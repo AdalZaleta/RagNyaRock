@@ -29,7 +29,7 @@ namespace Mangos
                 {
                     Debug.Log("Character selected " + temp.charSelected + ", skin selected " + temp.skinSelected);
                     GameObject go = Instantiate(charPrefab, spawnPoints[i].position, Quaternion.identity);
-                    go.GetComponent<CharacterController>().AssignID(temp.gamePlayerId);
+                    go.GetComponent<CharacterController>().AssignID(temp.rewiredPlayerId, temp.gamePlayerId);
                     go.GetComponent<CharacterController>().model = characterSets[temp.charSelected].skins[temp.skinSelected].model;
                     pivotPlacer.members[i] = go;
                 }

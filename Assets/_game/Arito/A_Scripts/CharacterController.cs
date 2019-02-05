@@ -84,7 +84,9 @@ namespace Mangos
 
         void Start()
         {
-            player = ReInput.players.GetPlayer(playerID);
+            if(player == null)
+                player = ReInput.players.GetPlayer(playerID);
+
             rig = gameObject.GetComponent<Rigidbody>();
             TestShield.SetActive(false);
             Instantiate(model, transform.position, transform.rotation, transform);
@@ -96,10 +98,10 @@ namespace Mangos
             SetLayers(gameObject, playerID + 8);
         }
 
-        public void AssignID(int _id)
+        public void AssignID(int _rewiredId, int _playerId)
         {
-            playerID = _id;
-            player = ReInput.players.GetPlayer(playerID);
+            playerID = _playerId;
+            player = ReInput.players.GetPlayer(_rewiredId);
             Debug.Log("Player was assigned id: " + playerID);
         }
 
