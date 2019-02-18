@@ -19,7 +19,7 @@ namespace Mangos
         public bool DebugMode;
 
         private HitData hitData;
-        private BoxCollider boxCollider;
+        public BoxCollider boxCollider;
         private Rigidbody rigi;
         private MeshRenderer render;
 

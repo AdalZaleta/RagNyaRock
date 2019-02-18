@@ -2954,7 +2954,7 @@ BoxCollider:
   m_GameObject: {fileID: 1647165117291146}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1.0000007, y: 1, z: 1.0000007}
   m_Center: {x: 0, y: 0, z: 0}
@@ -2978,7 +2978,7 @@ BoxCollider:
   m_GameObject: {fileID: 1663602061637616}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1.0000006, y: 0.99999994, z: 1.0000006}
   m_Center: {x: 0, y: 0, z: -0.00000047683716}
@@ -3017,6 +3017,7 @@ MonoBehaviour:
   scaleForce: 0.02
   damage: 10
   DebugMode: 0
+  boxCollider: {fileID: 65663041147759724}
 --- !u!114 &114313076042784830
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3034,6 +3035,7 @@ MonoBehaviour:
   scaleForce: 0.02
   damage: 10
   DebugMode: 0
+  boxCollider: {fileID: 65447343382380180}
 --- !u!114 &114379307921978140
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3046,7 +3048,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pelvis: {fileID: 1538759343527616}
-  rightHand: {fileID: 0}
+  rightHand: {fileID: 4507716449604880}
 --- !u!135 &135487967821812792
 SphereCollider:
   m_ObjectHideFlags: 1
